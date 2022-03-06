@@ -112,6 +112,23 @@
     position: absolute;
 }
 
+.body_button {
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: rgb(0, 47, 167);
+    color: rgb(255, 255, 255);
+    font-size: 28px;
+    border: none;
+    position: absolute;
+    cursor: pointer;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+}
+
+.body_button:hover {
+    background-color: rgb(0, 47, 167, 0.8);
+}
+
 .bottom {
     position: absolute;
     width: 100%;
