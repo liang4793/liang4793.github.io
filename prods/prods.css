@@ -6,6 +6,14 @@
     position: absolute;
 }
 
+.background_box {
+    width: 580px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    position: absolute;
+}
+
 .logo {
     user-select: none;
     -webkit-user-select: none;
