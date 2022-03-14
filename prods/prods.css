@@ -125,6 +125,7 @@
     -webkit-user-select: none;
     position: absolute;
     font-family: Microsoft YaHei, sans-serif;
+    line-height:70px;
     background: linear-gradient(to right,rgb(0, 47, 167), rgb(15, 190, 190));
     background-clip: text;
     -webkit-background-clip: text;
@@ -140,9 +141,24 @@
 }
 
 .section_box {
+    user-select: none;
+    -webkit-user-select: none;
     padding: 3px 10px;
     border-radius: 20px;
     background-color: rgb(150, 150, 150, 0.8);
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-family: Microsoft YaHei ,sans-serif;
+    border: none;
+    position: absolute;
+}
+
+.section_box2 {
+    user-select: none;
+    -webkit-user-select: none;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background-color: rgb(240, 210, 0);
     color: rgb(255, 255, 255);
     font-size: 15px;
     font-family: Microsoft YaHei ,sans-serif;
