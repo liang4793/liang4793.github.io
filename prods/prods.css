@@ -120,6 +120,36 @@
     position: absolute;
 }
 
+.card_title {
+    user-select: none;
+    -webkit-user-select: none;
+    position: absolute;
+    font-family: Microsoft YaHei, sans-serif;
+    background: linear-gradient(to right,rgb(0, 47, 167), rgb(15, 190, 190));
+    background-clip: text;
+    -webkit-background-clip: text;
+  	color: transparent;
+}
+
+.card_content {
+    user-select: none;
+    -webkit-user-select: none;
+    position: absolute;
+    font-family: Microsoft YaHei, sans-serif;
+    color: rgb(0, 47, 167);
+}
+
+.section_box {
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: rgb(150, 150, 150, 0.8);
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-family: Microsoft YaHei ,sans-serif;
+    border: none;
+    position: absolute;
+}
+
 .body_button {
     padding: 5px 12px;
     border-radius: 20px;
