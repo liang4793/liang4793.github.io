@@ -125,7 +125,6 @@
     -webkit-user-select: none;
     position: absolute;
     font-family: Microsoft YaHei, sans-serif;
-    line-height:70px;
     background: linear-gradient(to right,rgb(0, 47, 167), rgb(15, 190, 190));
     background-clip: text;
     -webkit-background-clip: text;
