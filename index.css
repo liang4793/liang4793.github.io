@@ -95,6 +95,8 @@
   }
 
 .body_button {
+    user-select: none;
+    -webkit-user-select: none;
     padding: 10px 20px;
     border-radius: 20px;
     background-color: rgb(0, 47, 167);
