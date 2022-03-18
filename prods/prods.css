@@ -151,9 +151,7 @@
   	color: transparent;
 }
 
-.card_test {
-    user-select: none;
-    -webkit-user-select: none;
+.card_text {
     user-select: none;
     -webkit-user-select: none;
     position: absolute;
