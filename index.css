@@ -1,4 +1,6 @@
 .background_circle {
+    user-select: none;
+    -webkit-user-select: none;
     width: 1600px;
     height: 1600px;
     border-radius: 900px;
@@ -7,6 +9,8 @@
 }
 
 .background_box {
+    user-select: none;
+    -webkit-user-select: none;
     width: 1150px;
     height: 550px;
     background-color: rgb(255, 255, 255);
@@ -32,6 +36,8 @@
 }
 
 .state_circle {
+    user-select: none;
+    -webkit-user-select: none;
     width: 95px;
     height: 30px;
     border-radius: 45px;
@@ -41,6 +47,8 @@
 }
 
 .state_circle_2 {
+    user-select: none;
+    -webkit-user-select: none;
     width: 13px;
     height: 13px;
     border-radius: 13px;
@@ -50,6 +58,8 @@
 }
 
 .logo_button {
+    user-select: none;
+    -webkit-user-select: none;
     padding: 25px 65px;
     background-color: rgb(0, 0, 0, 0);
     border: none;
@@ -57,6 +67,8 @@
 }
 
 .state_button {
+    user-select: none;
+    -webkit-user-select: none;
     padding: 20px 55px;
     background-color: rgb(0, 0, 0, 0);
     border: none;
@@ -65,6 +77,8 @@
 }
 
 .top_section_button {
+    user-select: none;
+    -webkit-user-select: none;
     padding: 20px 50px;
     border-radius: 20px;
     background-color: rgb(0, 0, 0, 0);
