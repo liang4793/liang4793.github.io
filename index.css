@@ -68,15 +68,6 @@
     position: absolute;
 }
 
-.logo_button {
-    user-select: none;
-    -webkit-user-select: none;
-    padding: 25px 65px;
-    background-color: rgb(0, 0, 0, 0);
-    border: none;
-    cursor: pointer;
-}
-
 .state_button {
     user-select: none;
     -webkit-user-select: none;
