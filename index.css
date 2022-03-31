@@ -27,12 +27,23 @@
     z-index: -1;
 }
 
+.logo_background {
+    user-select: none;
+    -webkit-user-select: none;
+    position: absolute;
+    width: 150px;
+    height: 62px;
+    border-radius: 16px;
+    background-color: rgb(255, 255, 255);
+    z-index: 0;
+}
+
 .logo {
     user-select: none;
     -webkit-user-select: none;
     position: absolute;
     font-family: Microsoft YaHei, sans-serif;
-    z-index: -1;
+    z-index: 1;
 }
 
 .state_circle {
@@ -192,7 +203,6 @@
     position: relative;
     font-size: 20px;
     font-family: Microsoft YaHei ,sans-serif;
-    min-width: 470px;
     color: rgb(0, 47, 167);
     -webkit-transition: color 0.5s;
     transition: color 0.5s;
