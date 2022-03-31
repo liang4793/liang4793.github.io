@@ -27,15 +27,15 @@
     z-index: -1;
 }
 
-.logo_background {
+.logo_box {
     user-select: none;
     -webkit-user-select: none;
     position: absolute;
     width: 150px;
     height: 62px;
     border-radius: 16px;
-    background-color: rgb(255, 255, 255);
-    z-index: 0;
+    border: none;
+    cursor: pointer;
 }
 
 .logo {
