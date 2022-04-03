@@ -83,9 +83,27 @@
 .top_section_button:hover {
     animation: top_section_button_hover 0.2s ease;
     animation-fill-mode: forwards;
+    -webkit-animation: top_section_button_hover 0.2s ease;
+    -webkit-animation-fill-mode: forwards;
 }
 
 @keyframes top_section_button_hover {
+    0% {
+      padding: 20px 50px;
+      border-radius: 20px;
+      background-color: rgb(0, 0, 0, 0);
+      border: none;
+    }
+
+    100% {
+      padding: 15px 45px;
+      border-radius: 20px;
+      background-color: rgb(0, 0, 0, 0);
+      border: 5px solid rgb(255, 255, 255);
+    }
+}
+
+@-webkit-keyframes top_section_button_hover {
     0% {
       padding: 20px 50px;
       border-radius: 20px;
