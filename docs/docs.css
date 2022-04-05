@@ -119,6 +119,34 @@
     }
 }
 
+.section_title {
+    user-select: none;
+    -webkit-user-select: none;
+    position: absolute;
+    font-size: 36px;
+    color: rgb(0, 47, 167);
+    font-family: Microsoft YaHei, sans-serif;
+}
+
+.navigation_text_title {
+    user-select: none;
+    -webkit-user-select: none;
+    position: absolute;
+    font-size: 36px;
+    color: rgb(0, 47, 167);
+    font-family: Microsoft YaHei, sans-serif;
+    cursor: pointer;
+}
+
+.navigation_text_normal {
+    user-select: none;
+    -webkit-user-select: none;
+    position: absolute;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    font-family: Microsoft YaHei, sans-serif;
+}
+
 .bottom {
     user-select: none;
     -webkit-user-select: none;
