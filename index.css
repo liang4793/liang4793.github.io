@@ -16,6 +16,10 @@
     top: 15px;
     left: 50%;
     z-index: 100;
+    animation: notice_pop 0.6s ease;
+    animation-fill-mode: forwards;
+    -webkit-animation: notice_pop 0.6s ease;
+    -webkit-animation-fill-mode: forwards;
 }
 
 .notice_box_button {
@@ -35,6 +39,17 @@
 
 .notice_box_button:hover {
     background-color: rgb(255, 204, 0);
+}
+
+@keyframes notice_pop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .background_circle {
