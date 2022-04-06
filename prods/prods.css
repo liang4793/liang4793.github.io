@@ -126,6 +126,10 @@
     font-size: 36px;
     color: rgb(0, 47, 167);
     font-family: Microsoft YaHei, sans-serif;
+    animation: appear 0.4s ease;
+    animation-fill-mode: forwards;
+    -webkit-animation: appear 0.4s ease;
+    -webkit-animation-fill-mode: forwards;
 }
 
 .scroll_box {
@@ -147,6 +151,10 @@
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 10px rgb(150, 150, 150);
     position: absolute;
+    animation: appear 0.6s ease;
+    animation-fill-mode: forwards;
+    -webkit-animation: appear 0.6s ease;
+    -webkit-animation-fill-mode: forwards;
 }
 
 .information_card_middle {
@@ -158,6 +166,22 @@
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 10px rgb(150, 150, 150);
     position: absolute;
+    animation: appear 0.8s ease;
+    animation-fill-mode: forwards;
+    -webkit-animation: appear 0.8s ease;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes appear{
+    0% {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 .card_title {
