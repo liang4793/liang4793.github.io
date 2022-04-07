@@ -1,3 +1,29 @@
+.text_title {
+    user-select: none;
+    -webkit-user-select: none;
+    position: absolute;
+    font-family: Microsoft YaHei, sans-serif;
+    font-size: 50px;
+    color: rgb(0, 47, 167);
+    animation: appear 0.4s ease;
+    animation-fill-mode: forwards;
+    -webkit-animation: appear 0.4s ease;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.text_normal {
+    user-select: none;
+    -webkit-user-select: none;
+    position: absolute;
+    font-family: Microsoft YaHei, sans-serif;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    animation: appear 0.6s ease;
+    animation-fill-mode: forwards;
+    -webkit-animation: appear 0.6s ease;
+    -webkit-animation-fill-mode: forwards;
+}
+
 .choose_card {
     user-select: none;
     -webkit-user-select: none;
@@ -7,6 +33,10 @@
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 10px rgb(150, 150, 150);
     position: absolute;
+    animation: appear 0.8s ease;
+    animation-fill-mode: forwards;
+    -webkit-animation: appear 0.8s ease;
+    -webkit-animation-fill-mode: forwards;
 }
 
 .card_text {
@@ -26,6 +56,10 @@
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 10px rgb(150, 150, 150);
     position: absolute;
+    animation: appear 0.8s ease;
+    animation-fill-mode: forwards;
+    -webkit-animation: appear 0.8s ease;
+    -webkit-animation-fill-mode: forwards;
 }
 
 .pay_card_text {
@@ -44,6 +78,18 @@
     width: 160px;
     height: 160px;
     border-radius: 10px;
+}
+
+@keyframes appear{
+    0% {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 .bottom {
