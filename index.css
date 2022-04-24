@@ -337,7 +337,7 @@
     position: relative;
     font-size: 20px;
     font-family: Microsoft YaHei, sans-serif;
-    color: rgb(0, 47, 167);
+    color: rgb(0, 0, 0, 0);
     -webkit-transition: color 0.5s;
     transition: color 0.5s;
   }
@@ -697,7 +697,7 @@
     position: relative;
     font-size: 20px;
     font-family: Microsoft YaHei, sans-serif;
-    color: rgb(0, 47, 167);
+    color: rgb(0, 0, 0, 0);
     -webkit-transition: color 0.5s;
     transition: color 0.5s;
   }
@@ -1058,7 +1058,7 @@
     position: relative;
     font-size: 20px;
     font-family: Microsoft YaHei, sans-serif;
-    color: rgb(0, 47, 167);
+    color: rgb(0, 0, 0, 0);
     -webkit-transition: color 0.5s;
     transition: color 0.5s;
   }
