@@ -14,6 +14,22 @@ Welcome! If you like it, please give me a star --->
 
 ## Notes
 This website is still under development and maintenance.  
-If there are any problems with the use or adaptation of this website, please leave issue or contact me.
+If there are any problems with the use or adaptation of this website, please leave issue or contact me.😸
 
 ## Introduction
+### Main Page
+Self introduction, contact information and interests.  
+Partial Preview:  
+*picture coming soon*
+### Prods Page
+Introduce the things I make and link to 📄documents and 📦repositories.  
+Partial Preview:  
+*picture coming soon*
+### Docs Page
+Documents for the things I make and 📂blogs.  
+Partial Preview:  
+*picture coming soon*
+
+## 🏳️‍🌈
+Enjoy life, learn more thing, do what you do best and have fun!  
+Oh, if you like it, please give me a star --->
