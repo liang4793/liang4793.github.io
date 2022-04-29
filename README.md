@@ -21,16 +21,19 @@ If there are any problems with the use or adaptation of this website, please lea
 Self introduction, contact information and interests.  
 Partial Preview:  
 ![image](https://raw.githubusercontent.com/liang4793/liang4793.github.io/main/preview/main.png)
+-------------------------------------  
 *Does not represent the final effect*
 ### Prods Page
 Introduce the things I make and link to 📄documents and 📦repositories.  
 Partial Preview:  
 ![image](https://raw.githubusercontent.com/liang4793/liang4793.github.io/main/preview/prods.png)
+-------------------------------------  
 *Does not represent the final effect*
 ### Docs Page
 Documents for the things I make and 📂blogs.  
 Partial Preview:  
 ![image](https://raw.githubusercontent.com/liang4793/liang4793.github.io/main/preview/docs.png)
+-------------------------------------  
 *Does not represent the final effect*
 
 ## 🏳️‍🌈
