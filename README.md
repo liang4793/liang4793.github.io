@@ -4,7 +4,6 @@
     <img src="https://img.shields.io/badge/License-BSD 2 Clause License-green" alt="License" />
     <img src="https://img.shields.io/github/languages/code-size/liang4793/liang4793.github.io?color=orange" alt="code size" />
     <img src="https://img.shields.io/github/commit-activity/m/liang4793/liang4793.github.io?color=brightgreen" alt="activity" />
-    
 </p>
 
 My personal website！
