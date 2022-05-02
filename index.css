@@ -116,7 +116,7 @@
     color: rgb(255, 255, 255);
   }
 
-  .logo_box {
+  #logo_box {
     user-select: none;
     -webkit-user-select: none;
     position: absolute;
@@ -125,6 +125,25 @@
     border-radius: 16px;
     border: none;
     cursor: pointer;
+    left: 16px;
+    top: 10px;
+    z-index: 0;
+    background-color: rgb(255, 255, 255);
+  }
+
+  #logo_button {
+    user-select: none;
+    -webkit-user-select: none;
+    position: absolute;
+    width: 150px;
+    height: 62px;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    left: 16px;
+    top: 10px;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0);
   }
 
   .logo {
@@ -133,6 +152,10 @@
     position: absolute;
     font-family: Microsoft YaHei, sans-serif;
     z-index: 1;
+  }
+
+  #logo_pic {
+    display: none;
   }
 
   .state_circle {
@@ -534,7 +557,7 @@
     color: rgb(255, 255, 255);
   }
 
-  .logo_box {
+  #logo_box {
     user-select: none;
     -webkit-user-select: none;
     position: absolute;
@@ -543,6 +566,25 @@
     border-radius: 16px;
     border: none;
     cursor: pointer;
+    left: 16px;
+    top: 10px;
+    z-index: 0;
+    background-color: rgb(255, 255, 255);
+  }
+
+  #logo_button {
+    user-select: none;
+    -webkit-user-select: none;
+    position: absolute;
+    width: 150px;
+    height: 62px;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    left: 16px;
+    top: 10px;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0);
   }
 
   .logo {
@@ -551,6 +593,10 @@
     position: absolute;
     font-family: Microsoft YaHei, sans-serif;
     z-index: 1;
+  }
+
+  #logo_pic{
+    display: none;
   }
 
   .state_circle {
@@ -952,22 +998,47 @@
     color: rgb(255, 255, 255);
   }
 
-  .logo_box {
+  #logo_box {
     user-select: none;
     -webkit-user-select: none;
     position: absolute;
-    width: 150px;
-    height: 62px;
-    border-radius: 16px;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
     border: none;
     cursor: pointer;
+    left: 16px;
+    top: 22px;
+    z-index: 0;
+    background-color: rgb(255, 255, 255);
+  }
+
+  #logo_button {
+    user-select: none;
+    -webkit-user-select: none;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    left: 16px;
+    top: 22px;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0);
   }
 
   .logo {
+    display: none;
+  }
+
+  #logo_pic{
     user-select: none;
     -webkit-user-select: none;
     position: absolute;
-    font-family: Microsoft YaHei, sans-serif;
+    border: none;
+    left: 3px;
+    top: 3px;
     z-index: 1;
   }
 
@@ -1127,15 +1198,6 @@
 
   #pic_ME {
     display: none;
-    position: absolute;
-    user-select: none;
-    -webkit-user-select: none;
-    width: 205px;
-    height: 205px;
-    border-radius: 50px;
-    top: 695px;
-    left: 26px;
-    transform: rotate(-5deg)
   }
 
   .down {
