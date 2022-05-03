@@ -172,6 +172,19 @@
     -webkit-animation-fill-mode: forwards;
 }
 
+.scroll_box {
+    user-select: none;
+    -webkit-user-select: none;
+    width: 96%;
+    height: 900px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    overflow: auto;
+}
+
 @keyframes appear{
     0% {
         opacity: 0;
