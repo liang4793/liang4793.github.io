@@ -165,6 +165,55 @@
   }
 }
 
+.title {
+  user-select: none;
+  -webkit-user-select: none;
+  position: absolute;
+  font-size: 46px;
+  color: rgb(0, 47, 167);
+  font-family: Microsoft YaHei, sans-serif;
+  z-index: -1;
+}
+
+.text {
+  user-select: none;
+  -webkit-user-select: none;
+  position: absolute;
+  font-size: 28px;
+  color: rgb(0, 0, 0);
+  font-family: Microsoft YaHei, sans-serif;
+  z-index: -1;
+}
+
+.body_button {
+  user-select: none;
+  -webkit-user-select: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: rgb(0, 47, 167);
+  color: rgb(255, 255, 255);
+  font-size: 28px;
+  font-family: Microsoft YaHei, sans-serif;
+  border: none;
+  position: absolute;
+  cursor: pointer;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+.body_button:hover {
+  background-color: rgb(0, 47, 167, 0.8);
+}
+
+.pic {
+  position: absolute;
+  user-select: none;
+  -webkit-user-select: none;
+  width: 205px;
+  height: 205px;
+  border-radius: 50px;
+}
+
 .bottom {
   user-select: none;
   -webkit-user-select: none;
@@ -297,85 +346,31 @@
     display: none;
   }
 
-  #title_introduction {
-    user-select: none;
-    -webkit-user-select: none;
-    position: absolute;
+  #title_ME {
     left: 260px;
     top: 680px;
     min-width: 300px;
-    font-size: 46px;
-    color: rgb(0, 47, 167);
-    font-family: Microsoft YaHei, sans-serif;
-    z-index: -1;
   }
 
-  #text_introduction {
-    user-select: none;
-    -webkit-user-select: none;
-    position: absolute;
+  #text_ME {
     left: 260px;
     top: 754px;
     min-width: 600px;
-    font-size: 28px;
-    color: rgb(0, 0, 0);
-    font-family: Microsoft YaHei, sans-serif;
-    z-index: -1;
   }
 
   #body_button_follow {
-    user-select: none;
-    -webkit-user-select: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    background-color: rgb(0, 47, 167);
-    color: rgb(255, 255, 255);
-    font-size: 28px;
-    min-width: 180px;
-    font-family: Microsoft YaHei, sans-serif;
-    border: none;
-    position: absolute;
-    cursor: pointer;
-    -webkit-transition: background 0.3s;
-    transition: background 0.3s;
     left: 850px;
     top: 762px;
-  }
-
-  #body_button_follow:hover {
-    background-color: rgb(0, 47, 167, 0.8);
+    min-width: 180px;
   }
 
   #body_button_chat {
-    user-select: none;
-    -webkit-user-select: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    background-color: rgb(0, 47, 167);
-    color: rgb(255, 255, 255);
-    font-size: 28px;
-    min-width: 180px;
-    font-family: Microsoft YaHei, sans-serif;
-    border: none;
-    position: absolute;
-    cursor: pointer;
-    -webkit-transition: background 0.3s;
-    transition: background 0.3s;
     left: 850px;
-    top: 837px
-  }
-
-  #body_button_chat:hover {
-    background-color: rgb(0, 47, 167, 0.8);
+    top: 837px;
+    min-width: 180px;
   }
 
   #pic_ME {
-    position: absolute;
-    user-select: none;
-    -webkit-user-select: none;
-    width: 205px;
-    height: 205px;
-    border-radius: 50px;
     top: 695px;
     left: 26px;
     transform: rotate(-5deg)
@@ -556,85 +551,31 @@
     display: none;
   }
 
-  #title_introduction {
-    user-select: none;
-    -webkit-user-select: none;
-    position: absolute;
+  #title_ME {
     left: 260px;
     top: 680px;
     min-width: 300px;
-    font-size: 46px;
-    color: rgb(0, 47, 167);
-    font-family: Microsoft YaHei, sans-serif;
-    z-index: -1;
   }
 
-  #text_introduction {
-    user-select: none;
-    -webkit-user-select: none;
-    position: absolute;
+  #text_ME {
     left: 260px;
     top: 754px;
     min-width: 600px;
-    font-size: 28px;
-    color: rgb(0, 0, 0);
-    font-family: Microsoft YaHei, sans-serif;
-    z-index: -1;
   }
 
   #body_button_follow {
-    user-select: none;
-    -webkit-user-select: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    background-color: rgb(0, 47, 167);
-    color: rgb(255, 255, 255);
-    font-size: 28px;
-    min-width: 180px;
-    font-family: Microsoft YaHei, sans-serif;
-    border: none;
-    position: absolute;
-    cursor: pointer;
-    -webkit-transition: background 0.3s;
-    transition: background 0.3s;
     left: 260px;
     top: 910px;
-  }
-
-  #body_button_follow:hover {
-    background-color: rgb(0, 47, 167, 0.8);
+    min-width: 180px;
   }
 
   #body_button_chat {
-    user-select: none;
-    -webkit-user-select: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    background-color: rgb(0, 47, 167);
-    color: rgb(255, 255, 255);
-    font-size: 28px;
-    min-width: 180px;
-    font-family: Microsoft YaHei, sans-serif;
-    border: none;
-    position: absolute;
-    cursor: pointer;
-    -webkit-transition: background 0.3s;
-    transition: background 0.3s;
     left: 460px;
-    top: 910px
-  }
-
-  #body_button_chat:hover {
-    background-color: rgb(0, 47, 167, 0.8);
+    top: 910px;
+    min-width: 180px;
   }
 
   #pic_ME {
-    position: absolute;
-    user-select: none;
-    -webkit-user-select: none;
-    width: 205px;
-    height: 205px;
-    border-radius: 50px;
     top: 695px;
     left: 26px;
     transform: rotate(-5deg)
@@ -782,76 +723,28 @@
     z-index: 1;
   }
 
-  #title_introduction {
-    user-select: none;
-    -webkit-user-select: none;
-    position: absolute;
+  #title_ME {
     left: 20px;
     top: 680px;
     min-width: 300px;
-    font-size: 46px;
-    color: rgb(0, 47, 167);
-    font-family: Microsoft YaHei, sans-serif;
-    z-index: -1;
   }
 
-  #text_introduction {
-    user-select: none;
-    -webkit-user-select: none;
-    position: absolute;
+  #text_ME {
     left: 22px;
     top: 754px;
     min-width: 600px;
-    font-size: 28px;
-    color: rgb(0, 0, 0);
-    font-family: Microsoft YaHei, sans-serif;
-    z-index: -1;
   }
 
   #body_button_follow {
-    user-select: none;
-    -webkit-user-select: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    background-color: rgb(0, 47, 167);
-    color: rgb(255, 255, 255);
-    font-size: 28px;
-    min-width: 180px;
-    font-family: Microsoft YaHei, sans-serif;
-    border: none;
-    position: absolute;
-    cursor: pointer;
-    -webkit-transition: background 0.3s;
-    transition: background 0.3s;
     left: 20px;
     top: 910px;
-  }
-
-  #body_button_follow:hover {
-    background-color: rgb(0, 47, 167, 0.8);
+    min-width: 180px;
   }
 
   #body_button_chat {
-    user-select: none;
-    -webkit-user-select: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    background-color: rgb(0, 47, 167);
-    color: rgb(255, 255, 255);
-    font-size: 28px;
-    min-width: 180px;
-    font-family: Microsoft YaHei, sans-serif;
-    border: none;
-    position: absolute;
-    cursor: pointer;
-    -webkit-transition: background 0.3s;
-    transition: background 0.3s;
     left: 220px;
-    top: 910px
-  }
-
-  #body_button_chat:hover {
-    background-color: rgb(0, 47, 167, 0.8);
+    top: 910px;
+    min-width: 180px;
   }
 
   #pic_ME {
