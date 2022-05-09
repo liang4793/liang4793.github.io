@@ -119,6 +119,15 @@
   }
 }
 
+.background_text {
+  user-select: none;
+  -webkit-user-select: none;
+  position: absolute;
+  font-size: 96px;
+  font-family: Microsoft YaHei, sans-serif;
+  z-index: -1;
+}
+
 .down {
   user-select: none;
   -webkit-user-select: none;
@@ -219,12 +228,6 @@
   }
 
   #background_text_01 {
-    user-select: none;
-    -webkit-user-select: none;
-    position: absolute;
-    font-size: 96px;
-    font-family: Microsoft YaHei, sans-serif;
-    z-index: -1;
     min-width: 339px;
     right: 798px;
     top: 155px;
@@ -232,12 +235,6 @@
   }
 
   #background_text_02 {
-    user-select: none;
-    -webkit-user-select: none;
-    position: absolute;
-    font-size: 96px;
-    font-family: Microsoft YaHei, sans-serif;
-    z-index: -1;
     min-width: 360px;
     right: 410px;
     top: 155px;
@@ -245,12 +242,6 @@
   }
 
   #background_text_03 {
-    user-select: none;
-    -webkit-user-select: none;
-    position: absolute;
-    font-size: 96px;
-    font-family: Microsoft YaHei, sans-serif;
-    z-index: -1;
     min-width: 430px;
     right: 714px;
     top: 265px;
@@ -258,12 +249,6 @@
   }
 
   #background_text_04 {
-    user-select: none;
-    -webkit-user-select: none;
-    position: absolute;
-    font-size: 96px;
-    font-family: Microsoft YaHei, sans-serif;
-    z-index: -1;
     min-width: 281px;
     right: 400px;
     top: 265px;
@@ -502,12 +487,6 @@
   }
 
   #background_text_01 {
-    user-select: none;
-    -webkit-user-select: none;
-    position: absolute;
-    font-size: 96px;
-    font-family: Microsoft YaHei, sans-serif;
-    z-index: -1;
     min-width: 339px;
     right: 548px;
     top: 155px;
@@ -515,12 +494,6 @@
   }
 
   #background_text_02 {
-    user-select: none;
-    -webkit-user-select: none;
-    position: absolute;
-    font-size: 96px;
-    font-family: Microsoft YaHei, sans-serif;
-    z-index: -1;
     min-width: 360px;
     right: 160px;
     top: 155px;
@@ -528,12 +501,6 @@
   }
 
   #background_text_03 {
-    user-select: none;
-    -webkit-user-select: none;
-    position: absolute;
-    font-size: 96px;
-    font-family: Microsoft YaHei, sans-serif;
-    z-index: -1;
     min-width: 430px;
     right: 464px;
     top: 265px;
@@ -541,12 +508,6 @@
   }
 
   #background_text_04 {
-    user-select: none;
-    -webkit-user-select: none;
-    position: absolute;
-    font-size: 96px;
-    font-family: Microsoft YaHei, sans-serif;
-    z-index: -1;
     min-width: 281px;
     right: 150px;
     top: 265px;
@@ -750,12 +711,6 @@
   }
 
   #background_text_01 {
-    user-select: none;
-    -webkit-user-select: none;
-    position: absolute;
-    font-size: 96px;
-    font-family: Microsoft YaHei, sans-serif;
-    z-index: -1;
     min-width: 339px;
     left: 5px;
     top: 80px;
@@ -763,12 +718,6 @@
   }
 
   #background_text_02 {
-    user-select: none;
-    -webkit-user-select: none;
-    position: absolute;
-    font-size: 96px;
-    font-family: Microsoft YaHei, sans-serif;
-    z-index: -1;
     min-width: 360px;
     left: 5px;
     top: 180px;
@@ -776,12 +725,6 @@
   }
 
   #background_text_03 {
-    user-select: none;
-    -webkit-user-select: none;
-    position: absolute;
-    font-size: 96px;
-    font-family: Microsoft YaHei, sans-serif;
-    z-index: -1;
     min-width: 430px;
     left: 5px;
     top: 280px;
@@ -789,12 +732,6 @@
   }
 
   #background_text_04 {
-    user-select: none;
-    -webkit-user-select: none;
-    position: absolute;
-    font-size: 96px;
-    font-family: Microsoft YaHei, sans-serif;
-    z-index: -1;
     min-width: 281px;
     left: 5px;
     top: 380px;
