@@ -32,6 +32,6 @@ Partial Preview:
 ![image](https://raw.githubusercontent.com/liang4793/liang4793.github.io/main/preview/docs.png)  
 *Does not represent the final effect*
 
-## 🏳️‍🌈
+## 🌅
 Enjoy life, learn more thing, do what you do best and have fun!  
 Oh, if you like it, please give me a star --->
