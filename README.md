@@ -6,6 +6,8 @@
     <img src="https://img.shields.io/github/commit-activity/m/liang4793/liang4793.github.io?color=brightgreen" alt="activity" />
 </p>
 
+### English | [简体中文](/README(CH).md)
+
 My personal website！
 (Still building🛠️)  
 Address: [Liang4793's Repository](https://liang4793.github.io/)  
