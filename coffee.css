@@ -62,13 +62,31 @@
     -webkit-animation-fill-mode: forwards;
 }
 
+.pay_card2 {
+    width: 684px;
+    height: 64px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgb(0, 47, 167);
+    position: absolute;
+    animation: appear 0.8s ease;
+    animation-fill-mode: forwards;
+    -webkit-animation: appear 0.8s ease;
+    -webkit-animation-fill-mode: forwards;
+}
+
 .pay_card_text {
     user-select: none;
     -webkit-user-select: none;
     position: absolute;
     font-size: 30px;
     font-family: Microsoft YaHei, sans-serif;
+}
 
+.pay_card_text2 {
+    position: absolute;
+    font-size: 20px;
+    font-family: Microsoft YaHei, sans-serif;
 }
 
 .pic {
