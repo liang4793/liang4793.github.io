@@ -311,7 +311,7 @@
   color: rgb(255, 255, 255);
 }
 
-@media (min-width: 1050px) {
+@media (min-width: 1100px) {
   #background_circle {
     user-select: none;
     -webkit-user-select: none;
@@ -479,7 +479,7 @@
   }
 }
 
-@media (min-width: 870px) and (max-width:1050px) {
+@media (min-width: 870px) and (max-width:1100px) {
   #background_circle {
     user-select: none;
     -webkit-user-select: none;
