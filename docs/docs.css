@@ -140,6 +140,10 @@
     -webkit-animation-fill-mode: forwards;
 }
 
+.navigation_text_title:hover {
+    color: rgb(0, 47, 167, 0.8);
+}
+
 .navigation_text_normal {
     user-select: none;
     -webkit-user-select: none;
