@@ -225,6 +225,28 @@
   z-index: -1;
 }
 
+.button_box {
+    user-select: none;
+    -webkit-user-select: none;
+    width: 200px;
+    height: 75px;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.button_icon {
+  user-select: none;
+  -webkit-user-select: none;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  transform: rotate(15deg);
+}
+
 .body_button {
   user-select: none;
   -webkit-user-select: none;
@@ -403,16 +425,14 @@
     min-width: 600px;
   }
 
-  #body_button_follow {
+  #button_box_follow {
     left: 850px;
     top: 762px;
-    min-width: 180px;
   }
 
-  #body_button_chat {
+  #button_box_chat {
     left: 850px;
     top: 837px;
-    min-width: 180px;
   }
 
   #pic_ME {
@@ -573,16 +593,14 @@
     min-width: 600px;
   }
 
-  #body_button_follow {
+  #button_box_follow {
     left: 260px;
-    top: 910px;
-    min-width: 180px;
+    top: 900px;
   }
 
-  #body_button_chat {
+  #button_box_chat {
     left: 460px;
-    top: 910px;
-    min-width: 180px;
+    top: 900px;
   }
 
   #pic_ME {
@@ -745,16 +763,14 @@
     min-width: 600px;
   }
 
-  #body_button_follow {
+  #button_box_follow {
     left: 20px;
-    top: 910px;
-    min-width: 180px;
+    top: 900px;
   }
 
-  #body_button_chat {
+  #button_box_chat {
     left: 220px;
-    top: 910px;
-    min-width: 180px;
+    top: 900px;
   }
 
   #pic_ME {
