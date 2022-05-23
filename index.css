@@ -16,6 +16,7 @@
   top: 15px;
   left: 50%;
   z-index: 100;
+  display: none;
 }
 
 .notice_box_button {
@@ -35,6 +36,17 @@
 
 .notice_box_button:hover {
   background-color: rgb(255, 204, 0);
+}
+
+@keyframes notice_box_pop {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 .state_circle {
