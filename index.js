@@ -1,3 +1,4 @@
+/* notice */
 let notice_box = document.querySelector(".notice_box");
 let notice_box_button = document.querySelectorAll(".notice_box_button");
 
