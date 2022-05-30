@@ -237,6 +237,14 @@
   z-index: -1;
 }
 
+.text_icon {
+  user-select: none;
+  -webkit-user-select: none;
+  width: 66px;
+  height: 66px;
+  position: absolute;
+}
+
 .button_box {
     user-select: none;
     -webkit-user-select: none;
@@ -466,6 +474,26 @@
     min-width: 462px;
   }
 
+  #text_icon_html {
+    right: 548px;
+    top: 1234px;
+  }
+
+  #text_icon_css {
+    right: 452px;
+    top: 1234px;
+  }
+
+  #text_icon_js {
+    right: 356px;
+    top: 1234px;
+  }
+
+  #text_icon_python {
+    right: 260px;
+    top: 1234px;
+  }
+
   #pic_software {
     top: 1020px;
     right: 26px;
@@ -482,6 +510,11 @@
     left: 260px;
     top: 1404px;
     min-width: 570px;
+  }
+
+  #text_icon_raspi {
+    left: 260px;
+    top: 1559px;
   }
 
   #pic_hardware {
@@ -634,6 +667,26 @@
     min-width: 490px;
   }
 
+  #text_icon_html {
+    right: 548px;
+    top: 1234px;
+  }
+
+  #text_icon_css {
+    right: 452px;
+    top: 1234px;
+  }
+
+  #text_icon_js {
+    right: 356px;
+    top: 1234px;
+  }
+
+  #text_icon_python {
+    right: 260px;
+    top: 1234px;
+  }
+
   #pic_software {
     top: 1020px;
     right: 26px;
@@ -650,6 +703,11 @@
     left: 260px;
     top: 1404px;
     min-width: 570px;
+  }
+
+  #text_icon_raspi {
+    left: 260px;
+    top: 1559px;
   }
 
   #pic_hardware {
@@ -802,6 +860,26 @@
     min-width: 462px;
   }
 
+  #text_icon_html {
+    right: 310px;
+    top: 1234px;
+  }
+
+  #text_icon_css {
+    right: 214px;
+    top: 1234px;
+  }
+
+  #text_icon_js {
+    right: 118px;
+    top: 1234px;
+  }
+
+  #text_icon_python {
+    right: 22px;
+    top: 1234px;
+  }
+
   #pic_software {
     display: none;
   }
@@ -816,6 +894,11 @@
     left: 22px;
     top: 1404px;
     min-width: 570px;
+  }
+
+  #text_icon_raspi {
+    left: 22px;
+    top: 1559px;
   }
 
   #pic_hardware {
