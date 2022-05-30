@@ -243,6 +243,11 @@
   width: 66px;
   height: 66px;
   position: absolute;
+  transition: all 0.12s;
+}
+
+.text_icon:hover {
+  transform: scale(1.12);
 }
 
 .button_box {
