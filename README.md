@@ -21,17 +21,17 @@ If there are any problems with the use or adaptation of this website, please lea
 ### Main Page
 Self introduction, contact information and interests.  
 Partial Preview:  
-![image](https://raw.githubusercontent.com/liang4793/liang4793.github.io/main/preview/main.png)  
+![home.jpg](https://s2.loli.net/2022/06/05/Vh9fN1gH6LjFMeJ.jpg)
 *Does not represent the final effect*
 ### Prods Page
 Introduce the things I make and link to 📄documents and 📦repositories.  
 Partial Preview:  
-![image](https://raw.githubusercontent.com/liang4793/liang4793.github.io/main/preview/prods.png)  
+![prods.jpg](https://s2.loli.net/2022/06/05/Radlgz3tufS8oKX.jpg)
 *Does not represent the final effect*
 ### Docs Page
 Documents for the things I make and 📂blogs.  
 Partial Preview:  
-![image](https://raw.githubusercontent.com/liang4793/liang4793.github.io/main/preview/docs.png)  
+![docs.jpg](https://s2.loli.net/2022/06/05/rlD4E5N1gsqHL7F.jpg)
 *Does not represent the final effect*
 
 # 🌅

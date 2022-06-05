@@ -21,17 +21,17 @@
 ### 主页
 个人信息，联系方式与兴趣爱好  
 局部预览：  
-![image](https://raw.githubusercontent.com/liang4793/liang4793.github.io/main/preview/main.png)  
+![home.jpg](https://s2.loli.net/2022/06/05/Vh9fN1gH6LjFMeJ.jpg)
 *不代表最终效果*
 ### 产品页面
 介绍我做的东西并连接至📄文档和📦仓库  
 局部预览：  
-![image](https://raw.githubusercontent.com/liang4793/liang4793.github.io/main/preview/prods.png)  
+![prods.jpg](https://s2.loli.net/2022/06/05/Radlgz3tufS8oKX.jpg)
 *不代表最终效果*
 ### 文档页面
 我做的东西的文档和📂博客  
 局部预览：  
-![image](https://raw.githubusercontent.com/liang4793/liang4793.github.io/main/preview/docs.png)  
+![docs.jpg](https://s2.loli.net/2022/06/05/rlD4E5N1gsqHL7F.jpg)
 *不代表最终效果*
 
 # 🌅
