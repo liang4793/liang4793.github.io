@@ -164,6 +164,7 @@
   right: 0;
   margin: auto;
   background-color: rgb(255, 255, 255);
+  font-family: Microsoft YaHei, sans-serif;
   position: absolute;
   overflow: auto;
   animation: appear 0.4s ease;
