@@ -24,29 +24,6 @@
   -webkit-animation-fill-mode: forwards;
 }
 
-.choose_card {
-  user-select: none;
-  -webkit-user-select: none;
-  width: 450px;
-  height: 140px;
-  border-radius: 20px;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0 0 10px rgb(150, 150, 150);
-  position: absolute;
-  animation: appear 0.8s ease;
-  animation-fill-mode: forwards;
-  -webkit-animation: appear 0.8s ease;
-  -webkit-animation-fill-mode: forwards;
-}
-
-.card_text {
-  user-select: none;
-  -webkit-user-select: none;
-  position: absolute;
-  font-family: Microsoft YaHei, sans-serif;
-  color: #7d4533
-}
-
 .pay_card {
   user-select: none;
   -webkit-user-select: none;
@@ -63,7 +40,7 @@
 }
 
 .pay_card2 {
-  width: 684px;
+  width: 690px;
   height: 64px;
   border-radius: 20px;
   background-color: rgb(255, 255, 255);
@@ -75,7 +52,7 @@
   -webkit-animation-fill-mode: forwards;
 }
 
-.pay_card_text {
+.card_text {
   user-select: none;
   -webkit-user-select: none;
   position: absolute;
@@ -83,7 +60,7 @@
   font-family: Microsoft YaHei, sans-serif;
 }
 
-.pay_card_text2 {
+.card_text2 {
   position: absolute;
   font-size: 20px;
   font-family: Microsoft YaHei, sans-serif;
