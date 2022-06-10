@@ -7,6 +7,8 @@
   border-left-width: 40px;
   border-right-width: 40px;
   border-radius: 10px;
+  min-width: 339px;
+  min-height: 32px;
   font-size: 24px;
   text-align: center;
   font-family: Microsoft YaHei, sans-serif;
@@ -364,6 +366,7 @@
   -webkit-user-select: none;
   padding: 10px 20px;
   border-radius: 20px;
+  min-width: 180px;
   background-color: rgb(0, 47, 167);
   color: rgb(255, 255, 255);
   font-size: 28px;
