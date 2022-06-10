@@ -55,53 +55,23 @@
   <div class="background_box" style="right: 0px; top: 0px; z-index: -3;">
     <div class="background_circle" style="right: -610px; top: -1500px; z-index: -2"></div>
   </div>
-  <div class="state_circle" style="right: 25px; top: 25px; z-index: -1"></div>
-  <div class="state_circle_2" style="right: 38px; top: 38px; z-index: -1"></div>
-  <div style="
-        user-select: none;
-        -webkit-user-select: none;
-        right: 60px;
-        position: absolute;
-        top: 30px;
-        font-size: 22px;
-        color: rgb(255, 255, 255);
-        font-family: Microsoft YaHei, sans-serif;
-        z-index: -1;
-      ">
+  <div id="state_circle"></div>
+  <div id="state_circle_2"></div>
+  <div class="top_section_text" id="state">
     State
   </div>
   <a href="https://www.githubstatus.com/" target="_Blank">
-    <button class="state_button" style="right: 20px; top: 25px; border-radius: 20px"></button>
+    <button id="state_button"></button>
   </a>
-  <div style="
-        user-select: none;
-        -webkit-user-select: none;
-        right: 195px;
-        position: absolute;
-        top: 30px;
-        font-size: 22px;
-        color: rgb(255, 255, 255);
-        font-family: Microsoft YaHei, sans-serif;
-        z-index: -1;
-      ">
+  <div class="top_section_text" id="docs">
     Docs
   </div>
-  <button class="top_section_button" style="right: 170px; top: 25px"
+  <button class="top_section_button" id="docs_button"
     onclick="window.location.href='../docs/docs.html'"></button>
-  <div style="
-        user-select: none;
-        -webkit-user-select: none;
-        right: 320px;
-        position: absolute;
-        top: 30px;
-        font-size: 22px;
-        color: rgb(255, 255, 255);
-        font-family: Microsoft YaHei, sans-serif;
-        z-index: -1;
-      ">
+  <div class="top_section_text" id="prods">
     Prods
   </div>
-  <button class="top_section_button" style="right: 300px; top: 25px"
+  <button class="top_section_button" id="prods_button"
     onclick="window.location.href='../prods/prods.html'"></button>
 
   <!--body-->
