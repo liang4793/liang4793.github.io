@@ -646,6 +646,87 @@
 }
 
 @media (min-width: 0px) and (max-width:870px) {
+  #logo_box {
+    user-select: none;
+    -webkit-user-select: none;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    left: 16px;
+    top: 22px;
+    z-index: 0;
+    background-color: rgb(255, 255, 255);
+  }
+
+  #logo_button {
+    user-select: none;
+    -webkit-user-select: none;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    left: 16px;
+    top: 22px;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .logo {
+    display: none;
+  }
+
+  #logo_pic {
+    display: block;
+    user-select: none;
+    -webkit-user-select: none;
+    position: absolute;
+    border: none;
+    left: 3px;
+    top: 3px;
+    z-index: 1;
+  }
+  
+  #prods {
+    right: 174px;
+    top: 30px;
+  }
+  
+  #prods_button {
+    right: 154px;
+    top: 25px;
+  }
+  
+  #docs {
+    right: 49px;
+    top: 30px;
+  }
+  
+  #docs_button {
+    right: 24px;
+    top: 25px;
+  }
+  
+  #state {
+    display: none;
+  }
+  
+  #state_circle {
+    display: none;
+  }
+  
+  #state_circle_2 {
+    display: none;
+  }
+  
+  #state_button {
+    display: none;
+  }
+  
   #background_circle {
     user-select: none;
     -webkit-user-select: none;
@@ -703,51 +784,6 @@
   #cursor {
     left: 290px;
     top: 356px;
-  }
-
-  #logo_box {
-    user-select: none;
-    -webkit-user-select: none;
-    position: absolute;
-    width: 42px;
-    height: 42px;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    left: 16px;
-    top: 22px;
-    z-index: 0;
-    background-color: rgb(255, 255, 255);
-  }
-
-  #logo_button {
-    user-select: none;
-    -webkit-user-select: none;
-    position: absolute;
-    width: 42px;
-    height: 42px;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    left: 16px;
-    top: 22px;
-    z-index: 2;
-    background-color: rgba(0, 0, 0, 0);
-  }
-
-  .logo {
-    display: none;
-  }
-
-  #logo_pic {
-    display: block;
-    user-select: none;
-    -webkit-user-select: none;
-    position: absolute;
-    border: none;
-    left: 3px;
-    top: 3px;
-    z-index: 1;
   }
 
   #title_ME {

@@ -387,4 +387,40 @@
     top: 3px;
     z-index: 1;
   }
+
+  #prods {
+    right: 174px;
+    top: 30px;
+  }
+  
+  #prods_button {
+    right: 154px;
+    top: 25px;
+  }
+  
+  #docs {
+    right: 49px;
+    top: 30px;
+  }
+  
+  #docs_button {
+    right: 24px;
+    top: 25px;
+  }
+  
+  #state {
+    display: none;
+  }
+  
+  #state_circle {
+    display: none;
+  }
+  
+  #state_circle_2 {
+    display: none;
+  }
+  
+  #state_button {
+    display: none;
+  }
 }
