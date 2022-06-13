@@ -35,5 +35,5 @@ Partial Preview:
 *Does not represent the final effect*
 
 # 🌅
-Enjoy life, learn more thing, do what you do best and have fun!  
+Have a nice day!  
 Oh, if you like it, please give me a star --->
