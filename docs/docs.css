@@ -7,7 +7,6 @@
   background-color: rgb(0, 47, 167);
   position: absolute;
 }
-
 .background_box {
   user-select: none;
   -webkit-user-select: none;
@@ -17,7 +16,6 @@
   overflow: hidden;
   position: absolute;
 }
-
 #logo_box {
   user-select: none;
   -webkit-user-select: none;
@@ -32,7 +30,6 @@
   z-index: 0;
   background-color: rgb(255, 255, 255);
 }
-
 #logo_button {
   user-select: none;
   -webkit-user-select: none;
@@ -47,7 +44,6 @@
   z-index: 2;
   background-color: rgba(0, 0, 0, 0);
 }
-
 .logo {
   user-select: none;
   -webkit-user-select: none;
@@ -55,36 +51,29 @@
   font-family: Microsoft YaHei, sans-serif;
   z-index: 1;
 }
-
 #logo_pic {
   display: none;
 }
-
 #prods {
   right: 320px;
   top: 30px;
 }
-
 #prods_button {
   right: 300px;
   top: 25px;
 }
-
 #docs {
   right: 195px;
   top: 30px;
 }
-
 #docs_button {
   right: 170px;
   top: 25px;
 }
-
 #state {
   right: 60px;
   top: 30px;
 }
-
 #state_circle {
   user-select: none;
   -webkit-user-select: none;
@@ -98,7 +87,6 @@
   top: 25px;
   z-index: -1;
 }
-
 #state_circle_2 {
   user-select: none;
   -webkit-user-select: none;
@@ -112,7 +100,6 @@
   top: 38px;
   z-index: -1;
 }
-
 #state_button {
   user-select: none;
   -webkit-user-select: none;
@@ -125,7 +112,6 @@
   top: 25px;
   border-radius: 20px;
 }
-
 .top_section_text {
   user-select: none;
   -webkit-user-select: none;
@@ -135,7 +121,6 @@
   position: absolute;
   z-index: -1;
 }
-
 .top_section_button {
   user-select: none;
   -webkit-user-select: none;
@@ -146,14 +131,12 @@
   position: absolute;
   cursor: pointer;
 }
-
 .top_section_button:hover {
   animation: top_section_button_hover 0.2s ease;
   animation-fill-mode: forwards;
   -webkit-animation: top_section_button_hover 0.2s ease;
   -webkit-animation-fill-mode: forwards;
 }
-
 @keyframes top_section_button_hover {
   0% {
     padding: 20px 50px;
@@ -169,7 +152,6 @@
     border: 5px solid rgb(255, 255, 255);
   }
 }
-
 @-webkit-keyframes top_section_button_hover {
   0% {
     padding: 20px 50px;
@@ -185,7 +167,6 @@
     border: 5px solid rgb(255, 255, 255);
   }
 }
-
 .section_title {
   user-select: none;
   -webkit-user-select: none;
@@ -198,7 +179,6 @@
   -webkit-animation: appear 0.4s ease;
   -webkit-animation-fill-mode: forwards;
 }
-
 .section_text {
   user-select: none;
   -webkit-user-select: none;
@@ -211,7 +191,6 @@
   -webkit-animation: appear 0.6s ease;
   -webkit-animation-fill-mode: forwards;
 }
-
 .navigation_text_title {
   user-select: none;
   -webkit-user-select: none;
@@ -225,11 +204,9 @@
   -webkit-animation: appear 0.8s ease;
   -webkit-animation-fill-mode: forwards;
 }
-
 .navigation_text_title:hover {
   color: rgb(0, 47, 167, 0.8);
 }
-
 .navigation_text_normal {
   user-select: none;
   -webkit-user-select: none;
@@ -242,7 +219,6 @@
   -webkit-animation: appear 0.8s ease;
   -webkit-animation-fill-mode: forwards;
 }
-
 .scroll_box {
   width: 96%;
   height: 900px;
@@ -258,7 +234,6 @@
   -webkit-animation: appear 0.4s ease;
   -webkit-animation-fill-mode: forwards;
 }
-
 @keyframes appear {
   0% {
     opacity: 0;
@@ -270,7 +245,6 @@
     transform: translateY(0px);
   }
 }
-
 .bottom {
   user-select: none;
   -webkit-user-select: none;
@@ -279,7 +253,6 @@
   height: 80px;
   background-color: rgb(0, 47, 167);
 }
-
 .bottom_button {
   user-select: none;
   -webkit-user-select: none;
@@ -295,12 +268,10 @@
   transition: background 0.3s, color 0.3s;
   -webkit-transition: background 0.3s, color 0.3s;
 }
-
 .bottom_button:hover {
   background-color: rgb(0, 47, 167);
   color: rgb(255, 255, 255);
 }
-
 @media (min-width: 0px) and (max-width:870px) {
   #logo_box {
     user-select: none;
@@ -316,7 +287,6 @@
     z-index: 0;
     background-color: rgb(255, 255, 255);
   }
-
   #logo_button {
     user-select: none;
     -webkit-user-select: none;
@@ -331,11 +301,9 @@
     z-index: 2;
     background-color: rgba(0, 0, 0, 0);
   }
-
   .logo {
     display: none;
   }
-
   #logo_pic {
     display: block;
     user-select: none;
@@ -346,39 +314,31 @@
     top: 3px;
     z-index: 1;
   }
-
   #prods {
     right: 174px;
     top: 30px;
   }
-  
   #prods_button {
     right: 154px;
     top: 25px;
   }
-  
   #docs {
     right: 49px;
     top: 30px;
   }
-  
   #docs_button {
     right: 24px;
     top: 25px;
   }
-  
   #state {
     display: none;
   }
-  
   #state_circle {
     display: none;
   }
-  
   #state_circle_2 {
     display: none;
   }
-  
   #state_button {
     display: none;
   }
