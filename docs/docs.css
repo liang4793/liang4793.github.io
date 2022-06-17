@@ -43,6 +43,11 @@
   top: 10px;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0);
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+#logo_button:hover {
+  background-color: rgba(0, 47, 167, 0.12);
 }
 .logo {
   user-select: none;
