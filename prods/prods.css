@@ -212,7 +212,7 @@
 .information_card_large {
   user-select: none;
   -webkit-user-select: none;
-  width: 500px;
+  width: 540px;
   height: 350px;
   border-radius: 20px;
   background-color: rgb(255, 255, 255);
