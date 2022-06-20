@@ -296,7 +296,7 @@
   user-select: none;
   -webkit-user-select: none;
   position: absolute;
-  font-size: 28px;
+  font-size: 26px;
   color: rgb(0, 0, 0);
   font-family: Microsoft YaHei, sans-serif;
   z-index: -1;
@@ -315,7 +315,7 @@
 .button_box {
   user-select: none;
   -webkit-user-select: none;
-  width: 200px;
+  width: 190px;
   height: 75px;
   background-color: rgb(255, 255, 255);
   overflow: hidden;
@@ -337,10 +337,10 @@
   -webkit-user-select: none;
   padding: 10px 20px;
   border-radius: 20px;
-  min-width: 180px;
+  min-width: 170px;
   background-color: rgb(0, 47, 167);
   color: rgb(255, 255, 255);
-  font-size: 28px;
+  font-size: 26px;
   font-family: Microsoft YaHei, sans-serif;
   border: none;
   position: absolute;
@@ -444,21 +444,21 @@
 }
 #title_ME {
   left: 260px;
-  top: 680px;
+  top: 682px;
   min-width: 300px;
 }
 #text_ME {
   left: 260px;
   top: 754px;
-  min-width: 565px;
+  min-width: 525px;
 }
 #button_box_follow {
-  left: 850px;
-  top: 753px;
+  left: 830px;
+  top: 744px;
 }
 #button_box_chat {
-  left: 850px;
-  top: 828px;
+  left: 830px;
+  top: 819px;
 }
 #pic_ME {
   top: 695px;
@@ -467,14 +467,14 @@
 }
 #title_software {
   right: 260px;
-  top: 1005px;
+  top: 1007px;
   min-width: 258px;
 }
 #text_software {
   right: 260px;
   top: 1079px;
   text-align: right;
-  min-width: 490px;
+  min-width: 455px;
 }
 #text_icon_html {
   right: 518px;
@@ -499,13 +499,13 @@
 }
 #title_hardware {
   left: 260px;
-  top: 1330px;
+  top: 1332px;
   min-width: 276px;
 }
 #text_hardware {
   left: 260px;
   top: 1404px;
-  min-width: 570px;
+  min-width: 529px;
 }
 #text_icon_raspi {
   left: 260px;
@@ -702,13 +702,13 @@
   }
   #title_ME {
     left: 20px;
-    top: 680px;
+    top: 682px;
     min-width: 300px;
   }
   #text_ME {
     left: 22px;
     top: 754px;
-    min-width: 565px;
+    min-width: 525px;
   }
   #button_box_follow {
     left: 20px;
@@ -723,14 +723,14 @@
   }
   #title_software {
     right: 20px;
-    top: 1005px;
+    top: 1007px;
     min-width: 258px;
   }
   #text_software {
     right: 22px;
     top: 1079px;
     text-align: right;
-    min-width: 490px;
+    min-width: 455px;
   }
   #text_icon_html {
     right: 280px;
@@ -753,13 +753,13 @@
   }
   #title_hardware {
     left: 20px;
-    top: 1330px;
+    top: 1332px;
     min-width: 276px;
   }
   #text_hardware {
     left: 22px;
     top: 1404px;
-    min-width: 570px;
+    min-width: 529px;
   }
   #text_icon_raspi {
     left: 22px;
