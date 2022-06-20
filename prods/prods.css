@@ -247,7 +247,7 @@
   -webkit-user-select: none;
   position: absolute;
   font-family: Microsoft YaHei, sans-serif;
-  color: rgb(0, 47, 167);
+  color: rgb(0, 0, 0);
 }
 .section_box {
   user-select: none;
