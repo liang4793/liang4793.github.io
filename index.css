@@ -706,10 +706,6 @@
     left: 5px;
     top: 80px;
     color: rgb(255, 255, 255);
-    animation: appear 0.4s ease;
-    animation-fill-mode: forwards;
-    -webkit-animation: appear 0.4s ease;
-    -webkit-animation-fill-mode: forwards;
   }
   #background_text_02 {
     min-width: 360px;
@@ -717,10 +713,6 @@
     top: 180px;
     color: rgb(255, 255, 255);
     color: rgb(255, 255, 255);
-    animation: appear 0.4s ease;
-    animation-fill-mode: forwards;
-    -webkit-animation: appear 0.4s ease;
-    -webkit-animation-fill-mode: forwards;
   }
   #background_text_03 {
     min-width: 430px;
@@ -728,10 +720,6 @@
     top: 280px;
     color: rgb(255, 255, 255);
     color: rgb(255, 255, 255);
-    animation: appear 0.4s ease;
-    animation-fill-mode: forwards;
-    -webkit-animation: appear 0.4s ease;
-    -webkit-animation-fill-mode: forwards;
   }
   #background_text_04 {
     min-width: 281px;
@@ -739,10 +727,6 @@
     top: 380px;
     color: rgb(255, 255, 255);
     color: rgb(255, 255, 255);
-    animation: appear 0.4s ease;
-    animation-fill-mode: forwards;
-    -webkit-animation: appear 0.4s ease;
-    -webkit-animation-fill-mode: forwards;
   }
   #cursor {
     left: 290px;
