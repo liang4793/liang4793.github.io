@@ -359,6 +359,15 @@
   height: 205px;
   border-radius: 50px;
 }
+@keyframes appear {
+  0% {
+    transform: translateX(60px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
 .bottom {
   user-select: none;
   -webkit-user-select: none;
@@ -401,6 +410,10 @@
   right: -650px;
   top: -1050px;
   z-index: -2;
+  animation: appear 0.5s ease;
+  animation-fill-mode: forwards;
+  -webkit-animation: appear 0.5s ease;
+  -webkit-animation-fill-mode: forwards;
 }
 #background_box {
   user-select: none;
@@ -419,24 +432,40 @@
   right: 798px;
   top: 155px;
   color: rgb(0, 47, 167);
+  animation: appear 0.4s ease;
+  animation-fill-mode: forwards;
+  -webkit-animation: appear 0.4s ease;
+  -webkit-animation-fill-mode: forwards;
 }
 #background_text_02 {
   min-width: 360px;
   right: 410px;
   top: 155px;
   color: rgb(255, 255, 255);
+  animation: appear 0.6s ease;
+  animation-fill-mode: forwards;
+  -webkit-animation: appear 0.6s ease;
+  -webkit-animation-fill-mode: forwards;
 }
 #background_text_03 {
   min-width: 430px;
   right: 714px;
   top: 265px;
   color: rgb(0, 47, 167);
+  animation: appear 0.4s ease;
+  animation-fill-mode: forwards;
+  -webkit-animation: appear 0.4s ease;
+  -webkit-animation-fill-mode: forwards;
 }
 #background_text_04 {
   min-width: 281px;
   right: 400px;
   top: 265px;
   color: rgb(255, 255, 255);
+  animation: appear 0.6s ease;
+  animation-fill-mode: forwards;
+  -webkit-animation: appear 0.6s ease;
+  -webkit-animation-fill-mode: forwards;
 }
 #cursor {
   right: 350px;
