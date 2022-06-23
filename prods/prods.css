@@ -149,7 +149,6 @@
     background-color: rgb(0, 0, 0, 0);
     border: none;
   }
-
   100% {
     padding: 15px 45px;
     border-radius: 20px;
@@ -164,7 +163,6 @@
     background-color: rgb(0, 0, 0, 0);
     border: none;
   }
-
   100% {
     padding: 15px 45px;
     border-radius: 20px;
@@ -225,7 +223,6 @@
   0% {
     transform: translateX(-60px);
   }
-
   100% {
     transform: translateY(0px);
   }

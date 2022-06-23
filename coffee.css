@@ -72,7 +72,6 @@
   0% {
     transform: translateX(-60px);
   }
-
   100% {
     transform: translateY(0px);
   }

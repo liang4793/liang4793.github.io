@@ -1,3 +1,5 @@
+console.log("Welcome to Liang4793's Repository!")
+
 /* notice */
 let show_notice = "True";
 let notice_box = document.querySelector(".notice_box");
