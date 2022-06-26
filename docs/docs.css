@@ -78,10 +78,6 @@
   font-family: Microsoft YaHei, sans-serif;
   position: absolute;
   overflow: auto;
-  animation: appear 0.4s ease;
-  animation-fill-mode: forwards;
-  -webkit-animation: appear 0.4s ease;
-  -webkit-animation-fill-mode: forwards;
 }
 @keyframes appear {
   0% {
