@@ -13,6 +13,7 @@ if (show_notice == "True") {
 
     notice_box_button[1].addEventListener("click", () => {
         notice_box.style.display = "none";
+        console.log("notice closed by user")
     });
 }
 
