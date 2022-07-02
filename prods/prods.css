@@ -79,8 +79,6 @@
   color: rgb(0, 0, 0);
 }
 .section_box {
-  user-select: none;
-  -webkit-user-select: none;
   padding: 3px 10px;
   border-radius: 20px;
   background-color: rgb(150, 150, 150, 0.8);
@@ -91,8 +89,6 @@
   position: absolute;
 }
 .section_box2 {
-  user-select: none;
-  -webkit-user-select: none;
   padding: 3px 10px;
   border-radius: 20px;
   background-color: rgb(255, 204, 0);
