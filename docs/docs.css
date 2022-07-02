@@ -18,6 +18,7 @@
 }
 .section_title {
   position: absolute;
+  left: 30px;
   font-size: 36px;
   color: rgb(0, 47, 167);
   font-family: Microsoft YaHei, sans-serif;
@@ -28,9 +29,10 @@
 }
 .section_text {
   position: absolute;
-  font-family: Microsoft YaHei, sans-serif;
+  left: 35px;
   font-size: 24px;
   color: rgb(0, 0, 0);
+  font-family: Microsoft YaHei, sans-serif;
   animation: appear 0.6s ease;
   animation-fill-mode: forwards;
   -webkit-animation: appear 0.6s ease;
@@ -38,6 +40,7 @@
 }
 .navigation_text_title {
   position: absolute;
+  left: 40px;
   font-size: 36px;
   color: rgb(0, 47, 167);
   font-family: Microsoft YaHei, sans-serif;
@@ -52,6 +55,7 @@
 }
 .navigation_text_normal {
   position: absolute;
+  left: 35px;
   font-size: 24px;
   color: rgb(0, 0, 0);
   font-family: Microsoft YaHei, sans-serif;
@@ -106,7 +110,7 @@
   background-color: rgb(0, 47, 167);
   color: rgb(255, 255, 255);
 }
-@media (min-width: 0px) and (max-width:870px) {
+@media (min-width: 550px) and (max-width:870px) {
   #logo_box {
     user-select: none;
     -webkit-user-select: none;
@@ -175,5 +179,89 @@
   }
   #state_button {
     display: none;
+  }
+}
+/*for phone*/
+@media (min-width: 0px) and (max-width:550px) {
+  #logo_box {
+    user-select: none;
+    -webkit-user-select: none;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    left: 16px;
+    top: 22px;
+    z-index: 0;
+    background-color: rgb(255, 255, 255);
+  }
+  #logo_button {
+    user-select: none;
+    -webkit-user-select: none;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    left: 16px;
+    top: 22px;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .logo {
+    display: none;
+  }
+  #logo_pic {
+    display: block;
+    user-select: none;
+    -webkit-user-select: none;
+    position: absolute;
+    border: none;
+    left: 3px;
+    top: 3px;
+    z-index: 1;
+  }
+  #prods {
+    right: 174px;
+    top: 30px;
+  }
+  #prods_button {
+    right: 154px;
+    top: 25px;
+  }
+  #docs {
+    right: 49px;
+    top: 30px;
+  }
+  #docs_button {
+    right: 24px;
+    top: 25px;
+  }
+  #state {
+    display: none;
+  }
+  #state_circle {
+    display: none;
+  }
+  #state_circle_2 {
+    display: none;
+  }
+  #state_button {
+    display: none;
+  }
+  .section_title {
+    left: 10px;
+  }
+  .section_text {
+    left: 16px;
+  }
+  .navigation_text_title {
+    left: 16px;
+  }
+  .navigation_text_normal {
+    left: 10px;
   }
 }
