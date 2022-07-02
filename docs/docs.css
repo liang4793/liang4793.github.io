@@ -17,8 +17,6 @@
   position: absolute;
 }
 .section_title {
-  user-select: none;
-  -webkit-user-select: none;
   position: absolute;
   font-size: 36px;
   color: rgb(0, 47, 167);
@@ -29,8 +27,6 @@
   -webkit-animation-fill-mode: forwards;
 }
 .section_text {
-  user-select: none;
-  -webkit-user-select: none;
   position: absolute;
   font-family: Microsoft YaHei, sans-serif;
   font-size: 24px;
@@ -41,8 +37,6 @@
   -webkit-animation-fill-mode: forwards;
 }
 .navigation_text_title {
-  user-select: none;
-  -webkit-user-select: none;
   position: absolute;
   font-size: 36px;
   color: rgb(0, 47, 167);
@@ -57,8 +51,6 @@
   color: rgb(0, 47, 167, 0.8);
 }
 .navigation_text_normal {
-  user-select: none;
-  -webkit-user-select: none;
   position: absolute;
   font-size: 24px;
   color: rgb(0, 0, 0);

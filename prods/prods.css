@@ -17,8 +17,6 @@
   position: absolute;
 }
 .section_title {
-  user-select: none;
-  -webkit-user-select: none;
   position: absolute;
   font-size: 36px;
   color: rgb(0, 47, 167);
@@ -29,8 +27,6 @@
   -webkit-animation-fill-mode: forwards;
 }
 .scroll_box {
-  user-select: none;
-  -webkit-user-select: none;
   width: 96%;
   height: 382px;
   background-color: rgb(255, 255, 255);
@@ -38,8 +34,6 @@
   overflow: auto;
 }
 .information_card_large {
-  user-select: none;
-  -webkit-user-select: none;
   width: 540px;
   height: 350px;
   border-radius: 20px;
@@ -52,8 +46,6 @@
   -webkit-animation-fill-mode: forwards;
 }
 .information_card_middle {
-  user-select: none;
-  -webkit-user-select: none;
   width: 300px;
   height: 350px;
   border-radius: 20px;
@@ -74,8 +66,6 @@
   }
 }
 .card_title {
-  user-select: none;
-  -webkit-user-select: none;
   position: absolute;
   font-family: Microsoft YaHei, sans-serif;
   background: linear-gradient(to right, rgb(0, 47, 167), rgb(15, 190, 190));
@@ -84,8 +74,6 @@
   color: transparent;
 }
 .card_text {
-  user-select: none;
-  -webkit-user-select: none;
   position: absolute;
   font-family: Microsoft YaHei, sans-serif;
   color: rgb(0, 0, 0);

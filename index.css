@@ -1,6 +1,4 @@
 .notice_box {
-  user-select: none;
-  -webkit-user-select: none;
   border-style: solid;
   border-top-width: 5px;
   border-bottom-width: 5px;
@@ -115,8 +113,6 @@
   }
 }
 .title {
-  user-select: none;
-  -webkit-user-select: none;
   position: absolute;
   font-size: 46px;
   color: rgb(0, 47, 167);
@@ -124,8 +120,6 @@
   z-index: -1;
 }
 .text {
-  user-select: none;
-  -webkit-user-select: none;
   position: absolute;
   font-size: 26px;
   color: rgb(0, 0, 0);
