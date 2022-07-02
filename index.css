@@ -728,7 +728,7 @@
   #background_text_01 {
     min-width: 339px;
     left: 16px;
-    top: 90px;
+    top: 94px;
     color: rgb(255, 255, 255);
   }
   #background_text_02 {
@@ -740,18 +740,18 @@
   #background_text_03 {
     min-width: 430px;
     left: 16px;
-    top: 290px;
+    top: 286px;
     color: rgb(255, 255, 255);
   }
   #background_text_04 {
     min-width: 281px;
     left: 16px;
-    top: 390px;
+    top: 382px;
     color: rgb(255, 255, 255);
   }
   #cursor {
     left: 254px;
-    top: 346px;
+    top: 338px;
   }
   #title_ME {
     left: 20px;
