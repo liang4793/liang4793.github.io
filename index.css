@@ -353,9 +353,12 @@
   user-select: none;
   -webkit-user-select: none;
   position: relative;
+  margin-top: -57px;
+  margin-left: 10px;
   font-size: 20px;
   font-family: Microsoft YaHei, sans-serif;
   color: rgb(0, 0, 0, 0);
+  z-index: -1;
   -webkit-transition: color 0.5s;
   transition: color 0.5s;
 }
@@ -827,6 +830,10 @@
     top: 1830px;
   }
   .bottom_text {
+    margin-top: -54px;
     font-size: 17px;
+  }
+  .bottom_stuff:hover {
+    transform: translateX(-135px)
   }
 }
