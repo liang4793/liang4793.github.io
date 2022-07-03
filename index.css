@@ -196,9 +196,12 @@
   user-select: none;
   -webkit-user-select: none;
   position: absolute;
+  left: 0px;
+  top: 1655px;
   width: 100%;
   height: 80px;
   background-color: rgb(0, 47, 167);
+  z-index: -2;
 }
 .bottom_text {
   user-select: none;
@@ -755,70 +758,76 @@
   }
   #title_ME {
     left: 20px;
-    top: 682px;
+    top: 642px;
     min-width: 300px;
   }
   #text_ME {
     left: 22px;
-    top: 754px;
-    min-width: 525px;
+    top: 714px;
+    min-width: 368px;
   }
   #button_box_follow {
     left: 20px;
-    top: 900px;
+    top: 960px;
   }
   #button_box_chat {
-    left: 220px;
-    top: 900px;
+    left: 20px;
+    top: 1040px;
   }
   #pic_ME {
     display: none;
   }
   #title_software {
     right: 20px;
-    top: 1007px;
+    top: 1147px;
     min-width: 258px;
   }
   #text_software {
     right: 22px;
-    top: 1079px;
+    top: 1219px;
     text-align: right;
-    min-width: 455px;
+    min-width: 368px;
   }
   #text_icon_html {
     right: 280px;
-    top: 1234px;
+    top: 1402px;
   }
   #text_icon_css {
     right: 194px;
-    top: 1234px;
+    top: 1402px;
   }
   #text_icon_js {
     right: 108px;
-    top: 1234px;
+    top: 1402px;
   }
   #text_icon_python {
     right: 22px;
-    top: 1234px;
+    top: 1402px;
   }
   #pic_software {
     display: none;
   }
   #title_hardware {
     left: 20px;
-    top: 1332px;
+    top: 1500px;
     min-width: 276px;
   }
   #text_hardware {
     left: 22px;
-    top: 1404px;
-    min-width: 529px;
+    top: 1572px;
+    min-width: 368px;
   }
   #text_icon_raspi {
     left: 22px;
-    top: 1559px;
+    top: 1751px;
   }
   #pic_hardware {
     display: none;
+  }
+  .bottom {
+    top: 1830px;
+  }
+  .bottom_text {
+    font-size: 17px;
   }
 }
