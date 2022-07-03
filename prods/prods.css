@@ -1,3 +1,11 @@
+@keyframes appear {
+  0% {
+    transform: translateX(-60px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 .background_circle {
   user-select: none;
   -webkit-user-select: none;
@@ -58,14 +66,6 @@
   animation-fill-mode: forwards;
   -webkit-animation: appear 0.8s ease;
   -webkit-animation-fill-mode: forwards;
-}
-@keyframes appear {
-  0% {
-    transform: translateX(-60px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
 }
 .card_title {
   position: absolute;
