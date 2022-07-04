@@ -133,9 +133,11 @@
 .cursor {
   user-select: none;
   -webkit-user-select: none;
+  width: 42px;
+  height: 6px;
   position: absolute;
   font-size: 96px;
-  color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
   font-family: Microsoft YaHei, sans-serif;
   z-index: -1;
   animation: blink 1.12s steps(2, jump-none) infinite;
@@ -143,7 +145,7 @@
 }
 #cursor {
   right: 350px;
-  top: 240px;
+  top: 360px;
 }
 @keyframes blink {
   0%,100% {
@@ -222,7 +224,7 @@
   -webkit-user-select: none;
   width: 190px;
   height: 75px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0, 0);
   overflow: hidden;
   position: absolute;
   z-index: -1;
@@ -425,7 +427,7 @@
   }
   #cursor {
     right: 100px;
-    top: 240px;
+    top: 360px;
   }
   #button_box_follow {
     left: 260px;
@@ -556,7 +558,7 @@
   }
   #cursor {
     left: 304px;
-    top: 356px;
+    top: 475px;
   }
   #title_ME {
     left: 20px;
@@ -756,7 +758,7 @@
   }
   #cursor {
     left: 254px;
-    top: 338px;
+    top: 461px;
   }
   #title_ME {
     left: 20px;
