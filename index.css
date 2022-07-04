@@ -302,19 +302,19 @@
 }
 #text_icon_html {
   right: 518px;
-  top: 1234px;
+  top: 1225px;
 }
 #text_icon_css {
   right: 432px;
-  top: 1234px;
+  top: 1225px;
 }
 #text_icon_js {
   right: 346px;
-  top: 1234px;
+  top: 1225px;
 }
 #text_icon_python {
   right: 260px;
-  top: 1234px;
+  top: 1225px;
 }
 #pic_software {
   top: 1020px;
@@ -333,7 +333,7 @@
 }
 #text_icon_raspi {
   left: 260px;
-  top: 1559px;
+  top: 1550px;
 }
 #pic_hardware {
   top: 1345px;
@@ -345,7 +345,7 @@
   -webkit-user-select: none;
   position: absolute;
   left: 0px;
-  top: 1655px;
+  top: 1657px;
   width: 100%;
   height: 80px;
   background-color: rgb(0, 47, 167);
@@ -431,11 +431,11 @@
   }
   #button_box_follow {
     left: 260px;
-    top: 900px;
+    top: 891px;
   }
   #button_box_chat {
     left: 460px;
-    top: 900px;
+    top: 891px;
   }
 }
 @media (min-width: 550px) and (max-width:870px) {
@@ -572,11 +572,11 @@
   }
   #button_box_follow {
     left: 20px;
-    top: 900px;
+    top: 891px;
   }
   #button_box_chat {
     left: 220px;
-    top: 900px;
+    top: 891px;
   }
   #pic_ME {
     display: none;
@@ -594,19 +594,19 @@
   }
   #text_icon_html {
     right: 280px;
-    top: 1234px;
+    top: 1225px;
   }
   #text_icon_css {
     right: 194px;
-    top: 1234px;
+    top: 1225px;
   }
   #text_icon_js {
     right: 108px;
-    top: 1234px;
+    top: 1225px;
   }
   #text_icon_python {
     right: 22px;
-    top: 1234px;
+    top: 1225px;
   }
   #pic_software {
     display: none;
@@ -623,7 +623,7 @@
   }
   #text_icon_raspi {
     left: 22px;
-    top: 1559px;
+    top: 1550px;
   }
   #pic_hardware {
     display: none;
@@ -772,11 +772,11 @@
   }
   #button_box_follow {
     left: 20px;
-    top: 960px;
+    top: 951px;
   }
   #button_box_chat {
     left: 20px;
-    top: 1040px;
+    top: 1031px;
   }
   #pic_ME {
     display: none;
@@ -794,19 +794,19 @@
   }
   #text_icon_html {
     right: 280px;
-    top: 1402px;
+    top: 1393px;
   }
   #text_icon_css {
     right: 194px;
-    top: 1402px;
+    top: 1393px;
   }
   #text_icon_js {
     right: 108px;
-    top: 1402px;
+    top: 1393px;
   }
   #text_icon_python {
     right: 22px;
-    top: 1402px;
+    top: 1393px;
   }
   #pic_software {
     display: none;
@@ -823,13 +823,13 @@
   }
   #text_icon_raspi {
     left: 22px;
-    top: 1751px;
+    top: 1742px;
   }
   #pic_hardware {
     display: none;
   }
   .bottom {
-    top: 1840px;
+    top: 1849px;
   }
   .bottom_text {
     margin-top: -54px;
