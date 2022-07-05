@@ -15,7 +15,8 @@
 
 ## 笔记
 这个网站仍在开发和维护中  
-如果在本网站的使用或适配上遇到了任何问题，请留下issue或与我联系😸
+如果在本网站的使用或适配上遇到了任何问题，请留下issue或与我联系😸  
+🔗在 [Liang4793's Repository](https://liang4793.github.io/docs/project_docs/about_doc.html) 浏览该文章
 
 ## 介绍
 ### 主页

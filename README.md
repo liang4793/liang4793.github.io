@@ -15,7 +15,8 @@ Welcome! If you like it, please give me a star --->
 
 ## Notes
 This website is still under development and maintenance.  
-If there are any problems with the use or adaptation of this website, please leave issue or contact me.😸
+If there are any problems with the use or adaptation of this website, please leave issue or contact me.😸  
+🔗Browse articles on: [Liang4793's Repository](https://liang4793.github.io/docs/project_docs/about_doc.html)
 
 ## Introduction
 ### Main Page
