@@ -1,11 +1,11 @@
-console.log("Welcome to Liang4793's Repository!")
+console.log("Welcome to Liang4793's Repository!");
 
 /* notice */
 let show_notice = "True";
 let notice_box = document.querySelector(".notice_box");
 let notice_box_button = document.querySelectorAll(".notice_box_button");
 
-console.log('show_notice',show_notice)
+console.log('show_notice',show_notice);
 
 if (show_notice == "True") {
     notice_box.style.display = "block";
