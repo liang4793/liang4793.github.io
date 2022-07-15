@@ -2,7 +2,7 @@
   user-select: none;
   -webkit-user-select: none;
   position: absolute;
-  font-size: 50px;
+  font-size: 46px;
   color: rgb(0, 47, 167);
   animation: appear 0.4s ease;
   animation-fill-mode: forwards;
@@ -13,7 +13,7 @@
   user-select: none;
   -webkit-user-select: none;
   position: absolute;
-  font-size: 30px;
+  font-size: 26px;
   color: rgb(0, 0, 0);
   animation: appear 0.6s ease;
   animation-fill-mode: forwards;
