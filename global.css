@@ -35,7 +35,6 @@
   user-select: none;
   -webkit-user-select: none;
   position: absolute;
-  font-family: Microsoft YaHei, sans-serif;
   z-index: 1;
 }
 #logo_pic {
@@ -104,7 +103,6 @@
   -webkit-user-select: none;
   font-size: 22px;
   color: rgb(255, 255, 255);
-  font-family: Microsoft YaHei, sans-serif;
   position: absolute;
   z-index: -1;
 }

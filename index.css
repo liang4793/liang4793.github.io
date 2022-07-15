@@ -9,7 +9,6 @@
   min-height: 32px;
   font-size: 24px;
   text-align: center;
-  font-family: Microsoft YaHei, sans-serif;
   color: rgb(255, 255, 255);
   border-color: rgb(255, 204, 0);
   background-color: rgb(255, 204, 0);
@@ -87,7 +86,6 @@
   -webkit-user-select: none;
   position: absolute;
   font-size: 96px;
-  font-family: Microsoft YaHei, sans-serif;
   z-index: -1;
 }
 #background_text_01 {
@@ -138,7 +136,6 @@
   position: absolute;
   font-size: 96px;
   background-color: rgb(255, 255, 255);
-  font-family: Microsoft YaHei, sans-serif;
   z-index: -1;
   animation: blink 1.12s steps(2, jump-none) infinite;
   -webkit-animation: blink 1.12s steps(2, jump-none) infinite;
@@ -198,14 +195,12 @@
   position: absolute;
   font-size: 46px;
   color: rgb(0, 47, 167);
-  font-family: Microsoft YaHei, sans-serif;
   z-index: -1;
 }
 .text {
   position: absolute;
   font-size: 26px;
   color: rgb(0, 0, 0);
-  font-family: Microsoft YaHei, sans-serif;
   z-index: -1;
 }
 .text_icon {
@@ -248,7 +243,6 @@
   background-color: rgb(0, 47, 167);
   color: rgb(255, 255, 255);
   font-size: 26px;
-  font-family: Microsoft YaHei, sans-serif;
   border: none;
   position: absolute;
   cursor: pointer;
@@ -358,7 +352,6 @@
   margin-top: -57px;
   margin-left: 10px;
   font-size: 20px;
-  font-family: Microsoft YaHei, sans-serif;
   color: rgb(0, 0, 0, 0);
   z-index: -1;
   -webkit-transition: color 0.5s;
@@ -729,7 +722,6 @@
     -webkit-user-select: none;
     position: absolute;
     font-size: 78px;
-    font-family: Microsoft YaHei, sans-serif;
     z-index: -1;
   }
   #background_text_01 {
