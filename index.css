@@ -295,20 +295,20 @@
   min-width: 455px;
 }
 #text_icon_html {
-  right: 518px;
-  top: 1225px;
+  right: 844px;
+  top: 1080px;
 }
 #text_icon_css {
-  right: 432px;
-  top: 1225px;
+  right: 844px;
+  top: 1151px;
 }
 #text_icon_js {
-  right: 346px;
-  top: 1225px;
+  right: 764px;
+  top: 1080px;
 }
 #text_icon_python {
-  right: 260px;
-  top: 1225px;
+  right: 764px;
+  top: 1151px;
 }
 #pic_software {
   top: 1020px;
@@ -326,8 +326,8 @@
   min-width: 529px;
 }
 #text_icon_raspi {
-  left: 260px;
-  top: 1550px;
+  left: 838px;
+  top: 1405px;
 }
 #pic_hardware {
   top: 1345px;
@@ -429,6 +429,26 @@
   #button_box_chat {
     left: 460px;
     top: 891px;
+  }
+  #text_icon_html {
+    right: 518px;
+    top: 1225px;
+  }
+  #text_icon_css {
+    right: 432px;
+    top: 1225px;
+  }
+  #text_icon_js {
+    right: 346px;
+    top: 1225px;
+  }
+  #text_icon_python {
+    right: 260px;
+    top: 1225px;
+  }
+  #text_icon_raspi {
+    left: 260px;
+    top: 1550px;
   }
 }
 @media (min-width: 550px) and (max-width:870px) {
