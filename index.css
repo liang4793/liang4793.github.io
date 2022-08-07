@@ -1,12 +1,12 @@
 .notice_box {
   border-style: solid;
-  border-top-width: 5px;
-  border-bottom-width: 5px;
-  border-left-width: 40px;
-  border-right-width: 40px;
+  border-top-width: 4px;
+  border-bottom-width: 4px;
+  border-left-width: 39px;
+  border-right-width: 39px;
   border-radius: 10px;
-  min-width: 259px;
-  min-height: 32px;
+  min-width: 257px;
+  min-height: 30px;
   font-size: 24px;
   text-align: center;
   color: rgb(255, 255, 255);
