@@ -1,0 +1,395 @@
+.notice {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 14px;
+  width: 200px;
+  height: 83px;
+  padding: 4px;
+  border-radius: 14px;
+  font-size: 16px;
+  color: #fff;
+  background-image: linear-gradient(#111, #111), linear-gradient(45deg, #1CA4B4, #00E5B0);
+  background-clip: content-box, padding-box;
+  z-index: 999;
+}
+.noticeBtn {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 0px;
+  background-color: rgb(0, 0, 0, 0);
+  cursor: pointer;
+}
+@keyframes noticePop {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes noticeClose {
+  0% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+}
+#titleBox {
+  position: relative;
+  top: 240px;
+  right: 0px;
+  width: 100%;
+  font-size: 96px;
+  color: #fff;
+}
+#titleLight {
+  background: linear-gradient(45deg, #1CA4B4, #00E5B0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+#titleNote {
+  margin-top: 6px;
+  font-size: 20px;
+  color: #a1a1a1;
+}
+#down {
+  position: absolute;
+  margin-top: 248px;
+  left: calc(50% - 17px);
+  width: 34px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+}
+#down:hover {
+  margin-top: 254px;
+}
+.contentBox {
+  position: relative;
+  left: calc(50% - 700px);
+  width: 1400px;
+}
+#introBox {
+  margin-top: 536px;
+  height: 220px;
+}
+.me {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 200px;
+  border: none;
+  box-shadow: 0px 0px 6px #111;
+}
+#mA {
+  top: 0px;
+  left: 140px;
+  z-index: 2;
+}
+#mB {
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+@keyframes mAtoR {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-180px);
+  }
+}
+@keyframes mAbackL {
+  0% {
+    transform: translateX(-180px);
+  }
+  100% {
+    transform: translateX(-140px);
+  }
+}
+@keyframes mBtoL {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(180px);
+  }
+}
+@keyframes mBbackR {
+  0% {
+    transform: translateX(180px);
+  }
+  100% {
+    transform: translateX(140px);
+  }
+}
+@keyframes mAtoL {
+  0% {
+    transform: translateX(-140px);
+  }
+  100% {
+    transform: translateX(40px);
+  }
+}
+@keyframes mAbackR {
+  0% {
+    transform: translateX(40px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes mBtoR {
+  0% {
+    transform: translateX(140px);
+  }
+  100% {
+    transform: translateX(-40px);
+  }
+}
+@keyframes mBbackL {
+  0% {
+    transform: translateX(-40px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+#switchBtn {
+  position: absolute;
+  top: 178px;
+  left: 0px;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  font-size: 20px;
+  color: rgb(0, 0, 0, 0);
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  z-index: 3;
+  transition: all 0.14s linear;
+  -webkit-transition: all 0.14s linear;
+}
+#switchBtn:hover {
+  width: 108px;
+  color: #111;
+}
+#btnPic {
+  position: absolute;
+  top: 6px;
+  left:6px;
+  width: 30px;
+  rotate: 90deg;
+}
+#btnText {
+  position: absolute;
+  left: 42px;
+  top: 9px;
+}
+.contact {
+  position: absolute;
+  width: 150px;
+  height: 42px;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+}
+.contact:hover {
+  margin-left: 6px;
+}
+.contactText {
+  position: absolute;
+  top: 0px;
+  left: 50px;
+}
+#cA {
+  top: 0px;
+  left: 400px;
+}
+#cB {
+  top: 60px;
+  left: 430px;
+}
+#cC {
+  top: 120px;
+  left: 430px;
+}
+#cD {
+  top: 180px;
+  left: 400px;
+}
+#cE {
+  display: none;
+  top: 0px;
+  left: 400px;
+}
+#cF {
+  display: none;
+  top: 60px;
+  left: 430px;
+}
+#introText {
+  position: absolute;
+  top: -10px;
+  left: 650px;
+  font-size: 20px;
+  color: #fff;
+}
+#SWBox {
+  margin-top: 140px;
+  height: 464px;
+}
+#SWText {
+  position: absolute;
+  top: -10px;
+  left: 0px;
+  width: calc(100% - 650px);
+  font-size: 20px;
+  color: #fff;
+}
+#codeBox {
+  position: absolute;
+  top: 0px;
+  right: 8px;
+  width: 552px;
+  height: 384px;
+  border-radius: 14px;
+  padding-top: 56px;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-bottom: 14px;
+  background: #333;
+  box-shadow: 8px 8px 0px 0px #444;
+  font-family: 'Fira Code VF', monospace;
+  font-size: 16px;
+  color: #fff;
+}
+
+@media (max-width: 1500px) {
+  .contentBox {
+    left: 4%;
+    width: 92%;
+  }
+}
+@media (max-width: 1200px) {
+  #introBox{
+    height: 344px;
+  }
+  #cA {
+    top: 240px;
+    left: 15px;
+  }
+  #cB {
+    top: 240px;
+    left: 195px;
+  }
+  #cC {
+    top: 302px;
+    left: 15px;
+  }
+  #cD {
+    top: 302px;
+    left: 195px;
+  }
+  #cE {
+    top: 240px;
+    left: 15px;
+  }
+  #cF {
+    top: 240px;
+    left: 195px;
+  }
+  #introText {
+    top: -8px;
+    left: 430px;
+  }
+  #SWBox {
+    height: 580px;
+  }
+  #SWText {
+    width: calc(100% - 430px);
+  }
+  #codeBox {
+    width: 332px;
+    height: 500px;
+  }
+}
+@media (max-width: 900px) {
+  #titleBox {
+    font-size: 76px;
+  }
+}
+@media (max-width: 750px) {
+  .contentBox {
+    left: calc(50% - 180px);
+    width: 360px;
+  }
+  #introBox{
+    height: 640px;
+  }
+  #cA {
+    top: 240px;
+    left: 15px;
+  }
+  #cB {
+    top: 240px;
+    left: 195px;
+  }
+  #cC {
+    top: 302px;
+    left: 15px;
+  }
+  #cD {
+    top: 302px;
+    left: 195px;
+  }
+  #cE {
+    top: 240px;
+    left: 15px;
+  }
+  #cF {
+    top: 240px;
+    left: 195px;
+  }
+  #introText {
+    top: 360px;
+    left: 0px;
+    text-align: center;
+  }
+  #SWBox {
+    height: 800px;
+  }
+  #SWText {
+    top: 586px;
+    left: 0px;
+    width: 360px;
+    text-align: center;
+  }
+  #codeBox {
+    left: 0px;
+    width: 332px;
+    height: 500px;
+    box-shadow: 0px 8px 0px 0px #444;
+  }
+}
+@media (max-width: 700px) {
+  #titleBox {
+    font-size: 56px;
+  }
+}
+@media (max-width: 500px) {
+  #titleBox {
+    font-size: 46px;
+  }
+}
