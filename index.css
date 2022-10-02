@@ -393,3 +393,8 @@
     font-size: 46px;
   }
 }
+@media (max-width: 400px) {
+  #titleBox {
+    font-size: 42px;
+  }
+}
