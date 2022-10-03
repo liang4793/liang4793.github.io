@@ -9,6 +9,3 @@ Documents: [Docs_Liang4793's Repository](https://liang4793.github.io/docs.html)
 Any bug reports/suggestions/questions are welcome!  
 
 ![mainweb.jpg](https://s2.loli.net/2022/10/02/drmpwetqfs9EzSB.jpg)
-
-![logo_L_W_h60.png](https://s2.loli.net/2022/10/02/xlXOuqdVWgy5zRt.png#gh-dark-mode-only)
-![logo_L_B_h60.png](https://s2.loli.net/2022/10/02/Xs7HKk9uJDiVrEb.png#gh-light-mode-only)
