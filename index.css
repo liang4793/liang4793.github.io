@@ -188,7 +188,7 @@
   top: 6px;
   left:6px;
   width: 30px;
-  rotate: 90deg;
+  transform: rotate(90deg);
 }
 #btnText {
   position: absolute;
