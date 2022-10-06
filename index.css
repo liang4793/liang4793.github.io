@@ -275,6 +275,12 @@
   font-size: 16px;
   color: #fff;
 }
+#SWChartBox {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: calc(100% - 650px);
+}
 
 @media (max-width: 1500px) {
   .contentBox {
@@ -324,6 +330,9 @@
     width: 332px;
     height: 500px;
   }
+  #SWChartBox {
+    width: calc(100% - 430px);
+  }
 }
 @media (max-width: 900px) {
   #titleBox {
@@ -368,7 +377,7 @@
     text-align: center;
   }
   #SWBox {
-    height: 800px;
+    height: 1010px;
   }
   #SWText {
     top: 586px;
@@ -381,6 +390,9 @@
     width: 332px;
     height: 500px;
     box-shadow: 0px 8px 0px 0px #444;
+  }
+  #SWChartBox {
+    width: 360px;
   }
 }
 @media (max-width: 700px) {

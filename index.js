@@ -102,3 +102,25 @@ switchBtn.addEventListener("click", () => {
         }
     }
 })
+
+/* SWBox */
+let SWBox = document.getElementById("SWBox");
+let SWText = document.getElementById("SWText");
+let SWChartBox = document.getElementById("SWChartBox");
+const ResizeSWChartBox = () => {
+    var SWBoxW = SWBox.clientWidth;
+    if (SWBoxW > 360) {
+        var SWBoxH = SWBox.clientHeight;
+        var SWTextH = SWText.clientHeight;
+        var SWChartBoxH = SWBoxH - SWTextH - 10;
+        SWChartBox.style.height = SWChartBoxH + "px";
+    } else {
+        var SWChartBoxH = 200;
+        SWChartBox.style.height = SWChartBoxH + "px";
+    }
+};
+ResizeSWChartBox();
+window.onresize = function(){
+    ResizeSWChartBox();
+}
+
