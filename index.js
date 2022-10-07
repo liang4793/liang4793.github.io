@@ -119,10 +119,10 @@ const ResizeSWChartBox = () => {
         SWChartBox.style.height = SWChartBoxH + "px";
     }
 };
-window.onload = function(){
+window.onload = () => {
     ResizeSWChartBox();
 }
-window.onresize = function(){
+window.onresize = () => {
     ResizeSWChartBox();
 }
 
