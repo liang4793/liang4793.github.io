@@ -280,6 +280,71 @@
   bottom: 0px;
   left: 0px;
   width: calc(100% - 650px);
+  overflow: auto;
+  scrollbar-width: none;
+}
+#SWChartBox::-webkit-scrollbar {
+  display: none;
+}
+.SWChart {
+  position: absolute;
+  left: 0px;
+  width: calc(100% - 8px);
+  height: 58px;
+  padding: 4px;
+  border-radius: 14px;
+  font-size: 16px;
+  color: #fff;
+}
+.SWChartIcon {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 38px;
+}
+.SWChartText {
+  position: absolute;
+  top: 12px;
+  left: 62px;
+  font-size: 20px;
+}
+.SWChartNote {
+  position: absolute;
+  bottom: 12px;
+  left: 62px;
+  font-size: 16px;
+  color: #888;
+}
+.SWChartPercentage {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 32px;
+}
+#SWChartA {
+  top: 0px;
+  background-image: linear-gradient(#111, #111), linear-gradient(90deg, #1CA4B4 80%, #00E5B0);
+  background-clip: content-box, padding-box;
+}
+#SWChartB {
+  top: 86px;
+  background-image: linear-gradient(#111, #111), linear-gradient(90deg, #1CA4B4 60%, #00E5B0);
+  background-clip: content-box, padding-box;
+}
+#SWChartC {
+  top: 172px;
+  background-image: linear-gradient(#111, #111), linear-gradient(90deg, #1CA4B4 20%, #00E5B0);
+  background-clip: content-box, padding-box;
+}
+#SWChartD {
+  top: 258px;
+  background-image: linear-gradient(#111, #111), linear-gradient(90deg, #1CA4B4 80%, #00E5B0);
+  background-clip: content-box, padding-box;
+}
+#SWChartE {
+  top: 344px;
+  background-image: linear-gradient(#111, #111), linear-gradient(90deg, #1CA4B4 80%, #00E5B0);
+  background-clip: content-box, padding-box;
 }
 
 @media (max-width: 1500px) {
@@ -337,6 +402,13 @@
 @media (max-width: 900px) {
   #titleBox {
     font-size: 76px;
+  }
+  .SWChartText {
+    top: 20px;
+    font-size: 22px;
+  }
+  .SWChartNote {
+    display: none;
   }
 }
 @media (max-width: 750px) {
