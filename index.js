@@ -115,7 +115,7 @@ const ResizeSWChartBox = () => {
         var SWChartBoxH = SWBoxH - SWTextH - 10;
         SWChartBox.style.height = SWChartBoxH + "px";
     } else {
-        var SWChartBoxH = 200;
+        var SWChartBoxH = 210;
         SWChartBox.style.height = SWChartBoxH + "px";
     }
 };
