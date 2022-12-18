@@ -8,4 +8,4 @@ Documents: [Docs_Liang4793's Repository](https://liang4793.github.io/docs.html)
 
 Any bug reports/suggestions/questions are welcome!  
 
-![web.jpg](https://s2.loli.net/2022/10/28/aQHsTZLSeR1FcrN.jpg)
+![mainWebsite.jpg](https://s2.loli.net/2022/12/18/FeJrDMXbyR9Hcaz.jpg)
