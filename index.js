@@ -20,13 +20,13 @@ if (showNotice == "True") {
 }
 
 /* title */
-document.getElementById("titleLight").innerHTML = "Discover";
-setTimeout(() => { document.getElementById("titleLight").innerHTML = "Explore" }, 3000);
-setTimeout(() => { document.getElementById("titleLight").innerHTML = "Establish" }, 6000);
+document.getElementById("titleLight").innerHTML = "Interesting";
+setTimeout(() => { document.getElementById("titleLight").innerHTML = "Valuable" }, 3000);
+setTimeout(() => { document.getElementById("titleLight").innerHTML = "Satisfying" }, 6000);
 var changeTitle = function () {
-    document.getElementById("titleLight").innerHTML = "Discover";
-    setTimeout(() => { document.getElementById("titleLight").innerHTML = "Explore" }, 3000);
-    setTimeout(() => { document.getElementById("titleLight").innerHTML = "Establish" }, 6000);
+    document.getElementById("titleLight").innerHTML = "Interesting";
+    setTimeout(() => { document.getElementById("titleLight").innerHTML = "Valuable" }, 3000);
+    setTimeout(() => { document.getElementById("titleLight").innerHTML = "Satisfying" }, 6000);
 };
 setInterval(changeTitle, 9000);
 

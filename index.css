@@ -46,7 +46,7 @@
   top: 240px;
   right: 0px;
   width: 100%;
-  font-size: 96px;
+  font-size: 90px;
   color: #fff;
 }
 #titleLight {
@@ -401,7 +401,7 @@
 }
 @media (max-width: 900px) {
   #titleBox {
-    font-size: 76px;
+    font-size: 70px;
   }
   .SWChartText {
     top: 20px;
@@ -469,16 +469,16 @@
 }
 @media (max-width: 700px) {
   #titleBox {
-    font-size: 56px;
+    font-size: 50px;
   }
 }
 @media (max-width: 500px) {
   #titleBox {
-    font-size: 46px;
+    font-size: 40px;
   }
 }
 @media (max-width: 400px) {
   #titleBox {
-    font-size: 42px;
+    font-size: 36px;
   }
 }
