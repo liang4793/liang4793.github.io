@@ -43,7 +43,7 @@
 }
 #titleBox {
   position: relative;
-  top: 240px;
+  top: 250px;
   right: 0px;
   width: 100%;
   font-size: 84px;
@@ -62,7 +62,7 @@
 }
 #down {
   position: absolute;
-  margin-top: 248px;
+  margin-top: 258px;
   left: calc(50% - 17px);
   width: 34px;
   cursor: pointer;
@@ -70,7 +70,7 @@
   -webkit-transition: all 0.2s linear;
 }
 #down:hover {
-  margin-top: 254px;
+  margin-top: 264px;
 }
 .contentBox {
   position: relative;
@@ -78,7 +78,7 @@
   width: 1400px;
 }
 #introBox {
-  margin-top: 536px;
+  margin-top: 546px;
   height: 220px;
 }
 .me {
