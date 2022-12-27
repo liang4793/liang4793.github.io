@@ -51,10 +51,10 @@ switchBtn.addEventListener("click", () => {
         mA.style.animation = "mAtoR 0.2s ease forwards";
         mB.style.animation = "mBtoL 0.2s ease forwards";
 
-        cA.style.animation = "leftClose 0.2s ease forwards";
-        cB.style.animation = "leftClose 0.2s ease forwards";
-        cC.style.animation = "leftClose 0.2s ease forwards";
-        cD.style.animation = "leftClose 0.2s ease forwards";
+        cA.style.animation = "rightClose 0.2s ease forwards";
+        cB.style.animation = "rightClose 0.2s ease forwards";
+        cC.style.animation = "rightClose 0.2s ease forwards";
+        cD.style.animation = "rightClose 0.2s ease forwards";
         setTimeout(() => {
             mA.style.zIndex = "1";
             mB.style.zIndex = "2";
@@ -78,8 +78,8 @@ switchBtn.addEventListener("click", () => {
             mA.style.animation = "mAtoL 0.2s ease forwards";
             mB.style.animation = "mBtoR 0.2s ease forwards";
 
-            cE.style.animation = "leftClose 0.2s ease forwards";
-            cF.style.animation = "leftClose 0.2s ease forwards";
+            cE.style.animation = "rightClose 0.2s ease forwards";
+            cF.style.animation = "rightClose 0.2s ease forwards";
             setTimeout(() => {
                 mA.style.zIndex = "2";
                 mB.style.zIndex = "1";
