@@ -498,6 +498,10 @@
   }
 }
 @media (max-width: 500px) {
+  .notice {
+    bottom: 4px;
+    right: 4px;
+  }
   #titleBox {
     font-size: 36px;
   }
