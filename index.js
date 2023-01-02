@@ -21,12 +21,12 @@ if (showNotice == "True") {
 
 /* title */
 document.getElementById("titleLight").innerHTML = "Interesting";
-setTimeout(() => { document.getElementById("titleLight").innerHTML = "Valuable" }, 3000);
-setTimeout(() => { document.getElementById("titleLight").innerHTML = "Satisfying" }, 6000);
+setTimeout(() => { document.getElementById("titleLight").innerHTML = "Valuable"; }, 3000);
+setTimeout(() => { document.getElementById("titleLight").innerHTML = "Satisfying"; }, 6000);
 let changeTitle = function () {
     document.getElementById("titleLight").innerHTML = "Interesting";
-    setTimeout(() => { document.getElementById("titleLight").innerHTML = "Valuable" }, 3000);
-    setTimeout(() => { document.getElementById("titleLight").innerHTML = "Satisfying" }, 6000);
+    setTimeout(() => { document.getElementById("titleLight").innerHTML = "Valuable"; }, 3000);
+    setTimeout(() => { document.getElementById("titleLight").innerHTML = "Satisfying"; }, 6000);
 };
 setInterval(changeTitle, 9000);
 
@@ -137,7 +137,7 @@ SWChartBoxIn.addEventListener('scroll', () => {
         lowerMask.style.animation = "disappear 0.1s ease forwards";
         setTimeout(() => {
             lowerMask.style.display = "none";
-        }, 100)
+        }, 100);
     } else {
         lowerMask.style.display = "block";
         lowerMask.style.animation = "appear 0.1s ease forwards";
@@ -147,9 +147,9 @@ SWChartBoxIn.addEventListener('scroll', () => {
         upperMask.style.animation = "disappear 0.1s ease forwards";
         setTimeout(() => {
             upperMask.style.display = "none";
-        }, 100)
+        }, 100);
     } else {
         upperMask.style.display = "block";
         upperMask.style.animation = "appear 0.1s ease forwards";
     };
-})
+});
