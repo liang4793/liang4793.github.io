@@ -280,10 +280,35 @@
   bottom: 0px;
   left: 0px;
   width: calc(100% - 650px);
+  overflow: none;
+}
+.boxMask {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 10px;
+  z-index: 99;
+}
+#upperMask {
+  display: none;
+  top: 0px;
+  background-image: linear-gradient(#111, rgb(0, 0, 0, 0));
+}
+#lowerMask {
+  display: block;
+  bottom: 0px;
+  background-image: linear-gradient(rgb(0, 0, 0, 0), #111);
+}
+#SWChartBoxIn {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
   overflow: auto;
   scrollbar-width: none;
 }
-#SWChartBox::-webkit-scrollbar {
+#SWChartBoxIn::-webkit-scrollbar {
   display: none;
 }
 .SWChart {

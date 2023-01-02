@@ -17,19 +17,18 @@ if (showNotice == "True") {
         }, 400);
         console.log("notice closed by user");
     });
-}
+};
 
 /* title */
 document.getElementById("titleLight").innerHTML = "Interesting";
 setTimeout(() => { document.getElementById("titleLight").innerHTML = "Valuable" }, 3000);
 setTimeout(() => { document.getElementById("titleLight").innerHTML = "Satisfying" }, 6000);
-var changeTitle = function () {
+let changeTitle = function () {
     document.getElementById("titleLight").innerHTML = "Interesting";
     setTimeout(() => { document.getElementById("titleLight").innerHTML = "Valuable" }, 3000);
     setTimeout(() => { document.getElementById("titleLight").innerHTML = "Satisfying" }, 6000);
 };
 setInterval(changeTitle, 9000);
-
 
 /* introBox */
 let switchBtn = document.getElementById("switchBtn");
@@ -99,15 +98,15 @@ switchBtn.addEventListener("click", () => {
             }, 200);
         } else {
             console.log("switchState => Error");
-        }
-    }
-})
+        };
+    };
+});
 
 /* SWBox */
 let SWBox = document.getElementById("SWBox");
 let SWText = document.getElementById("SWText");
 let SWChartBox = document.getElementById("SWChartBox");
-const ResizeSWChartBox = () => {
+let ResizeSWChartBox = () => {
     var SWBoxW = SWBox.clientWidth;
     if (SWBoxW > 360) {
         var SWBoxH = SWBox.clientHeight;
@@ -117,12 +116,40 @@ const ResizeSWChartBox = () => {
     } else {
         var SWChartBoxH = 210;
         SWChartBox.style.height = SWChartBoxH + "px";
-    }
+    };
 };
 window.onload = () => {
     ResizeSWChartBox();
-}
+};
 window.onresize = () => {
     ResizeSWChartBox();
-}
+};
 
+let SWChartBoxIn = document.getElementById('SWChartBoxIn');
+let upperMask = document.getElementById('upperMask');
+let lowerMask = document.getElementById('lowerMask');
+SWChartBoxIn.addEventListener('scroll', () => {
+    let clientHeight = SWChartBoxIn.clientHeight;
+    let scrollTop = SWChartBoxIn.scrollTop;
+    let scrollHeight = SWChartBoxIn.scrollHeight;
+
+    if (clientHeight + scrollTop == scrollHeight) {
+        lowerMask.style.animation = "disappear 0.1s ease forwards";
+        setTimeout(() => {
+            lowerMask.style.display = "none";
+        }, 100)
+    } else {
+        lowerMask.style.display = "block";
+        lowerMask.style.animation = "appear 0.1s ease forwards";
+    };
+
+    if (scrollTop == 0) {
+        upperMask.style.animation = "disappear 0.1s ease forwards";
+        setTimeout(() => {
+            upperMask.style.display = "none";
+        }, 100)
+    } else {
+        upperMask.style.display = "block";
+        upperMask.style.animation = "appear 0.1s ease forwards";
+    };
+})
