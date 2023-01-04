@@ -348,27 +348,27 @@
 }
 #SWChartA {
   top: 0px;
-  background-image: linear-gradient(#111, #111), linear-gradient(90deg, #1CA4B4 80%, #00E5B0);
+  background-image: linear-gradient(#111, #111), linear-gradient(90deg, #1CA4B4 20%, #00E5B0);
   background-clip: content-box, padding-box;
 }
 #SWChartB {
   top: 86px;
-  background-image: linear-gradient(#111, #111), linear-gradient(90deg, #1CA4B4 60%, #00E5B0);
+  background-image: linear-gradient(#111, #111), linear-gradient(90deg, #1CA4B4 40%, #00E5B0);
   background-clip: content-box, padding-box;
 }
 #SWChartC {
   top: 172px;
-  background-image: linear-gradient(#111, #111), linear-gradient(90deg, #1CA4B4 20%, #00E5B0);
+  background-image: linear-gradient(#111, #111), linear-gradient(90deg, #1CA4B4 80%, #00E5B0);
   background-clip: content-box, padding-box;
 }
 #SWChartD {
   top: 258px;
-  background-image: linear-gradient(#111, #111), linear-gradient(90deg, #1CA4B4 80%, #00E5B0);
+  background-image: linear-gradient(#111, #111), linear-gradient(90deg, #1CA4B4 20%, #00E5B0);
   background-clip: content-box, padding-box;
 }
 #SWChartE {
   top: 344px;
-  background-image: linear-gradient(#111, #111), linear-gradient(90deg, #1CA4B4 80%, #00E5B0);
+  background-image: linear-gradient(#111, #111), linear-gradient(90deg, #1CA4B4 20%, #00E5B0);
   background-clip: content-box, padding-box;
 }
 
