@@ -1,206 +1,63 @@
+<!--¯\_(ツ)_/¯ Why are you looking at my HTML?-->
 <!DOCTYPE html>
 <html lang="en" style="width: 100%; height: 100%;">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Liang4793's Repository: Let's build something here...">
+  <meta name="description" content="Liáng4793's Repository: Let's build something here...">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="https://fonts.googlefonts.cn/css?family=Roboto">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css">
   <link rel="stylesheet" type="text/css" href="global.css">
   <link rel="stylesheet" type="text/css" href="index.css">
   <link rel="shortcut icon" href="image/logoB.svg">
-  <title>Liang4793's Repository</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital@0;1&display=swap');
+  </style>
+  <title>Liáng4793's Repository</title>
 </head>
 
-<body
-  style="background-color: #111; width: 100%; height: 100%; margin: auto; font-family: 'Roboto', sans-serif; min-width: 360px;">
-  <!--notice-->
-  <div class="notice">
-    <button class="noticeBtn" alt="more" style="position: relative; margin-left: 16px; margin-top:10px">
-      <img src="image/logoW.svg" alt="more" width="20px" style="margin-left: -6px; margin-top: 1px">
-    </button>
-    <button class="noticeBtn" alt="close" style="position: absolute; top: 14px; right: 20px">
-      <img src="image/close.svg" alt="close" width="14px" style="margin-left: -3px; margin-top: 2px">
-    </button>
-    <div style="margin-left: 16px; margin-top: 6px">
-      This website </br>
-      is under construction
+<body style="background-color:#111; width:100%; height:100%; margin:auto; min-width:360px; font-family: 'JetBrains Mono', monospace; cursor: crosshair;">
+
+  <div id="cursor">
+    <img src="image/cursor/TL.svg" alt="cursor" height="38%" style="position:absolute; top:0px; left:0px;">
+    <img src="image/cursor/TR.svg" alt="cursor" height="38%" style="position:absolute; top:0px; right:0px;">
+    <img src="image/cursor/BL.svg" alt="cursor" height="38%" style="position:absolute; bottom:0px; left:0px;">
+    <img src="image/cursor/BR.svg" alt="cursor" height="38%" style="position:absolute; bottom:0px; right:0px;">
+  </div>
+
+  <div id="shade">
+    <div id="JSneeded">
+      <img src="image/JSneeded.svg" alt="JSneeded" width="100%" style="margin-bottom: 16px;"></img>
+      <div id="shadeText">[... JS disabled ...]</div>
     </div>
   </div>
-  <!--nav-->
-  <div id="navBox">
-    <a href="https://liang4793.github.io/">
-      <img src="image/logo.svg" alt="home" id="logoBtn">
-    </a>
-    <div class="nav">
-      <button class="navBtn" alt="products" onclick="window.location.href='prods.html'">Prods</button>
-      <button class="navBtn" alt="documents" onclick="window.location.href='docs.html'">Docs</button>
-      <a href="https://www.githubstatus.com/" target="_Blank">
-        <button class="navBtn" alt="state">State
-          <div id="light"></div>
-        </button>
+
+  <div id="container">
+    <div id="homeContainer">
+      <div id="iconBox">
+        <a href="https://liang4793.github.io/">
+          <img class="icon" id="L" src="image/iconL.svg" alt="logo">
+        </a>
+        <img class="icon" id="X1" src="image/iconX.svg" alt="X">
+        <img class="icon" id="X2" src="image/iconX.svg" alt="X">
+        <img class="icon" id="X3" src="image/iconX.svg" alt="X">
+        <img class="icon" id="X4" src="image/iconX.svg" alt="X">
+        <img class="icon" id="X5" src="image/iconX.svg" alt="X">
+        <img class="icon" id="X6" src="image/iconX.svg" alt="X">
+        <img class="icon" id="X7" src="image/iconX.svg" alt="X">
+        <img class="icon" id="X8" src="image/iconX.svg" alt="X">
+        <img class="icon" id="X9" src="image/iconX.svg" alt="X">
+        <img class="icon" id="X10" src="image/iconX.svg" alt="X">
+      </div>
+      <a href="https://liang4793.github.io/">
+        <img id="textL" src="image/textL.svg" alt="liang's repo">
       </a>
-    </div>
-  </div>
-  <!--page-->
-  <div align="center" id="titleBox">
-    <b>Let's Build Some</br>
-      <span id="titleLight">Interesting</span> Things Here</b>
-    <div id="titleNote">@Liang4793(liang4793) My pride and regret</div>
-  </div>
-
-  <img src="image/index/down.svg" alt="down" id="down">
-
-  <div class="contentBox" id="introBox">
-    <!--partA-->
-    <img src="image/index/meA.jpg" alt="me" title="🟦Zima Blue" class="me" id="mA">
-    <img src="image/index/meB.jpg" alt="me" title="❤️ナナチ" class="me" id="mB">
-    <button id="switchBtn" alt="switch">
-      <img src="image/index/switch.svg" alt="switch" id="btnPic">
-      <span id="btnText">switch</span>
-    </button>
-    <a href="https://github.com/liang4793" target="_Blank">
-      <div class="contact" id="cA">
-        <img src="image/index/github.svg" alt="github" height="42px">
-        <div class="contactText">
-          Github</br>
-          <span style="position: absolute; top: 22px; font-size:16px;">@Liang4793</span>
-        </div>
+      <div id="homeText">
+        Redefine() The World</br>
+        //With [Imagination]...
       </div>
-    </a>
-    <a href="https://stackoverflow.com/users/18446501/liang4793" target="_Blank">
-      <div class="contact" id="cB">
-        <img src="image/index/stackoverflow.svg" alt="stackoverflow" height="42px">
-        <div class="contactText">
-          Stack...</br>
-          <span style="position: absolute; top: 22px; font-size:16px;">@Liang4793</span>
-        </div>
-      </div>
-    </a>
-    <a href="https://twitter.com/liang4793" target="_Blank">
-      <div class="contact" id="cC">
-        <img src="image/index/twitter.svg" alt="twitter" height="42px">
-        <div class="contactText">
-          Twitter</br>
-          <span style="position: absolute; top: 22px; font-size:16px;">@Liang4793</span>
-        </div>
-      </div>
-    </a>
-    <a href="mailto:3500506060@qq.com">
-      <div class="contact" id="cD">
-        <img src="image/index/mail.svg" alt="mail" height="42px">
-        <div class="contactText">
-          E-mail</br>
-          <span style="position: absolute; top: 22px; font-size:16px;">@Liang4793</span>
-        </div>
-      </div>
-    </a>
-    <div class="contact" id="cE">
-      <img src="image/index/wechat.svg" alt="wechat" height="42px">
-      <div class="contactText">
-        wechat</br>
-        <span style="position: absolute; top: 22px; font-size:16px;">@Liang4793</span>
-      </div>
-    </div>
-    <div class="contact" id="cF">
-      <img src="image/index/qq.svg" alt="qq" height="42px">
-      <div class="contactText">
-        QQ</br>
-        <span style="position: absolute; top: 22px; font-size:16px;">@Liang4793</span>
-      </div>
-    </div>
-    <!--partB-->
-    <div id="introText">
-      <span style="font-size: 46px; line-height: 64px;">Hi there_</span></br>
-      I'm Liang4793(liang4793) from Shanghai, a student, an imperfect perfectionist.</br>
-      I have great interest in modern technology and want to make some satisfying cool things.</br>
-      I keep learning and trying to use my limited strength to realize my ideas.</br>
-      Also, feel free to contact me! :D
     </div>
   </div>
 
-  <div class="contentBox" id="SWBox">
-    <!--partA-->
-    <div id="SWText">
-      <span style="font-size: 46px; line-height: 64px;">Software_</span></br>
-      My Software skills...</br>
-      Favorite editor: Visual Studio Code (VSCode).</br>
-      Intereted in: Interface design, Front end development and network security...</br>
-      Skills learned &nbsp &nbsp<img src="image/index/arrowD.svg" alt="down" width="20px"
-        style="position: absolute; margin-top: 2px; margin-left: -18px;">
-    </div>
-    <!--partB-->
-    <div id="codeBox">
-      <img src="image/index/codeBox.svg" alt="codeBox" width="20px" style="position: absolute; top: 10px; left: 14px">
-      <div style="position: absolute; top: 10px; left: 44px; font-size: 16px; color: #fff;">
-        Terminal(Powershell)</br><span style="color: #888">-> new project - demo</span>
-      </div>
-      <img src="image/index/more.svg" alt="more" title="Show only" width="20px"
-        style="position: absolute; top: 10px; right: 14px">
-      <span style="color: #85e89d">></span> <span style="color: #f9f1a5">git</span> clone
-      https://github.com/liang4793/demo</br>
-      Cloning into 'demo'...</br>
-      remote: Enumerating objects: 3, done.</br>
-      remote: Counting objects: 100% (3/3), done.</br>
-      remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0</br>
-      Receiving objects: 100% (3/3), done.</br></br>
-      <span style="color: #85e89d">></span> <span style="color: #f9f1a5">cd</span> demo</br></br>
-      <span style="color: #85e89d">\demo></span> <span style="color: #f9f1a5">echo</span> hello world
-      >hello.txt</br></br>
-      <span style="color: #85e89d">\demo></span> <span style="color: #f9f1a5">git</span> add .</br></br>
-      <span style="color: #85e89d">\demo></span> <span style="color: #f9f1a5">git</span> commit -m <span
-        style="color: #79b8ff">"update"</span></br>
-      1 file changed, 0 insertions(+), 0 deletions(-)</br>
-      create mode 100644 hello.txt</br></br>
-      <span style="color: #85e89d">\demo></span> <span style="color: #f9f1a5">git</span> push</br>
-      ...
-    </div>
-    <!--partC-->
-    <div id="SWChartBox">
-      <div class="boxMask" id="upperMask"></div>
-      <div id="SWChartBoxIn">
-        <div class="SWChart" id="SWChartA">
-          <img src="image/index/icons/python.svg" alt="python" class="SWChartIcon">
-          <div class="SWChartText">Python</div>
-          <div class="SWChartNote">Projects: <a style="color: #1CA4B4"
-              href="https://github.com/liang4793/Emergency-Brakes" target="_black">Emergency-Brakes</a>...</div>
-          <div class="SWChartPercentage">80%</div>
-        </div>
-        <div class="SWChart" id="SWChartB">
-          <img src="image/index/icons/js.svg" alt="javascript" class="SWChartIcon">
-          <div class="SWChartText">JavaScript</div>
-          <div class="SWChartNote">Projects: <a style="color: #1CA4B4"
-              href="https://github.com/liang4793/liang4793.github.io" target="_black">This website</a>...</div>
-          <div class="SWChartPercentage">60%</div>
-        </div>
-        <div class="SWChart" id="SWChartC">
-          <img src="image/index/icons/golang.svg" alt="golang" class="SWChartIcon">
-          <div class="SWChartText">Golang</div>
-          <div class="SWChartNote">Projects: <a style="color: #1CA4B4"
-              href="https://github.com/liang4793/liang4793.github.io" target="_black">This website</a>...</div>
-          <div class="SWChartPercentage">20%</div>
-        </div>
-        <div class="SWChart" id="SWChartD">
-          <img src="image/index/icons/css3.svg" alt="css3" class="SWChartIcon">
-          <div class="SWChartText">Css3</div>
-          <div class="SWChartNote">Projects: <a style="color: #1CA4B4"
-              href="https://github.com/liang4793/liang4793.github.io" target="_black">This website</a>...</div>
-          <div class="SWChartPercentage">80%</div>
-        </div>
-        <div class="SWChart" id="SWChartE">
-          <img src="image/index/icons/html.svg" alt="html5" class="SWChartIcon">
-          <div class="SWChartText">HTML5</div>
-          <div class="SWChartNote">Projects: <a style="color: #1CA4B4"
-              href="https://github.com/liang4793/liang4793.github.io" target="_black">This website</a>...</div>
-          <div class="SWChartPercentage">80%</div>
-        </div>
-      </div>
-      <div class="boxMask" id="lowerMask"></div>
-    </div>
-  </div>
-
-  <div style="position: absolute; top: 4000px; color: white;">END---------------------END</div>
   <script type="text/javascript" src="index.js"></script>
 </body>
 

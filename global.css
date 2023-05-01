@@ -1,130 +1,44 @@
-@keyframes rightPop {
-  0% {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
-@keyframes rightClose {
-  0% {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-}
-@keyframes leftPop {
-  0% {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
-@keyframes leftClose {
-  0% {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-}
+/*¯\_(ツ)_/¯ Why are you looking at my CSS?*/
 @keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 @keyframes disappear {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
-#navBox {
-  position: relative;
-  top: 22px;
-  left: calc(50% - 700px);
-  width: 1400px;
-  height: 38px;
+body::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
 }
-#logoBtn {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 38px;
-  height: 38px;
-  border-radius: 10px;
-  border: none;
-  background-color: #fff;
-  cursor: pointer;
+body::-webkit-scrollbar-thumb {
+    background-image: repeating-linear-gradient(45deg, white 0, white 12px, #111 0, #111 24px);
+    background-clip: content-box;
 }
-.nav {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 250px;
-  background-color: rgb(0, 0, 0, 0);
+#cursor {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    z-index: 999;
+    pointer-events: none;
+    user-select: none;
+    animation: appear 0.2s ease-in backwards;
 }
-.navBtn {
-  position: relative;
-  font-size: 20px;
-  width: 80px;
-  height: 38px;
-  border-radius: 10px;
-  border: none;
-  background-color: rgb(0, 0, 0, 0);
-  color: #fff;
-  cursor: pointer;
-}
-#light {
-  position: absolute;
-  top: 14px;
-  right: 0px;
-  width: 4px;
-  height: 4px;
-  border-radius: 3px;
-  border: solid;
-  border-width: 3px;
-  border-color: #00E5B0;
-  background-color: rgb(0, 0, 0, 0);
-  animation: blink 1.2s infinite;
-  -webkit-animation: blink 1.2s infinite;
-}
-@keyframes blink {
-  0%,100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes blink {
-  0%,100% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-  }
-}
-
-@media (max-width: 1500px) {
-  #navBox {
-    left: 4%;
-    width: 92%;
-  }
+@keyframes cursorLoading {
+    0%, 100%{
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
 }
