@@ -20,7 +20,6 @@ window.onload = function () {
             JSnotice.style.display = "none";
             shade.style.display = "none";
             container.style.display = "block";
-            isLoading = false;
             cursor.style.animation = "none"
         }, 400);
     }, 1000);
