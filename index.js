@@ -6,6 +6,22 @@ console.log("[Welcome to Liáng4793's Repository(Liáng's Repo)]");
 //cursor
 let cursor = document.getElementById("cursor");
 cursor.style.animation = "cursorLoading 1.4s infinite";
+let mx = 0, my = 0, cx = 0, cy = 0, i = 0;
+window.addEventListener('mousemove', (m) => {
+    mx = m.x - cursor.offsetLeft - cursor.clientWidth / 2;
+    my = m.y - cursor.offsetTop - cursor.clientHeight / 2;
+    i = 0;
+});
+function moveCursor() {
+    if (i < 20) {
+        cx += mx / 20;
+        cy += my / 20;
+    }
+    cursor.style.left = cx + "px";
+    cursor.style.top = cy + "px";
+    i++;
+};
+setInterval(moveCursor, 1);
 
 //page
 let container = document.getElementById("container");
