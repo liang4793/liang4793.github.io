@@ -11,6 +11,9 @@ window.addEventListener('mousemove', (m) => {
     mx = m.x - cursor.offsetLeft - cursor.clientWidth / 2;
     my = m.y - cursor.offsetTop - cursor.clientHeight / 2;
     i = 0;
+    if (cursor.style.display != "block") {
+        cursor.style.display = "block";
+    };
 });
 function moveCursor() {
     if (i < 20) {

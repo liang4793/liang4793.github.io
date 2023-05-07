@@ -24,6 +24,7 @@ body::-webkit-scrollbar-thumb {
     background-clip: content-box;
 }
 #cursor {
+    display: none;
     position: fixed;
     bottom: 10px;
     right: 10px;
