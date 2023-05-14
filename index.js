@@ -1,4 +1,5 @@
 //¯\_(ツ)_/¯ Why are you looking at my code? 
+let body = document.body;
 
 //welcome
 console.log("[Welcome to Liáng4793's Repository(Liáng's Repo)]");
@@ -7,13 +8,20 @@ console.log("[Welcome to Liáng4793's Repository(Liáng's Repo)]");
 let cursor = document.getElementById("cursor");
 cursor.style.animation = "cursorLoading 1.4s infinite";
 let mx = 0, my = 0, cx = 0, cy = 0, i = 0;
-window.addEventListener('mousemove', (m) => {
+body.addEventListener("mousemove", (m) => {
     mx = m.x - cursor.offsetLeft - cursor.clientWidth / 2;
     my = m.y - cursor.offsetTop - cursor.clientHeight / 2;
     i = 0;
     if (cursor.style.display != "block") {
         cursor.style.display = "block";
+        cursor.style.animation = "cursorAppear 0.2s ease-in backwards";
     };
+});
+body.addEventListener("mouseleave", () => {
+    cursor.style.animation = "cursorDisappear 0.2s ease-out forwards";
+    setTimeout(() => {
+        cursor.style.display = "none";
+    }, 200);
 });
 function moveCursor() {
     if (i < 20) {

@@ -36,10 +36,29 @@ body::-webkit-scrollbar-thumb {
     animation: appear 0.2s ease-in backwards;
 }
 @keyframes cursorLoading {
-    0%, 100%{
+    0%, 100% {
         transform: scale(1);
     }
     50% {
         transform: scale(1.2);
+    }
+}
+@keyframes cursorAppear {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    80% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+@keyframes cursorDisappear {
+    20% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(0.8);
+        opacity: 0;
     }
 }
