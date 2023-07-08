@@ -29,7 +29,6 @@
     background-color: #111;
     z-index: 1;
 }
-
 #container {
     display: none;
     position: absolute;
@@ -39,14 +38,13 @@
     width: 100%;
     height: 4000px;
     color: white;
+    min-width: 420px;
 }
 #homeContainer{
     position: relative;
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 740px;
-    overflow: hidden;
 }
 @keyframes fromL {
     0% {
@@ -56,6 +54,16 @@
     100% {
         opacity: 1;
         margin-left: 0;
+    }
+}
+@keyframes fromR {
+    0% {
+        opacity: 0;
+        margin-right: -2px;
+    }
+    100% {
+        opacity: 1;
+        margin-right: 0;
     }
 }
 #iconBox {
@@ -122,12 +130,19 @@
     animation: fromL 0.2s ease-in backwards;
     animation-delay: 0.2s;
 }
+#siteInfo {
+    position: absolute;
+    top: 20px;
+    right:20px;
+    font-size: 16px;
+    line-height: 1.1;
+    text-align-last: justify;
+    animation: fromR 0.2s ease-in backwards;
+}
 #homeText {
     position: absolute;
     top: 600px;
     left: 20px;
-    width: 690px;
-    height: 120px;
     color: white;
     font-size: 50px;
     line-height: 1.2;
@@ -135,9 +150,20 @@
     animation-delay: 0.2s;
 }
 
+@media (max-width: 440px) {
+    #container {
+        left: 0px;
+        transform: none;
+    }
+}
 @media (max-width: 500px) {
     #JSneeded {
         width: 90%;
+    }
+}
+@media (max-width: 520px) {
+    #homeText {
+        font-size: 40px;
     }
 }
 @media (min-width: 1460px) {
