@@ -33,7 +33,7 @@ body::-webkit-scrollbar-thumb {
     z-index: 999;
     pointer-events: none;
     user-select: none;
-    animation: appear 0.2s ease-in backwards;
+    transition: width 0.2s ease;
 }
 @keyframes cursorLoading {
     0%, 100% {
