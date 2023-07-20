@@ -6,6 +6,7 @@
     transform: translate(-50%, -50%);
     display: block;
     width: 450px;
+    min-width: 360px;
     z-index: 2;
     animation: appear 0.2s ease-in backwards;
 }
