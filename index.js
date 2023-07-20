@@ -35,9 +35,9 @@ body.addEventListener("mouseleave", () => {
     }, 200);
 });
 function moveCursor() {
-    if (i < 20) {
-        cx += mx / 20;
-        cy += my / 20;
+    if (i < 18) {
+        cx += mx / 18;
+        cy += my / 18;
     };
     cursor.style.left = cx + "px";
     cursor.style.top = cy + "px";
