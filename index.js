@@ -63,7 +63,6 @@ let shade = document.getElementById("shade");
 let shadeText = document.getElementById("shadeText");
 shadeText.innerHTML = "[... JS enabled. Loading website ...]";
 function startPage() {
-    a
     setTimeout(() => {
         JSnotice.style.animation = "disappear 0.4s ease-out forwards";
         shade.style.animation = "disappear 0.4s ease-out forwards";
