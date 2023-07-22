@@ -6,7 +6,7 @@
     transform: translate(-50%, -50%);
     display: block;
     width: 450px;
-    min-width: 360px;
+    min-width: 361px;
     z-index: 2;
     animation: appear 0.2s ease-in backwards;
 }
@@ -16,9 +16,10 @@
     left: 0px;
     width: 100%;
     font-size: 16px;
-    min-width: 360px;
+    min-width: 361px;
     text-align: center;
     color: white;
+    animation: appear 0.2s ease-in backwards;
 }
 #shade {
     position: absolute;
