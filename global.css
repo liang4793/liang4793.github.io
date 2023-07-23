@@ -33,14 +33,113 @@ body::-webkit-scrollbar-thumb {
     z-index: 999;
     pointer-events: none;
     user-select: none;
-    transition: width 0.2s ease;
 }
-@keyframes cursorLoading {
-    0%, 100% {
-        transform: scale(1);
+#cursorTL {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+#cursorTR {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+#cursorBL {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+#cursorBR {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+@keyframes TLloading {
+    25% {
+        top: 0px;
+        left: 24px;
+        rotate: 90deg;
     }
     50% {
-        transform: scale(1.2);
+        top: 24px;
+        left: 24px;
+        rotate: 180deg;
+    }
+    75% {
+        top: 24px;
+        left: 0px;
+        rotate: 270deg;
+    }
+    100% {
+        top: 0px;
+        left: 0px;
+        rotate: 360deg;
+    }
+}
+@keyframes TRloading {
+    25% {
+        top: 24px;
+        right: 0px;
+        rotate: 90deg;
+    }
+    50% {
+        top: 24px;
+        right: 24px;
+        rotate: 180deg;
+    }
+    75% {
+        top: 0px;
+        right: 24px;
+        rotate: 270deg;
+    }
+    100% {
+        top: 0px;
+        right: 0px;
+        rotate: 360deg;
+    }
+}
+@keyframes BLloading {
+    25% {
+        bottom: 24px;
+        left: 0px;
+        rotate: 90deg;
+    }
+    50% {
+        bottom: 24px;
+        left: 24px;
+        rotate: 180deg;
+    }
+    75% {
+        bottom: 0px;
+        left: 24px;
+        rotate: 270deg;
+    }
+    100% {
+        bottom: 0px;
+        left: 0px;
+        rotate: 360deg;
+    }
+}
+@keyframes BRloading {
+    25% {
+        bottom: 0px;
+        right: 24px;
+        rotate: 90deg;
+    }
+    50% {
+        bottom: 24px;
+        right: 24px;
+        rotate: 180deg;
+    }
+    75% {
+        bottom: 24px;
+        right: 0px;
+        rotate: 270deg;
+    }
+    100% {
+        bottom: 0px;
+        right: 0px;
+        rotate: 360deg;
     }
 }
 @keyframes cursorAppear {

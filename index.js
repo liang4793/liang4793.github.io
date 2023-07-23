@@ -6,8 +6,11 @@ let loading = 1;
 console.log("[Welcome to Liáng4793's Repository(Liáng's Repo)]");
 
 //cursor
-//cursor move
 let cursor = document.getElementById("cursor");
+let cursorTL = document.getElementById("cursorTL");
+let cursorTR = document.getElementById("cursorTR");
+let cursorBL = document.getElementById("cursorBL");
+let cursorBR = document.getElementById("cursorBR");
 let mx = 0, my = 0, cx = 0, cy = 0, i = 0;
 body.addEventListener("mousemove", (m) => {
     mx = m.x - cursor.offsetLeft - cursor.clientWidth / 2;
@@ -15,17 +18,18 @@ body.addEventListener("mousemove", (m) => {
     i = 0;
     if (cursor.style.display != "block") {
         cursor.style.display = "block";
-        if (loading) {
-            cursor.style.animation = "cursorLoading 1.4s infinite";
-        } else {
-            cursor.style.animation = "cursorAppear 0.2s ease-in backwards";
-        };
+        cursor.style.animation = "cursorAppear 0.2s ease-in backwards";
+    };
+    if (loading) {
+        cursorTL.style.animation = "TLloading 2s infinite";
+        cursorTR.style.animation = "TRloading 2s infinite";
+        cursorBL.style.animation = "BLloading 2s infinite";
+        cursorBR.style.animation = "BRloading 2s infinite";
     } else {
-        if (loading) {
-            cursor.style.animation = "cursorLoading 1.4s infinite";
-        } else {
-            cursor.style.animation = "none";
-        };
+        cursorTL.style.animation = "none";
+        cursorTR.style.animation = "none";
+        cursorBL.style.animation = "none";
+        cursorBR.style.animation = "none";
     };
 });
 body.addEventListener("mouseleave", () => {
@@ -44,15 +48,6 @@ function moveCursor() {
     i++;
 };
 setInterval(moveCursor, 1);
-//cursor hover
-Array.from(document.getElementsByTagName("hoverable")).forEach(e => e.addEventListener("mouseover", () => {
-    console.log("hovering");
-    cursor.style.width = "80px";
-}));
-Array.from(document.getElementsByTagName("hoverable")).forEach(e => e.addEventListener("mouseout", () => {
-    console.log("unhovering");
-    cursor.style.width = "40px";
-}));
 
 //page
 let container = document.getElementById("container");

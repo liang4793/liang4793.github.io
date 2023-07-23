@@ -18,19 +18,17 @@
 <body style="background-color:#111; width:100%; height:100%; margin:auto; min-width:420px; font-family: 'JetBrains Mono', monospace; cursor: crosshair;">
 
   <div id="cursor">
-    <img src="image/cursor/TL.svg" alt="cursor" height="16px" style="position:absolute; top:0px; left:0px;">
-    <img src="image/cursor/TR.svg" alt="cursor" height="16px" style="position:absolute; top:0px; right:0px;">
-    <img src="image/cursor/BL.svg" alt="cursor" height="16px" style="position:absolute; bottom:0px; left:0px;">
-    <img src="image/cursor/BR.svg" alt="cursor" height="16px" style="position:absolute; bottom:0px; right:0px;">
+    <img id="cursorTL" src="image/cursor/TL.svg" alt="cursor" height="16px">
+    <img id="cursorTR" src="image/cursor/TR.svg" alt="cursor" height="16px">
+    <img id="cursorBL" src="image/cursor/BL.svg" alt="cursor" height="16px">
+    <img id="cursorBR" src="image/cursor/BR.svg" alt="cursor" height="16px">
   </div>
 
   <div id="shade">
-    <hoverable>
-      <div id="JSneeded">
-        <img src="image/JSneeded.svg" alt="JSneeded" width="100%" style="margin-bottom: 16px;"></img>
-        <div id="shadeText">[... JS disabled ...]</div>
-      </div>
-    </hoverable>
+    <div id="JSneeded">
+      <img src="image/JSneeded.svg" alt="JSneeded" width="100%" style="margin-bottom: 16px;"></img>
+      <div id="shadeText">[... JS disabled ...]</div>
+    </div>
   </div>
 
   <div id="container">
@@ -51,9 +49,7 @@
         <img class="icon" id="X10" src="image/iconX.svg" alt="X">
       </div>
       <a href="https://liang4793.github.io/">
-        <hoverable>
-          <img id="textL" src="image/textL.svg" alt="liang's repo">
-        </hoverable>
+        <img id="textL" src="image/textL.svg" alt="liang's repo">
       </a>
       <div id="siteInfo">
         [dimension] C-137</br>
