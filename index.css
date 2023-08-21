@@ -156,7 +156,7 @@
     position: absolute;
     top: 600px;
     right: 0px;
-    width: 300px;
+    width: 280px;
     animation: fromR 0.2s ease-in backwards;
 }
 @media (max-width: 440px) {
