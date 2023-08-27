@@ -154,9 +154,9 @@
 }
 #page1to2 {
     position: absolute;
-    top: 600px;
-    right: 0px;
-    width: 270px;
+    top: 605px;
+    right: 20px;
+    width: 260px;
     animation: fromR 0.2s ease-in backwards;
 }
 @media (max-width: 440px) {
@@ -175,7 +175,7 @@
         font-size: 40px;
     }
 }
-@media (max-width: 820px) {
+@media (max-width: 830px) {
     #page1to2 {
         display: none;
     }
