@@ -70,7 +70,24 @@ function startPage() {
     }, 1000);
 };
 
+
+//homePage
+//nothing yet
+
+
+//introPage
+let introTitle = document.getElementById("introTitle");
+let picText = document.getElementById("picText");
+window.onresize = function () {
+    introTitle.style.bottom = picText.offsetHeight + 40 + "px";
+};
+
+
 //Let's go!
 window.onload = function () {
     startPage();
+    setTimeout(() => {
+        console.log(picText.clientHeight)
+        introTitle.style.bottom = picText.offsetHeight + 40 + "px";
+    }, 1600);
 };
