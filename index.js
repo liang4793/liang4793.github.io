@@ -76,18 +76,27 @@ function startPage() {
 
 
 //introPage
+let introStatus = "life";
+let switchButton = document.getElementById("switchButton")
 let introTitle = document.getElementById("introTitle");
 let picText = document.getElementById("picText");
 window.onresize = function () {
     introTitle.style.bottom = picText.offsetHeight + 40 + "px";
 };
+switchButton.addEventListener("click", () => {
+    if (introStatus == "life") {
+        introStatus = "work"
+    } else {
+        introStatus = "life"
+    }
+    console.log(introStatus)
+});
 
 
 //Let's go!
 window.onload = function () {
     startPage();
     setTimeout(() => {
-        console.log(picText.clientHeight)
         introTitle.style.bottom = picText.offsetHeight + 40 + "px";
     }, 1600);
 };

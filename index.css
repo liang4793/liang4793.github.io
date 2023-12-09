@@ -229,6 +229,17 @@
     font-size: 50px;
     line-height: 1.2;
 }
+#introTitleS {
+    display: none;
+    position: relative;
+    top: 10px;
+    left: 0px;
+    width: 100%;
+    color: white;
+    font-size: 50px;
+    line-height: 1.2;
+    text-align-last: justify;
+}
 #picText {
     position: absolute;
     bottom: 44px;
@@ -268,6 +279,9 @@
     #picTextBox {
         display: none;
     }
+    #introTitleS {
+        display: block;
+    }
 }
 @media (min-width: 830px) and (max-width: 880px) {
     #switchBox {
@@ -275,6 +289,9 @@
     }
     #picTextBox {
         display: none;
+    }
+    #introTitleS {
+        display: block;
     }
 }
 @media (max-width: 980px) {
