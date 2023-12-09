@@ -147,6 +147,7 @@
     position: absolute;
     bottom: 0px;
     left: 20px;
+    width: calc(100% - 20px);
     color: white;
     font-size: 50px;
     line-height: 1.2;
@@ -259,7 +260,7 @@
         width: 90%;
     }
 }
-@media (max-width: 560px) {
+@media (max-width: 520px) {
     #homeText {
         font-size: 40px;
     }
