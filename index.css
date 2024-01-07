@@ -167,6 +167,8 @@
     left: 0px;
     width: 100%;
     height: 500px;
+    animation: fromL 0.2s ease-in backwards;
+    animation-delay: 0.2s;
 }
 #upperPart {
     position: relative;

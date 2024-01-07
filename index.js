@@ -77,76 +77,96 @@ function startPage() {
 
 //introPage
 let introStatus = "life";
-let switchButton = document.getElementById("switchButton")
+let switchButton = document.getElementById("switchButton");
 let introTitle = document.getElementById("introTitle");
 let picText = document.getElementById("picText");
 let arrow = document.getElementById("arrow");
 let switchButtonText1 = document.getElementById("switchButtonText1");
-let MYpic = document.getElementById("MYpic")
+let MYpic = document.getElementById("MYpic");
 window.onresize = function () {
     introTitle.style.bottom = picText.offsetHeight + 40 + "px";
 };
 switchButton.addEventListener("click", () => {
     if (introStatus == "life") {
-        introStatus = "work"
-        console.log(introStatus)
+        introStatus = "work";
+        console.log(introStatus);
 
-        arrow.style.animation = "fromL 0.2s reverse ease forwards"
+        arrow.style.animation = "fromL 0.2s reverse ease forwards";
         setTimeout(() => {
-            arrow.style.display = "none"
-            arrow.style.animation = "none"
+            arrow.style.display = "none";
+            arrow.style.animation = "none";
         }, 200)
-        switchButtonText1.style.animation = " moveL 0.4s 0.2s ease forwards"
+        switchButtonText1.style.animation = " moveL 0.4s 0.2s ease forwards";
         setTimeout(() => {
-            switchButtonText1.style.marginLeft = "-50px"
-            switchButtonText1.style.animation = "none"
-            arrow.style.left = "calc(100% - 170px)"
-            arrow.style.display = "block"
-            arrow.style.animation = "fromL 0.2s ease forwards"
+            switchButtonText1.style.marginLeft = "-50px";
+            switchButtonText1.style.animation = "none";
+            arrow.style.left = "calc(100% - 170px)";
+            arrow.style.display = "block";
+            arrow.style.animation = "fromL 0.2s ease forwards";
             setTimeout(() => {
-                arrow.style.animation = "none"
-            }, 200)
-        }, 600)
+                arrow.style.animation = "none";
+            }, 200);
+        }, 600);
 
-        MYpic.style.animation = "disappear 0.4s ease forwards"
+        MYpic.style.animation = "disappear 0.4s ease forwards";
         setTimeout(() => {
-            MYpic.style.animation = "none"
-            MYpic.src = "image\\MYpic\\pic1z.jpg"
-            MYpic.style.animation = "appear 0.4s ease forwards"
+            MYpic.style.animation = "none";
+            MYpic.src = "image\\MYpic\\pic1z.jpg";
+            MYpic.style.animation = "appear 0.4s ease forwards";
             setTimeout(() => {
-                MYpic.style.animation = "none"
-            }, 400)
-        }, 400)
+                MYpic.style.animation = "none";
+            }, 400);
+        }, 400);
+
+        picText.style.animation = "disappear 0.4s ease forwards";
+        setTimeout(() => {
+            picText.style.animation = "none";
+            picText.innerHTML = "Avatar for Github/X or other: ZimaBlue.";
+            picText.style.animation = "appear 0.4s ease forwards";
+            setTimeout(() => {
+                picText.style.animation = "none";
+            }, 400);
+        }, 400);
     } else {
-        introStatus = "life"
-        console.log(introStatus)
+        introStatus = "life";
+        console.log(introStatus);
 
-        arrow.style.animation = "fromL 0.2s reverse ease forwards"
+        arrow.style.animation = "fromL 0.2s reverse ease forwards";
         setTimeout(() => {
-            arrow.style.display = "none"
-            arrow.style.animation = "none"
+            arrow.style.display = "none";
+            arrow.style.animation = "none";
         }, 200)
-        switchButtonText1.style.animation = " moveL 0.4s 0.2s reverse ease forwards"
+        switchButtonText1.style.animation = " moveL 0.4s 0.2s reverse ease forwards";
         setTimeout(() => {
-            switchButtonText1.style.marginLeft = "0"
-            switchButtonText1.style.animation = "none"
-            arrow.style.left = "0px"
-            arrow.style.display = "block"
-            arrow.style.animation = "fromL 0.2s ease forwards"
+            switchButtonText1.style.marginLeft = "0";
+            switchButtonText1.style.animation = "none";
+            arrow.style.left = "0px";
+            arrow.style.display = "block";
+            arrow.style.animation = "fromL 0.2s ease forwards";
             setTimeout(() => {
-                arrow.style.animation = "none"
-            }, 200)
-        }, 600)
+                arrow.style.animation = "none";
+            }, 200);
+        }, 600);
 
-        MYpic.style.animation = "disappear 0.4s ease forwards"
+        MYpic.style.animation = "disappear 0.4s ease forwards";
         setTimeout(() => {
-            MYpic.style.animation = "none"
-            MYpic.src = "image\\MYpic\\pic2z.jpg"
-            MYpic.style.animation = "appear 0.4s ease forwards"
+            MYpic.style.animation = "none";
+            MYpic.src = "image\\MYpic\\pic2z.jpg";
+            MYpic.style.animation = "appear 0.4s ease forwards";
             setTimeout(() => {
-                MYpic.style.animation = "none"
-            }, 400)
-        }, 400)
+                MYpic.style.animation = "none";
+            }, 400);
+        }, 400);
+
+        picText.style.animation = "disappear 0.4s ease forwards";
+        setTimeout(() => {
+            picText.style.animation = "none";
+            picText.innerHTML = "Avatar for Wechat/CloudMusic or other: Shikabane.";
+            picText.style.animation = "appear 0.4s ease forwards";
+            setTimeout(() => {
+                picText.style.animation = "none";
+            }, 400);
+        }, 400);
     }
 });
 
