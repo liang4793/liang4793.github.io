@@ -1,6 +1,7 @@
 /*¯\_(ツ)_/¯ Why are you looking at my CSS?*/
 html{
     font-size:16px;
+    font-family: 'Poppins', sans-serif;
 }
 @keyframes appear {
     0% {
