@@ -5,321 +5,80 @@
     left: 50%;
     transform: translate(-50%, -50%);
     display: block;
-    width: 450px;
-    min-width: 400px;
+    width: 35rem;
     z-index: 2;
     animation: appear 0.2s ease-in backwards;
 }
 #shadeText {
     position: absolute;
-    bottom: 0px;
-    left: 0px;
+    bottom: 0rem;
+    left: 0rem;
     width: 100%;
-    font-size: 16px;
-    min-width: 400px;
+    font-size: 1rem;
     text-align: center;
     color: white;
     animation: appear 0.2s ease-in backwards;
 }
 #shade {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0rem;
+    left: 0rem;
     display: block;
     width: 100%;
     height: 100%;
-    min-width: 400px;
-    background-color: #111;
+    background-color: #080808;
     z-index: 1;
 }
 #container {
     display: none;
     position: absolute;
-    top: 0px;
+    top: 0rem;
     left: 50%;
     transform: translate(-50%,0);
     width: 100%;
-    height: 4000px;
     color: white;
-    min-width: 420px;
+    animation: appear 0.2s ease-in forwards;
 }
-#homeContainer{
+.box {
     position: relative;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 720px;
+    margin-top: 10rem;
+    left: 10%;
+    width: 80%;
+    min-width: 35rem;
+    word-break: break-all;
 }
-@keyframes fromL {
-    0% {
-        opacity: 0;
-        margin-left: -2px;
-    }
-    100% {
-        opacity: 1;
-        margin-left: 0;
-    }
-}
-@keyframes fromR {
-    0% {
-        opacity: 0;
-        margin-right: -2px;
-    }
-    100% {
-        opacity: 1;
-        margin-right: 0;
-    }
-}
-#iconBox {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 40px;
-    height: 100px;
-    animation: fromL 0.2s ease-in backwards;
-}
-.icon {
-    position: absolute;
-    left: 0px;
-    width: 100%
-}
-#L {
-    top: 0px;
-}
-#X1 {
-    top: 30px;
-    z-index: 3;
-}
-#X2 {
-    top: 60px;
-    z-index: 4;
-}
-#X3 {
-    top: 90px;
-    z-index: 5;
-}
-#X4 {
-    top: 140px;
-    z-index: 5;
-}
-#X5 {
-    top: 190px;
-    z-index: 5;
-}
-#X6 {
-    top: 240px;
-    z-index: 5;
-}
-#X7 {
-    top: 270px;
-    z-index: 4;
-}
-#X8 {
-    top: 300px;
-    z-index: 3;
-}
-#X9 {
-    top: 330px;
-    z-index: 2;
-}
-#X10 {
-    top: 360px;
-    z-index: 1;
-}
-#textL {
-    position: absolute;
-    top: 20px;
-    left: 70px;
-    width: 126px;
-    animation: fromL 0.2s ease-in backwards;
-    animation-delay: 0.2s;
-}
-#siteInfo {
-    position: absolute;
-    top: 20px;
-    right:20px;
-    font-size: 16px;
-    line-height: 1.1;
-    text-align-last: justify;
-    animation: fromR 0.2s ease-in backwards;
-}
-#homeText {
-    position: absolute;
-    bottom: 0px;
-    left: 20px;
-    width: calc(100% - 20px);
-    color: white;
-    font-size: 50px;
+#main {
+    font-size: 3.5rem;
     line-height: 1.2;
-    animation: fromL 0.2s ease-in backwards;
-    animation-delay: 0.2s;
+    color: rgba(255, 255, 255, 0.4);
 }
-#page1to2 {
-    position: absolute;
-    top: 605px;
-    right: 20px;
-    width: 260px;
-    animation: fromR 0.2s ease-in backwards;
+.textimg {
+    height: 2.6rem;
 }
-#introContainer {
-    position: relative;
-    top: 104px;
-    left: 0px;
-    width: 100%;
-    height: 500px;
-    animation: fromL 0.2s ease-in backwards;
-    animation-delay: 0.2s;
-}
-#upperPart {
-    position: relative;
-    top: 0px;
-    left :0px;
-    width: 100%;
-}
-#switchBox {
-    position: relative;
-    top: 0px;
-    left: 20px;
-    width: calc(100% - 360px);
-    max-width: 600px;
-}
-#MYpic {
-    position: relative;
-    top: 0px;
-    left:0px;
-    width: 100%;
-    height: auto;
-}
-#switchButton {
-    position: relative;
-    top: 5px;
-    left: 0px;
-    width: 100%;
-    height: 40px;
+.hoverable {
     cursor: pointer;
-}
-#arrow {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 40px;
-    height: 40px;
-}
-#switchButtonText1 {
-    position: absolute;
-    top: -12px;
-    left: 50px;
-    font-size: 50px;
-}
-#switchButtonText2 {
-    position: absolute;
-    top: -12px;
-    right: 0px;
-    font-size: 50px;
-}
-@keyframes moveL {
-    0% {
-        margin-left: 0px;
-    }
-    100% {
-        margin-left: -50px;
-    }
-}
-#picTextBox {
-    position: absolute;
-    left: 640px;
-    bottom: 0px;
-    width: calc(100% - 690px);
-    height: 100%;
-}
-#introTitle {
-    position: absolute;
-    bottom: 34px;
-    left: 0px;
     color: white;
-    font-size: 50px;
-    line-height: 1.2;
 }
-#introTitleS {
-    display: none;
+.hoverable:hover {
+    color: rgb(250, 100, 0);
+}
+#projects {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+.title {
     position: relative;
-    top: 10px;
-    left: 0px;
-    width: 100%;
-    color: white;
-    font-size: 50px;
+    font-size: 3.5rem;
     line-height: 1.2;
-    text-align-last: justify;
-}
-#picText {
-    position: absolute;
-    bottom: 44px;
-    left: 0px;
     color: white;
-    font-size: 16px;
-    line-height: 1.1;
 }
-#lowerPart {
-    position: relative;
-    top: 15px;
-    left: 0px;
-    width: 100%;
-    height: 100px;
+#moments {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.4);
 }
-@media (max-width: 440px) {
-    #container {
-        left: 0px;
-        transform: none;
-    }
-}
-@media (max-width: 500px) {
-    #JSneeded {
-        width: 90%;
-    }
-}
-@media (max-width: 520px) {
-    #homeText {
-        font-size: 40px;
-    }
-}
-@media (max-width: 729px) {
-    #homeContainer{
-        height: 800px;
-    }
-}
-@media (max-width: 830px) {
-    #page1to2 {
-        display: none;
-    }
-    #switchBox {
-        width: calc(100% - 40px);
-    }
-    #picTextBox {
-        display: none;
-    }
-    #introTitleS {
-        display: block;
-    }
-}
-@media (min-width: 830px) and (max-width: 880px) {
-    #switchBox {
-        width: calc(100% - 320px);
-    }
-    #picTextBox {
-        display: none;
-    }
-    #introTitleS {
-        display: block;
-    }
-}
-@media (max-width: 980px) {
-    #picTextBox {
-        left: calc(100% - 320px);
-        width: 270px;
-    }
-}
-@media (min-width: 1460px) {
-    #container {
-        width: 1440px;
-    }
+#footer {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: white;
+    text-align: center;
 }
