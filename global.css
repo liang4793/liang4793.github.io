@@ -28,18 +28,23 @@ body::-webkit-scrollbar-thumb {
     background-image: repeating-linear-gradient(45deg, white 0, white 12px, #080808 0, #080808 24px);
     background-clip: content-box;
 }
-@media (max-width: 642px){
+@media (max-width: 642px) {
     html {
         font-size: 14px;
     }
 }
-@media (max-width: 565px){
+@media (max-width: 565px) {
     html {
         font-size: 12px;
     }
 }
-@media (max-width: 488px){
+@media (max-width: 488px) {
     html {
         font-size: 10px;
+    }
+}
+@media (max-width: 410px) {
+    html {
+        font-size: 8px;
     }
 }
