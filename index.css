@@ -9,7 +9,7 @@
     z-index: 2;
     animation: appear 0.2s ease-in backwards;
 }
-#shadeText {
+#shade1Text {
     position: absolute;
     bottom: 0rem;
     left: 0rem;
@@ -19,7 +19,10 @@
     color: white;
     animation: appear 0.2s ease-in backwards;
 }
-#shade {
+#shade1 {
+    display: block;
+}
+.shade {
     position: absolute;
     top: 0rem;
     left: 0rem;
@@ -45,7 +48,6 @@
     left: 10%;
     width: 80%;
     min-width: 35rem;
-    word-break: break-all;
 }
 #main {
     font-size: 3.5rem;
@@ -81,4 +83,14 @@
     line-height: 1.2;
     color: white;
     text-align: center;
+}
+#shade2 {
+    display: none;
+}
+.shadeBox {
+    position: relative;
+    margin-top: 2rem;
+    left: 5%;
+    width: 90%;
+    min-width: 35rem;
 }
