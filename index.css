@@ -84,6 +84,7 @@
     color: white;
     text-align: center;
 }
+
 #shade2 {
     display: none;
 }
@@ -93,4 +94,75 @@
     left: 5%;
     width: 90%;
     min-width: 35rem;
+}
+.shadeBox2 {
+    position: relative;
+    margin-top: 2rem;
+    left: 0rem;
+    width: 100%;
+    display: none;
+}
+#map {
+    display: none;
+    position: relative;
+    width: 60%;
+    max-width: 35rem;
+    float: left;
+}
+#locationInfo {
+    position: relative;
+    top: 0rem;
+    left: 37rem;
+    width: calc(100% - 37rem);
+    color: white;
+}
+#axis {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-top: -3rem;
+}
+#LL {
+    display: none;
+    font-size: 14rem;
+    color: rgb(250, 100, 0);
+}
+#SS {
+    display: none;
+    color: rgba(255, 255, 255, 0.4);
+}
+#timeTitle {
+    display: none;
+}
+@media (max-width: 1260px) {
+    #axis {
+        margin-top: -2rem;
+    }
+    #LL {
+        font-size: 10rem;
+    }
+}
+@media (max-width: 1092px) {
+    #axis {
+        margin-top: -1.6rem;
+    }
+    #LL {
+        font-size: 8rem;
+    }
+}
+@media (max-width: 894px) {
+    #axis {
+        margin-top: -1.2rem;
+    }
+    #LL {
+        font-size: 5rem;
+    }
+}
+@media (max-width: 65rem) {
+    #locationInfo {
+        left: 63.2%;
+        width: 38%;
+    }
 }

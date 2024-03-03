@@ -4,6 +4,9 @@ html {
     font-family: 'Poppins', sans-serif;
     word-break: break-all;
 }
+::selection {
+    background-color: rgb(250, 100, 0, 0.4);
+}
 @keyframes appear {
     0% {
         opacity: 0;
@@ -18,6 +21,44 @@ html {
     }
     100% {
         opacity: 0;
+    }
+}
+@keyframes fromL {
+    0% {
+        margin-left: -2rem;
+        opacity: 0;
+    }
+    100% {
+        margin-left: 0rem;
+        opacity: 1;
+    }
+}
+@keyframes fromR {
+    0% {
+        margin-right: -2rem;
+        opacity: 0;
+    }
+    100% {
+        margin-right: 0rem;
+        opacity: 1;
+    }
+}
+@keyframes fromT {
+    0% {
+        margin-top: -2rem;
+        opacity: 0;
+    }
+    100% {
+        margin-top: 0rem;
+        opacity: 1;
+    }
+}
+@keyframes rotate{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
 body::-webkit-scrollbar {
