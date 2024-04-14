@@ -119,6 +119,30 @@ s.addEventListener("click", () => {
     projects.scrollIntoView({ behavior: "smooth" });
 });
 
+var isDragging = false;
+var startPosition;
+var startScrollPosition;
+
+document.querySelectorAll(".PimgBox").forEach(item => {
+    item.addEventListener('mousedown', function(event) {
+        isDragging = true;
+        startPosition = event.clientX;
+        startScrollPosition = item.scrollLeft;
+    });
+    item.addEventListener('mousemove', function(event) {
+        if (isDragging) {
+            var scrollDistance = event.clientX - startPosition;
+            item.scrollLeft = startScrollPosition - scrollDistance;
+        }
+    });
+    item.addEventListener('mouseup', function() {
+        isDragging = false;
+    });
+    item.addEventListener('mouseout', function() {
+        isDragging = false;
+    });
+});
+
 //Let's go!
 window.onload = function () {
     startPage();
