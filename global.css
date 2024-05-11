@@ -25,6 +25,16 @@ html {
 }
 @keyframes fromL {
     0% {
+        margin-right: 2rem;
+        opacity: 0;
+    }
+    100% {
+        margin-right: 0rem;
+        opacity: 1;
+    }
+}
+@keyframes fromL2 {
+    0% {
         margin-left: -2rem;
         opacity: 0;
     }
@@ -35,11 +45,11 @@ html {
 }
 @keyframes fromR {
     0% {
-        margin-right: -2rem;
+        margin-left: 2rem;
         opacity: 0;
     }
     100% {
-        margin-right: 0rem;
+        margin-left: 0rem;
         opacity: 1;
     }
 }
