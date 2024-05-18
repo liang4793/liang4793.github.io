@@ -31,6 +31,7 @@ let shade2 = document.getElementById("shade2");
 let quit = document.getElementById("quit");
 let l = document.getElementById("location");
 let me = document.getElementById("me");
+let furry = document.getElementById("furry");
 let repo = document.getElementById("repo");
 
 //locationBox
@@ -50,6 +51,9 @@ let label1 = document.getElementById("label1");
 let label2 = document.getElementById("label2");
 let contactTitle = document.getElementById("contactTitle");
 let contactBox = document.getElementById("contactBox");
+
+//furryBox
+let furryBox = document.getElementById("furryBox");
 
 //repoBox
 let repoBox = document.getElementById("repoBox");
@@ -76,6 +80,8 @@ quit.addEventListener("click", () => {
         contactBox.style.display = "none";
 
         repoBox.style.display = "none";
+
+        furryBox.style.display = "none";
     }, 200);
 });
 
@@ -169,6 +175,16 @@ me.addEventListener("click", () => {
         contactBox.style.display = "block";
     }, 400);
 });
+
+//furryBox
+furry.addEventListener("click", () => {
+    shade2.style.animation = "appear 0.2s ease-in forwards";
+    container.style.animation = "disappear 0.2s ease-in forwards";
+    setTimeout(() => {
+        shade2.style.display = "block";
+        container.style.display = "none";
+    })
+})
 
 //repoBox
 repo.addEventListener("click", () => {
