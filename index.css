@@ -355,6 +355,30 @@
         filter: brightness(60%);
     }  
 }
+.furryTitle {
+    position: relative;
+    top: 0rem;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: white;
+}
+#furryAll {
+    position: relative;
+    top: 2rem;
+    width: 100%;
+}
+#furryTop {
+    display: none;
+    position: relative;
+    top: 2rem;
+    width: 100%;
+}
+#furryBottom {
+    display: none;
+    position: relative;
+    top: 2.5rem;
+    width: 100%;
+}
 @media (max-width: 1260px) {
     #axis {
         margin-top: -2rem;

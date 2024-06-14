@@ -1,6 +1,8 @@
 //¯\_(ツ)_/¯ Why are you looking at my code? 
 let body = document.body;
 let loading = 1;
+document.body.style.cursor = 'wait';
+let showF = 0;
 
 //welcome
 console.log("[Welcome to Liáng4793's Repository(Liáng's Repo)]");
@@ -19,6 +21,7 @@ function startPage() {
         shade1.style.animation = "disappear 0.4s ease-out forwards";
         setTimeout(() => {
             loading = 0;
+            document.body.style.cursor = 'crosshair';
             JSnotice.style.display = "none";
             shade1.style.display = "none";
             container.style.display = "block";
@@ -54,6 +57,13 @@ let contactBox = document.getElementById("contactBox");
 
 //furryBox
 let furryBox = document.getElementById("furryBox");
+let FT1 = document.getElementById("FT1");
+let FT2 = document.getElementById("FT2");
+let FT3 = document.getElementById("FT3");
+let FT4 = document.getElementById("FT4");
+let furryAll = document.getElementById("furryAll");
+let furryTop = document.getElementById("furryTop");
+let furryBottom = document.getElementById("furryBottom");
 
 //repoBox
 let repoBox = document.getElementById("repoBox");
@@ -79,9 +89,17 @@ quit.addEventListener("click", () => {
         contactTitle.style.display = "none";
         contactBox.style.display = "none";
 
-        repoBox.style.display = "none";
-
         furryBox.style.display = "none";
+        FT1.style.display = "none";
+        FT2.style.display = "none";
+        FT3.style.display = "none";
+        FT4.style.display = "none";
+        furryAll.style.display = "none";
+        furryTop.style.display = "none";
+        furryBottom.style.display = "none";
+        showF = 0;
+
+        repoBox.style.display = "none";
     }, 200);
 });
 
@@ -183,8 +201,46 @@ furry.addEventListener("click", () => {
     setTimeout(() => {
         shade2.style.display = "block";
         container.style.display = "none";
-    })
-})
+    }, 200);
+    furryBox.style.display = "block";
+    FT1.style.animation = "fromT 0.4s ease forwards";
+    FT2.style.animation = "fromT 0.4s ease forwards";
+    FT3.style.animation = "fromT 0.4s ease forwards";
+    FT4.style.animation = "fromT 0.4s ease forwards";
+    setTimeout(() => {
+        FT1.style.display = "block";
+        FT2.style.display = "block";
+        FT3.style.display = "block";
+        FT4.style.display = "block";
+    }, 400);
+    if (document.body.clientWidth >= 894) {
+        furryAll.style.animation = "fromT 0.4s ease forwards";
+        setTimeout(() => {
+            furryAll.style.display = "block";
+        }, 400);
+    } else {
+        furryTop.style.animation = "fromT 0.4s ease forwards";
+        furryBottom.style.animation = "fromT 0.4s ease forwards";
+        setTimeout(() => {
+            furryTop.style.display = "block";
+            furryBottom.style.display = "block";
+        }, 400);
+    };
+    showF = 1;
+});
+window.addEventListener("resize", () => {
+    if (showF == 1) {
+        if (document.body.clientWidth >= 894) {
+            furryAll.style.display = "block";
+            furryTop.style.display = "none";
+            furryBottom.style.display = "none";
+        } else {
+            furryAll.style.display = "none";
+            furryTop.style.display = "block";
+            furryBottom.style.display = "block";
+        };
+    };
+});
 
 //repoBox
 repo.addEventListener("click", () => {
