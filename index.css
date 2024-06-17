@@ -113,12 +113,30 @@
     opacity: 1;
     transition: opacity 0.2s 0.4s;
 }
+#P3box:hover #P3imgBox {
+    margin-top: 0rem;
+    z-index: 1;
+    transition: margin-top 0.5s, z-index 0s 0.5s;
+}
+#P3box:hover #P3img {
+    opacity: 1;
+    transition: opacity 0.2s 0.4s;
+}
 #P2box:hover #P2imgBox {
     margin-top: 0rem;
     z-index: 1;
     transition: margin-top 0.5s, z-index 0s 0.5s;
 }
 #P2box:hover #P2img {
+    opacity: 1;
+    transition: opacity 0.2s 0.4s;
+}
+#P1box:hover #P1imgBox {
+    margin-top: 0rem;
+    z-index: 1;
+    transition: margin-top 0.5s, z-index 0s 0.5s;
+}
+#P1box:hover #P1img {
     opacity: 1;
     transition: opacity 0.2s 0.4s;
 }
