@@ -2,37 +2,28 @@
 let progressBar = document.getElementById('progressBar');
 let percentage = document.getElementById('percentage');
 
-function getElementWidthPercentage(element) {
+function updateProgressBar() {
     const windowWidth = document.body.clientWidth;
-    const elementWidth = element.offsetWidth;
-    const percentage = (elementWidth / windowWidth) * 100;
-    return Math.round(percentage);
+    const elementWidth = progressBar.offsetWidth;
+    const p = Math.round((elementWidth / windowWidth) * 100);
+    percentage.innerHTML = p + "%";
+    if (p == 0) {
+        percentage.style.opacity = "0";
+        percentage.style.marginTop = "0px";
+    } else if (progressBar.offsetWidth >= window.innerWidth - 66) {
+        percentage.style.opacity = "1";
+        percentage.style.marginTop = "20px";
+    } else {
+        percentage.style.opacity = "1";
+        percentage.style.marginTop = "0px";
+    }
 }
 window.onload = function() {
-    p = getElementWidthPercentage(progressBar);
-    percentage.innerHTML = p + "%";
-    if (p == 0) {
-        percentage.style.opacity = "0";
-        percentage.style.marginTop = "0px";
-    } else if (progressBar.offsetWidth >= window.innerWidth - 66) {
-        percentage.style.opacity = "1";
-        percentage.style.marginTop = "20px";
-    } else {
-        percentage.style.opacity = "1";
-        percentage.style.marginTop = "0px";
-    }
+    updateProgressBar();
+}
+window.onresize = function() {
+    updateProgressBar();
 }
 window.addEventListener('scroll', function() {
-    p = getElementWidthPercentage(progressBar);
-    percentage.innerHTML = p + "%";
-    if (p == 0) {
-        percentage.style.opacity = "0";
-        percentage.style.marginTop = "0px";
-    } else if (progressBar.offsetWidth >= window.innerWidth - 66) {
-        percentage.style.opacity = "1";
-        percentage.style.marginTop = "20px";
-    } else {
-        percentage.style.opacity = "1";
-        percentage.style.marginTop = "0px";
-    }
+    updateProgressBar();
 });

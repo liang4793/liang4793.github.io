@@ -4,7 +4,7 @@
     top: 0rem;
     left: 0rem;
     width: 100%;
-    height: 20px;
+    height: 1.25rem;
     background-image: repeating-linear-gradient(45deg, rgb(250, 100, 0) 0, rgb(255, 102, 0) 12px, #080808 0, #080808 24px);
     background-clip: content-box;
     animation-name: progress;
