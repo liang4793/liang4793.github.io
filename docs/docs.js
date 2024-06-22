@@ -14,7 +14,7 @@ window.onload = function() {
     if (p == 0) {
         percentage.style.opacity = "0";
         percentage.style.marginTop = "0px";
-    } else if (p >= 98) {
+    } else if (progressBar.offsetWidth >= window.innerWidth - 66) {
         percentage.style.opacity = "1";
         percentage.style.marginTop = "20px";
     } else {
@@ -28,7 +28,7 @@ window.addEventListener('scroll', function() {
     if (p == 0) {
         percentage.style.opacity = "0";
         percentage.style.marginTop = "0px";
-    } else if (p >= 98) {
+    } else if (progressBar.offsetWidth >= window.innerWidth - 66) {
         percentage.style.opacity = "1";
         percentage.style.marginTop = "20px";
     } else {
