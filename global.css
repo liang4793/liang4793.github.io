@@ -7,6 +7,9 @@ html {
 ::selection {
     background-color: rgb(250, 100, 0, 0.4);
 }
+a {
+    text-decoration: none;
+}
 @keyframes appear {
     0% {
         opacity: 0;
