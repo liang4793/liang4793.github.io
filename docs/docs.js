@@ -12,7 +12,7 @@ function updateProgressBar() {
         percentage.style.marginTop = "0px";
     } else if (progressBar.offsetWidth >= window.innerWidth - 66) {
         percentage.style.opacity = "1";
-        percentage.style.marginTop = "20px";
+        percentage.style.marginTop = "1.25rem";
     } else {
         percentage.style.opacity = "1";
         percentage.style.marginTop = "0px";
