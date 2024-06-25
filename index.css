@@ -381,6 +381,7 @@
     color: white;
 }
 #furryAll {
+    display: none;
     position: relative;
     top: 2rem;
     width: 100%;
