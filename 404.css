@@ -1,0 +1,16 @@
+/*¯\_(ツ)_/¯ Why are you looking at my CSS?*/
+#errBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+#errText {
+    font-size: 3.5rem;
+    color: rgb(250, 100, 0);
+}
+#errText2 {
+    font-size: 1.5rem;
+}
