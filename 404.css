@@ -4,7 +4,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
     text-align: center;
 }
 #errText {
@@ -13,4 +12,13 @@
 }
 #errText2 {
     font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+#errButton {
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+}
+#errButton:hover {
+    color: rgb(250, 100, 0);
 }
