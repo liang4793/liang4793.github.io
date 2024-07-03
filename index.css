@@ -9,6 +9,16 @@
     z-index: 2;
     animation: appear 0.2s ease-in backwards;
 }
+#loadText {
+    position: fixed;
+    top: 0rem;
+    right: 0rem;
+    text-align: right;
+    color: rgb(250, 100, 0);
+    font-size: 1.5rem;
+    line-height: 0.9;
+    animation: appear 0.2s ease-in backwards;
+}
 #shade1Text {
     position: absolute;
     bottom: 0rem;
@@ -397,6 +407,25 @@
     position: relative;
     top: 2.5rem;
     width: 100%;
+}
+#furryPicBox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    position: relative;
+    top: 5.5rem;
+    width: 100%;
+    overflow: hidden;
+}
+.furryPic {
+    position: relative;
+    height: 20rem;
+    border-radius: 0.5rem;
+}
+.furryPic:hover {
+    outline: 0.2rem solid rgb(250, 100, 0);
+    outline-offset: -0.2rem;
 }
 @media (max-width: 1260px) {
     #axis {

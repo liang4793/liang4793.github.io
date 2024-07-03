@@ -11,17 +11,20 @@ console.log("[Welcome to Liáng4793's Repository(Liáng's Repo)]");
 let container = document.getElementById("container");
 
 //JSneeded & Loading
+let loadText = document.getElementById("loadText");
 let JSnotice = document.getElementById("JSneeded");
 let shade1 = document.getElementById("shade1");
 let shade1Text = document.getElementById("shade1Text");
 shade1Text.innerHTML = "[... JS enabled. Loading website ...]";
 function startPage() {
     setTimeout(() => {
+        loadText.style.animation = "disappear 0.4s ease-out forwards";
         JSnotice.style.animation = "disappear 0.4s ease-out forwards";
         shade1.style.animation = "disappear 0.4s ease-out forwards";
         setTimeout(() => {
             loading = 0;
             document.body.style.cursor = 'crosshair';
+            loadText.style.display = "none";
             JSnotice.style.display = "none";
             shade1.style.display = "none";
             container.style.display = "block";
@@ -285,6 +288,15 @@ document.querySelectorAll(".PimgBox").forEach(item => {
 });
 
 //Let's go!
+let loadNum = "0%";
+let img = document.querySelectorAll("img");
+for(let i = 0, len = img.length; i < len; i++) {
+    img[i].onload = function () {
+        loadNum = Math.round((i / len) * 100) + '%';
+        loadText.innerHTML = loadNum + " loaded";
+    };
+};
 window.onload = function () {
+    loadText.innerHTML = "All done!";
     startPage();
 };
