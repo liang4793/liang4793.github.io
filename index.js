@@ -66,6 +66,7 @@ let FT3 = document.getElementById("FT3");
 let FT4 = document.getElementById("FT4");
 let furryAll1 = document.getElementById("furryAll1");
 let furryAll2 = document.getElementById("furryAll2");
+let furryPicBox = document.getElementById("furryPicBox");
 
 //repoBox
 let repoBox = document.getElementById("repoBox");
@@ -99,6 +100,7 @@ quit.addEventListener("click", () => {
         furryAll1.style.display = "none";
         furryAll2.style.display = "none";
         showF = 0;
+        furryPicBox.style.display = "none";
 
         repoBox.style.display = "none";
     }, 200);
@@ -226,6 +228,10 @@ furry.addEventListener("click", () => {
         }, 400);
     };
     showF = 1;
+    furryPicBox.style.animation = "appear 0.4s ease forwards";
+    setTimeout(() => {
+        furryPicBox.style.display = "block";
+    }, 400);
 });
 window.addEventListener("resize", () => {
     if (showF == 1) {
