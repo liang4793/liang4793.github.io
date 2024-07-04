@@ -64,9 +64,8 @@ let FT1 = document.getElementById("FT1");
 let FT2 = document.getElementById("FT2");
 let FT3 = document.getElementById("FT3");
 let FT4 = document.getElementById("FT4");
-let furryAll = document.getElementById("furryAll");
-let furryTop = document.getElementById("furryTop");
-let furryBottom = document.getElementById("furryBottom");
+let furryAll1 = document.getElementById("furryAll1");
+let furryAll2 = document.getElementById("furryAll2");
 
 //repoBox
 let repoBox = document.getElementById("repoBox");
@@ -97,9 +96,8 @@ quit.addEventListener("click", () => {
         FT2.style.display = "none";
         FT3.style.display = "none";
         FT4.style.display = "none";
-        furryAll.style.display = "none";
-        furryTop.style.display = "none";
-        furryBottom.style.display = "none";
+        furryAll1.style.display = "none";
+        furryAll2.style.display = "none";
         showF = 0;
 
         repoBox.style.display = "none";
@@ -217,16 +215,14 @@ furry.addEventListener("click", () => {
         FT4.style.display = "block";
     }, 400);
     if (document.body.clientWidth >= 894) {
-        furryAll.style.animation = "fromT 0.4s ease forwards";
+        furryAll1.style.animation = "fromT 0.4s ease forwards";
         setTimeout(() => {
-            furryAll.style.display = "block";
+            furryAll1.style.display = "block";
         }, 400);
     } else {
-        furryTop.style.animation = "fromT 0.4s ease forwards";
-        furryBottom.style.animation = "fromT 0.4s ease forwards";
+        furryAll2.style.animation = "fromT 0.4s ease forwards";
         setTimeout(() => {
-            furryTop.style.display = "block";
-            furryBottom.style.display = "block";
+            furryAll2.style.display = "block";
         }, 400);
     };
     showF = 1;
@@ -234,13 +230,11 @@ furry.addEventListener("click", () => {
 window.addEventListener("resize", () => {
     if (showF == 1) {
         if (document.body.clientWidth >= 894) {
-            furryAll.style.display = "block";
-            furryTop.style.display = "none";
-            furryBottom.style.display = "none";
+            furryAll1.style.display = "block";
+            furryAll2.style.display = "none";
         } else {
-            furryAll.style.display = "none";
-            furryTop.style.display = "block";
-            furryBottom.style.display = "block";
+            furryAll1.style.display = "none";
+            furryAll2.style.display = "block";
         };
     };
 });
@@ -290,12 +284,15 @@ document.querySelectorAll(".PimgBox").forEach(item => {
 //Let's go!
 let loadNum = "0%";
 let img = document.querySelectorAll("img");
-for(let i = 0, len = img.length; i < len; i++) {
-    img[i].onload = function () {
-        loadNum = Math.round((i / len) * 100) + '%';
+let len = img.length;
+let sum = 0;
+img.forEach((singleImg) => {
+    singleImg.onload = () => {
+        sum ++;
+        loadNum = Math.round(sum / len * 100) + "%";
         loadText.innerHTML = loadNum + " loaded";
     };
-};
+});
 window.onload = function () {
     loadText.innerHTML = "All done!";
     startPage();
