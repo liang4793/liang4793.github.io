@@ -65,6 +65,58 @@
 a {
     color: rgb(250, 100, 0);
 }
+#expend {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: rgb(250, 100, 0);
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    outline: 0.2rem solid rgb(250, 100, 0);
+    outline-offset: -0.2rem;
+    animation: appear 0.4s ease forwards;
+    cursor: pointer;
+    transition: width 0.4s ease 0.2s, height 0.4s ease 0.2s, background-color 0.2s ease 0.4s;
+    z-index: 10;
+}
+#expendImg {
+    width: 2.5rem;
+    margin-top: 0.95rem;
+    margin-left: 0.5rem;
+    transition: all 0.4s ease 0.2s;
+}
+#expendText {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 3.5rem;
+    left: 1rem;
+    width: 18rem;
+    height: 25.5rem;
+    transition: all 0.2s;
+    overflow: auto;
+}
+#expendText::-webkit-scrollbar {
+    display: none;
+}
+#expend:hover {
+    width: 20rem;
+    height: 30rem;
+    background-color: #080808;
+    transition: width 0.4s ease, height 0.4s ease, background-color 0.4s ease;
+}
+#expend:hover #expendImg {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    transition: all 0.4s ease;
+}
+#expend:hover #expendText {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.2s ease 0.4s;
+}
 .textimg {
     height: 2.5rem;
 }

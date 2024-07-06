@@ -27,3 +27,26 @@ window.onresize = function() {
 window.addEventListener('scroll', function() {
     updateProgressBar();
 });
+
+let article = document.getElementById("text");
+let content = document.getElementById("expendText");
+let articleHeadings = article.querySelectorAll("h1, h2, h3, h4, h5, h6");
+function scrollToElement(id) {
+    document.getElementById(id).scrollIntoView({behavior: 'smooth'});
+};
+articleHeadings.forEach(function(heading, index) {
+    let headingLevel = heading.tagName.toLowerCase().replace("h", "");
+    let headingName = heading.innerText.trim();
+    let idName = heading.id;
+    if (!idName) {
+        idName = 'No' + (index + 1);
+        heading.id = idName;
+    };
+    let contentItem = document.createElement("div");
+    contentItem.setAttribute("class", "hoverable");
+    contentItem.setAttribute("id", idName);
+    contentItem.setAttribute("style", `position: relative; padding-bottom: 1rem; padding-left: ${headingLevel - 1}rem;`);
+    contentItem.setAttribute("onclick", `scrollToElement('${idName}')`);
+    contentItem.innerHTML = `L${headingLevel} ${headingName}`;
+    content.appendChild(contentItem);
+});

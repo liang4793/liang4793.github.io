@@ -3,12 +3,20 @@ html {
     font-size:16px;
     font-family: 'Poppins', sans-serif;
     word-break: break-all;
+    scroll-behavior: smooth;
 }
 ::selection {
     background-color: rgb(250, 100, 0, 0.4);
 }
 a {
     text-decoration: none;
+}
+.hoverable {
+    cursor: pointer;
+    color: white;
+}
+.hoverable:hover {
+    color: rgb(250, 100, 0);
 }
 @keyframes appear {
     0% {

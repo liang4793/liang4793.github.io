@@ -67,13 +67,6 @@
 .textimg {
     height: 2.5rem;
 }
-.hoverable {
-    cursor: pointer;
-    color: white;
-}
-.hoverable:hover {
-    color: rgb(250, 100, 0);
-}
 #projects {
     font-size: 1.5rem;
     color: rgba(255, 255, 255, 0.4);
