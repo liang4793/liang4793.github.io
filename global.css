@@ -36,41 +36,31 @@ a {
 }
 @keyframes fromL {
     0% {
-        margin-right: 2rem;
+        transform: translateX(-2rem);
         opacity: 0;
     }
     100% {
-        margin-right: 0rem;
-        opacity: 1;
-    }
-}
-@keyframes fromL2 {
-    0% {
-        margin-left: -2rem;
-        opacity: 0;
-    }
-    100% {
-        margin-left: 0rem;
+        transform: translateX(0rem);
         opacity: 1;
     }
 }
 @keyframes fromR {
     0% {
-        margin-left: 2rem;
+        transform: translateX(2rem);
         opacity: 0;
     }
     100% {
-        margin-left: 0rem;
+        transform: translateX(0rem);
         opacity: 1;
     }
 }
 @keyframes fromT {
     0% {
-        margin-top: -2rem;
+        transform: translateY(-2rem);
         opacity: 0;
     }
     100% {
-        margin-top: 0rem;
+        transform: translateY(0rem);
         opacity: 1;
     }
 }

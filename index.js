@@ -55,6 +55,8 @@ let toLeft = document.getElementById("toLeft");
 let toRight = document.getElementById("toRight");
 let label1 = document.getElementById("label1");
 let label2 = document.getElementById("label2");
+let label3 = document.getElementById("label3");
+let label4 = document.getElementById("label4");
 let contactTitle = document.getElementById("contactTitle");
 let contactBox = document.getElementById("contactBox");
 
@@ -89,6 +91,8 @@ quit.addEventListener("click", () => {
         toRight.style.display = "none";
         label1.style.display = "none";
         label2.style.display = "none";
+        label3.style.display = "none";
+        label4.style.display = "none";
         contactTitle.style.display = "none";
         contactBox.style.display = "none";
 
@@ -121,7 +125,7 @@ l.addEventListener("click", () => {
         container.style.display = "none";
     }, 200);
     lBox.style.display = "block";
-    map.style.animation = "fromL2 0.4s ease forwards";
+    map.style.animation = "fromL 0.4s ease forwards";
     setTimeout(() => {
         map.style.display = "block";
     }, 400);
@@ -183,11 +187,15 @@ me.addEventListener("click", () => {
     setTimeout(() => {
         toRight.style.display = "block";
     }, 400);
-    label1.style.animation = "appear 0.4s ease forwards";
-    label2.style.animation = "appear 0.4s ease forwards";
+    label1.style.animation = "fromR 0.4s ease forwards";
+    label2.style.animation = "fromL 0.4s ease forwards";
+    label3.style.animation = "fromR 0.4s ease forwards";
+    label4.style.animation = "fromL 0.4s ease forwards";
     setTimeout(() => {
         label1.style.display = "block";
         label2.style.display = "block";
+        label3.style.display = "block";
+        label4.style.display = "block";
     }, 400);
     contactTitle.style.animation = "fromT 0.4s ease forwards";
     contactBox.style.animation = "fromT 0.4s ease forwards";
