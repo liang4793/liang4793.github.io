@@ -52,6 +52,17 @@
     color: white;
     animation: appear 0.2s ease-in forwards;
 }
+#noticeHeader {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 100%;
+    font-size: 1rem;
+    background-color: rgb(250, 100, 0);
+    color: white;
+    animation: fromT 0.2s ease forwards;
+    text-align: center;
+}
 .box {
     position: relative;
     margin-top: 10rem;
@@ -418,6 +429,29 @@
 .furryPic:hover {
     outline: 0.2rem solid rgb(250, 100, 0);
     outline-offset: -0.2rem;
+}
+.repoTitle {
+    position: relative;
+    top: 0rem;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: white;
+}
+#repoLogoBox {
+    position: relative;
+    top: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40rem;
+    overflow: hidden;
+}
+.repoContent {
+    position: relative;
+    top: 0rem;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.4);
 }
 @media (max-width: 1260px) {
     #axis {

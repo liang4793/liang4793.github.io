@@ -72,6 +72,15 @@ let furryPicBox = document.getElementById("furryPicBox");
 
 //repoBox
 let repoBox = document.getElementById("repoBox");
+let RT1 = document.getElementById("RT1");
+let repoLogoBox = document.getElementById("repoLogoBox");
+let RT2 = document.getElementById("RT2");
+let repoPic1 = document.getElementById("repoPic1");
+let repoPic2 = document.getElementById("repoPic2");
+let repoPic3 = document.getElementById("repoPic3");
+let repoPic4 = document.getElementById("repoPic4");
+let repoPic5 = document.getElementById("repoPic5");
+let RC1 = document.getElementById("RC1");
 
 quit.addEventListener("click", () => {
     shade2.style.animation = "disappear 0.2s ease-in forwards";
@@ -107,6 +116,15 @@ quit.addEventListener("click", () => {
         furryPicBox.style.display = "none";
 
         repoBox.style.display = "none";
+        RT1.style.display = "none";
+        repoLogoBox.style.display = "none";
+        RT2.style.display = "none";
+        repoPic1.style.display = "none";
+        repoPic2.style.display = "none";
+        repoPic3.style.display = "none";
+        repoPic4.style.display = "none";
+        repoPic5.style.display = "none";
+        RC1.style.display = "none";
     }, 200);
 });
 
@@ -116,6 +134,7 @@ function updateLocalTime() {
     localTime.innerHTML = time;
 };
 l.addEventListener("click", () => {
+    window.scrollTo(0, 0);
     updateLocalTime();
     setInterval(updateLocalTime, 1000);
     shade2.style.animation = "appear 0.2s ease-in forwards";
@@ -172,6 +191,7 @@ toRight.addEventListener("click", () => {
     },200);
 });
 me.addEventListener("click", () => {
+    window.scrollTo(0, 0);
     shade2.style.animation = "appear 0.2s ease-in forwards";
     container.style.animation = "disappear 0.2s ease-in forwards";
     setTimeout(() => {
@@ -207,6 +227,7 @@ me.addEventListener("click", () => {
 
 //furryBox
 furry.addEventListener("click", () => {
+    window.scrollTo(0, 0);
     shade2.style.animation = "appear 0.2s ease-in forwards";
     container.style.animation = "disappear 0.2s ease-in forwards";
     setTimeout(() => {
@@ -236,7 +257,7 @@ furry.addEventListener("click", () => {
         }, 400);
     };
     showF = 1;
-    furryPicBox.style.animation = "appear 0.4s ease forwards";
+    furryPicBox.style.animation = "fromT 0.4s ease forwards";
     setTimeout(() => {
         furryPicBox.style.display = "block";
     }, 400);
@@ -255,12 +276,37 @@ window.addEventListener("resize", () => {
 
 //repoBox
 repo.addEventListener("click", () => {
+    window.scrollTo(0, 0);
     shade2.style.animation = "appear 0.2s ease-in forwards";
     container.style.animation = "disappear 0.2s ease-in forwards";
     setTimeout(() => {
         shade2.style.display = "block";
         container.style.display = "none";
     }, 200);
+    repoBox.style.display = "block";
+    RT1.style.animation = "fromT 0.4s ease forwards";
+    setTimeout(() => {
+        RT1.style.display = "block";
+    }, 400);
+    repoLogoBox.style.display = "flex";
+    RT2.style.animation = "fromT 0.4s ease forwards";
+    repoPic1.style.animation = "fromT 0.4s ease forwards";
+    repoPic2.style.animation = "fromR 0.4s ease forwards";
+    repoPic3.style.animation = "fromR 0.4s ease forwards";
+    repoPic4.style.animation = "fromT 0.4s ease forwards";
+    repoPic5.style.animation = "fromT 0.4s ease forwards";
+    setTimeout(() => {
+        RT2.style.display = "block";
+        repoPic1.style.display = "block";
+        repoPic2.style.display = "block";
+        repoPic3.style.display = "block";
+        repoPic4.style.display = "block";
+        repoPic5.style.display = "block";
+    }, 400);
+    RC1.style.animation = "fromT 0.4s ease forwards";
+    setTimeout(() => {
+        RC1.style.display = "block";
+    }, 400);
 });
 
 //main
