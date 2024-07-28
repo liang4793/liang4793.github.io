@@ -1,8 +1,9 @@
 /*¯\_(ツ)_/¯ Why are you looking at my CSS?*/
 html {
-    font-size:16px;
+    font-size: 16px;
     font-family: 'Poppins', sans-serif;
     word-break: break-all;
+    text-align: justify;
     scroll-behavior: smooth;
 }
 ::selection {
