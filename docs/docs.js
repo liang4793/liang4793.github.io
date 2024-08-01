@@ -28,7 +28,25 @@ window.addEventListener('scroll', function() {
     updateProgressBar();
 });
 
+let wordCount = document.getElementById("wordCount");
+let readingTime = document.getElementById("readingTime");
 let article = document.getElementById("text");
+
+function countWords(str) {
+    const arr = str.split(' ');
+    return arr.filter(word => word !== '').length;
+};
+
+let letterC = countWords(article.innerText)
+wordCount.innerHTML = letterC;
+readT = Math.round(letterC / 100);
+console.log(readT);
+if (readT >= 1) {
+    readingTime.innerHTML = "≈" + readT;
+} else {
+    readingTime.innerHTML = "<1";
+}
+
 let content = document.getElementById("expendText");
 let articleHeadings = article.querySelectorAll("h1, h2, h3, h4, h5, h6");
 function scrollToElement(id) {

@@ -40,7 +40,7 @@
     top: 0rem;
     left: 0rem;
     height: 3.8rem;
-    animation: fromL2 0.4s ease forwards;
+    animation: fromL 0.4s ease forwards;
 }
 #title {
     position: relative;
@@ -53,9 +53,18 @@
     color: white;
     animation: fromR 0.4s ease forwards;
 }
+#textInfo {
+    position: relative;
+    top: 6rem;
+    left: 0rem;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    color:rgb(250, 100, 0);
+    animation: fromL 0.4s ease forwards;
+}
 #text {
     position: relative;
-    top: 5rem;
+    top: 10.5rem;
     left: 0rem;
     width: 100%;
     font-size: 1rem;
@@ -122,7 +131,7 @@ a {
 }
 #footer {
     position: relative;
-    margin-top: 25rem;
+    top: 25.5rem;
     left: 10%;
     width: 80%;
     min-width: 35rem;
