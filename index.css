@@ -158,6 +158,49 @@
     font-size: 1.5rem;
     color: rgba(255, 255, 255, 0.4);
 }
+.Mbox {
+    position: relative;
+    overflow: hidden;
+    min-height: 20rem;
+}
+.MtextBox {
+    width: calc(100% - 29.2rem);
+}
+.MimgBox {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    width: 29.2rem;
+    height: 100%;
+}
+.Mimg {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    height: 20rem;
+    border-radius: 0.5rem;
+    -webkit-user-drag: none;
+    box-shadow: 0rem 0rem 1rem 0rem #080808;
+}
+.Mimg:hover {
+    outline: 0.2rem solid rgb(250, 100, 0);
+    outline-offset: -0.2rem;
+}
+.Mimg1 {
+    z-index: 3;
+    right: 2rem;
+    filter: brightness(100%);
+}
+.Mimg2 {
+    z-index: 2;
+    right: 1rem;
+    filter: brightness(80%);
+}
+.Mimg3 {
+    z-index: 1;
+    right: 0rem;
+    filter: brightness(60%);
+}
 #footer {
     font-size: 3.5rem;
     line-height: 1.2;
@@ -460,6 +503,24 @@
     #LL {
         font-size: 10rem;
     }
+    .MimgBox {
+        width: 27.2rem;
+    }
+    .MtextBox {
+        width: calc(100% - 27.2rem);
+    }
+    .Mimg1 {
+        right: 0rem;
+        top: 0rem;
+    }
+    .Mimg2 {
+        right: 0rem;
+        top: 1rem;
+    }
+    .Mimg3 {
+        right: 0rem;
+        top: 2rem;
+    }
 }
 @media (max-width: 1092px) {
     #axis {
@@ -473,6 +534,31 @@
     }
     #label2 {
         margin-left: 50%;
+    }
+    .MtextBox {
+        width: 100%;
+    }
+    .MimgBox {
+        position: relative;
+        top: 0rem;
+        left: 0rem;
+        width: 100%;
+        height: 20rem;
+    }
+    .Mimg1 {
+        left: 0%;
+        top: 0rem;
+        filter: brightness(100%);
+    }
+    .Mimg2 {
+        left: calc(50% - 13.33rem);
+        top: 0rem;
+        filter: brightness(100%);
+    }
+    .Mimg3 {
+        right: 0%;
+        top: 0rem;
+        filter: brightness(100%);
     }
 }
 @media (max-width: 1000px) {
