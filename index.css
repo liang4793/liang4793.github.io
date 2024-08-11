@@ -7,17 +7,31 @@
     display: block;
     width: 35rem;
     z-index: 2;
-    animation: appear 0.2s ease-in backwards;
+    animation: appear 0.2s ease-in forwards;
 }
 #loadText {
     position: fixed;
     top: 0rem;
-    right: 0rem;
-    text-align: right;
+    left: 0rem;
+    width: 100%;
     color: rgb(250, 100, 0);
     font-size: 1.5rem;
     line-height: 0.9;
-    animation: appear 0.2s ease-in backwards;
+    animation: fromT 0.2s ease-in forwards;
+}
+#loadText1 {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 10rem;
+    text-align: left;
+}
+#loadText2 {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    width: calc(100% - 10rem);
+    text-align: right;
 }
 #shade1Text {
     position: absolute;
@@ -27,7 +41,7 @@
     font-size: 1rem;
     text-align: center;
     color: white;
-    animation: appear 0.2s ease-in backwards;
+    animation: appear 0.2s ease-in forwards;
 }
 #shade1 {
     display: block;
@@ -60,7 +74,7 @@
     font-size: 1rem;
     background-color: rgb(250, 100, 0);
     color: white;
-    animation: fromT 0.2s ease forwards;
+    animation: fromT 0.2s ease-in forwards;
     text-align: center;
 }
 .box {

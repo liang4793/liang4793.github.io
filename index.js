@@ -342,6 +342,8 @@ document.querySelectorAll(".PimgBox").forEach(item => {
 });
 
 //Let's go!
+let loadText1 = document.getElementById("loadText1");
+let loadText2 = document.getElementById("loadText2");
 let loadNum = "0%";
 let img = document.querySelectorAll("img");
 let len = img.length;
@@ -350,10 +352,11 @@ img.forEach((singleImg) => {
     singleImg.onload = () => {
         sum ++;
         loadNum = Math.round(sum / len * 100) + "%";
-        loadText.innerHTML = loadNum + " loaded. Redefining the world with imagination.";
+        loadText1.innerHTML = loadNum + " loaded";
     };
 });
 window.onload = function () {
-    loadText.innerHTML = "All done! Redefine the world with imagination!";
+    loadText1.innerHTML = "All done!";
+    loadText2.innerHTML = "Redefine the world with imagination!";
     startPage();
 };
