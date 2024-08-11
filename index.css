@@ -7,7 +7,7 @@
     display: block;
     width: 35rem;
     z-index: 2;
-    animation: appear 0.2s ease-in forwards;
+    animation: appear 0.2s ease forwards;
 }
 #loadText {
     position: fixed;
@@ -17,7 +17,7 @@
     color: rgb(250, 100, 0);
     font-size: 1.5rem;
     line-height: 0.9;
-    animation: fromT 0.2s ease-in forwards;
+    animation: fromT 0.2s ease forwards;
 }
 #loadText1 {
     position: absolute;
@@ -41,7 +41,7 @@
     font-size: 1rem;
     text-align: center;
     color: white;
-    animation: appear 0.2s ease-in forwards;
+    animation: appear 0.2s ease forwards;
 }
 #shade1 {
     display: block;
@@ -64,7 +64,7 @@
     transform: translate(-50%,0);
     width: 100%;
     color: white;
-    animation: appear 0.2s ease-in forwards;
+    animation: appear 0.2s ease forwards;
 }
 #noticeHeader {
     position: absolute;
@@ -74,7 +74,7 @@
     font-size: 1rem;
     background-color: rgb(250, 100, 0);
     color: white;
-    animation: fromT 0.2s ease-in forwards;
+    animation: fromT 0.2s ease forwards;
     text-align: center;
 }
 .box {

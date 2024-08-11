@@ -83,8 +83,8 @@ let repoPic5 = document.getElementById("repoPic5");
 let RC1 = document.getElementById("RC1");
 
 quit.addEventListener("click", () => {
-    shade2.style.animation = "disappear 0.2s ease-in forwards";
-    container.style.animation = "appear 0.2s ease-in forwards";
+    shade2.style.animation = "disappear 0.2s ease forwards";
+    container.style.animation = "appear 0.2s ease forwards";
     setTimeout(() => {
         shade2.style.display = "none";
         container.style.display = "block";
@@ -137,8 +137,8 @@ l.addEventListener("click", () => {
     window.scrollTo(0, 0);
     updateLocalTime();
     setInterval(updateLocalTime, 1000);
-    shade2.style.animation = "appear 0.2s ease-in forwards";
-    container.style.animation = "disappear 0.2s ease-in forwards";
+    shade2.style.animation = "appear 0.2s ease forwards";
+    container.style.animation = "disappear 0.2s ease forwards";
     setTimeout(() => {
         shade2.style.display = "block";
         container.style.display = "none";
@@ -192,8 +192,8 @@ toRight.addEventListener("click", () => {
 });
 me.addEventListener("click", () => {
     window.scrollTo(0, 0);
-    shade2.style.animation = "appear 0.2s ease-in forwards";
-    container.style.animation = "disappear 0.2s ease-in forwards";
+    shade2.style.animation = "appear 0.2s ease forwards";
+    container.style.animation = "disappear 0.2s ease forwards";
     setTimeout(() => {
         shade2.style.display = "block";
         container.style.display = "none";
@@ -228,8 +228,8 @@ me.addEventListener("click", () => {
 //furryBox
 furry.addEventListener("click", () => {
     window.scrollTo(0, 0);
-    shade2.style.animation = "appear 0.2s ease-in forwards";
-    container.style.animation = "disappear 0.2s ease-in forwards";
+    shade2.style.animation = "appear 0.2s ease forwards";
+    container.style.animation = "disappear 0.2s ease forwards";
     setTimeout(() => {
         shade2.style.display = "block";
         container.style.display = "none";
@@ -277,8 +277,8 @@ window.addEventListener("resize", () => {
 //repoBox
 repo.addEventListener("click", () => {
     window.scrollTo(0, 0);
-    shade2.style.animation = "appear 0.2s ease-in forwards";
-    container.style.animation = "disappear 0.2s ease-in forwards";
+    shade2.style.animation = "appear 0.2s ease forwards";
+    container.style.animation = "disappear 0.2s ease forwards";
     setTimeout(() => {
         shade2.style.display = "block";
         container.style.display = "none";
