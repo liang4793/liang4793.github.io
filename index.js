@@ -350,10 +350,10 @@ img.forEach((singleImg) => {
     singleImg.onload = () => {
         sum ++;
         loadNum = Math.round(sum / len * 100) + "%";
-        loadText.innerHTML = loadNum + " loaded";
+        loadText.innerHTML = loadNum + " loaded. Redefining the world with imagination.";
     };
 });
 window.onload = function () {
-    loadText.innerHTML = "All done!";
+    loadText.innerHTML = "All done! Redefine the world with imagination!";
     startPage();
 };
