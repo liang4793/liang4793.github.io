@@ -59,6 +59,8 @@ let label3 = document.getElementById("label3");
 let label4 = document.getElementById("label4");
 let contactTitle = document.getElementById("contactTitle");
 let contactBox = document.getElementById("contactBox");
+let musicTitle = document.getElementById("musicTitle");
+let musicShare = document.getElementById("musicShare");
 
 //furryBox
 let furryBox = document.getElementById("furryBox");
@@ -104,6 +106,8 @@ quit.addEventListener("click", () => {
         label4.style.display = "none";
         contactTitle.style.display = "none";
         contactBox.style.display = "none";
+        musicTitle.style.display = "none";
+        musicShare.style.display = "none";
 
         furryBox.style.display = "none";
         FT1.style.display = "none";
@@ -222,6 +226,12 @@ me.addEventListener("click", () => {
     setTimeout(() => {
         contactTitle.style.display = "block";
         contactBox.style.display = "block";
+    }, 400);
+    musicTitle.style.animation = "fromT 0.4s ease forwards";
+    musicShare.style.animation = "fromT 0.4s ease forwards";
+    setTimeout(() => {
+        musicTitle.style.display = "block";
+        musicShare.style.display = "block";
     }, 400);
 });
 

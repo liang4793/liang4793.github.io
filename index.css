@@ -389,14 +389,20 @@
 #contactBox {
     position: relative;
     top: 3.5rem;
-}
-.contact {
-    position: relative;
     font-size: 3.5rem;
     line-height: 1.2;
     color: white;
-    float: left;
-    margin-right: 2.5rem;
+}
+#musicTitle {
+    position: relative;
+    top: 5.5rem;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: white;
+}
+#musicShare {
+    position: relative;
+    top: 6rem;
 }
 @keyframes to4 {
     0% {
