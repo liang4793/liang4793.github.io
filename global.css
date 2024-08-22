@@ -19,10 +19,6 @@ a {
 .hoverable:hover {
     color: rgb(250, 100, 0);
 }
-.autoShow {
-    animation: appear both;
-    animation-timeline: view(85% 5%);
-}
 @keyframes appear {
     0% {
         opacity: 0;
