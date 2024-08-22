@@ -61,6 +61,8 @@ let contactTitle = document.getElementById("contactTitle");
 let contactBox = document.getElementById("contactBox");
 let musicTitle = document.getElementById("musicTitle");
 let musicShare = document.getElementById("musicShare");
+let NGLTitle = document.getElementById("NGLTitle");
+let NGLBox = document.getElementById("NGLBox");
 
 //furryBox
 let furryBox = document.getElementById("furryBox");
@@ -108,6 +110,8 @@ quit.addEventListener("click", () => {
         contactBox.style.display = "none";
         musicTitle.style.display = "none";
         musicShare.style.display = "none";
+        NGLTitle.style.display = "none";
+        NGLBox.style.display = "none";
 
         furryBox.style.display = "none";
         FT1.style.display = "none";
@@ -232,6 +236,12 @@ me.addEventListener("click", () => {
     setTimeout(() => {
         musicTitle.style.display = "block";
         musicShare.style.display = "block";
+    }, 400);
+    NGLTitle.style.animation = "fromT 0.4s ease forwards";
+    NGLBox.style.animation = "fromT 0.4s ease forwards";
+    setTimeout(() => {
+        NGLTitle.style.display = "block";
+        NGLBox.style.display = "flex";
     }, 400);
 });
 
