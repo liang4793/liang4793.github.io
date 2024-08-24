@@ -85,6 +85,12 @@ let repoPic3 = document.getElementById("repoPic3");
 let repoPic4 = document.getElementById("repoPic4");
 let repoPic5 = document.getElementById("repoPic5");
 let RC1 = document.getElementById("RC1");
+let repoSkillBox = document.getElementById("repoSkillBox");
+let RT3 = document.getElementById("RT3");
+let repoPic6 = document.getElementById("repoPic6");
+let repoPic7 = document.getElementById("repoPic7");
+let repoPic8 = document.getElementById("repoPic8");
+let RC2 = document.getElementById("RC2");
 
 quit.addEventListener("click", () => {
     shade2.style.animation = "disappear 0.2s ease forwards";
@@ -133,6 +139,12 @@ quit.addEventListener("click", () => {
         repoPic4.style.display = "none";
         repoPic5.style.display = "none";
         RC1.style.display = "none";
+        repoSkillBox.style.display = "none";
+        RT3.style.display = "none";
+        repoPic6.style.display = "none";
+        repoPic7.style.display = "none";
+        repoPic8.style.display = "none";
+        RC2.style.display = "none";
     }, 200);
 });
 
@@ -326,6 +338,21 @@ repo.addEventListener("click", () => {
     RC1.style.animation = "fromT 0.4s ease forwards";
     setTimeout(() => {
         RC1.style.display = "block";
+    }, 400);
+    repoSkillBox.style.display = "flex";
+    RT3.style.animation = "fromT 0.4s ease forwards";
+    repoPic6.style.animation = "fromT 0.4s ease forwards";
+    repoPic7.style.animation = "fromR 0.4s ease forwards";
+    repoPic8.style.animation = "fromT 0.4s ease forwards";
+    setTimeout(() => {
+        RT3.style.display = "block";
+        repoPic6.style.display = "block";
+        repoPic7.style.display = "block";
+        repoPic8.style.display = "block";
+    }, 400);
+    RC2.style.animation = "fromT 0.4s ease forwards";
+    setTimeout(() => {
+        RC2.style.display = "block";
     }, 400);
 });
 
