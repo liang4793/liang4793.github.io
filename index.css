@@ -1,5 +1,5 @@
 /*¯\_(ツ)_/¯ Why are you looking at my CSS?*/
-#JSneeded {
+.welcomeBox {
     position:absolute;
     top: 50%;
     left: 50%;
@@ -43,9 +43,6 @@
     color: white;
     animation: appear 0.2s ease forwards;
 }
-#shade1 {
-    display: block;
-}
 .shade {
     position: absolute;
     top: 0rem;
@@ -65,17 +62,6 @@
     width: 100%;
     color: white;
     animation: appear 0.2s ease forwards;
-}
-#noticeHeader {
-    position: absolute;
-    top: 0rem;
-    left: 0rem;
-    width: 100%;
-    font-size: 1rem;
-    background-color: rgb(250, 100, 0);
-    color: white;
-    animation: fromT 0.2s ease forwards;
-    text-align: center;
 }
 .box {
     position: relative;

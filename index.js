@@ -13,21 +13,28 @@ let container = document.getElementById("container");
 //JSneeded & Loading
 let loadText = document.getElementById("loadText");
 let JSnotice = document.getElementById("JSneeded");
+let mainLogo = document.getElementById("mainLogo");
 let shade1 = document.getElementById("shade1");
 let shade1Text = document.getElementById("shade1Text");
 shade1Text.innerHTML = "[... JS enabled. Loading website ...]";
 function startPage() {
     setTimeout(() => {
-        loadText.style.animation = "disappear 0.4s ease-out forwards";
-        JSnotice.style.animation = "disappear 0.4s ease-out forwards";
-        shade1.style.animation = "disappear 0.4s ease-out forwards";
+        loadText.style.animation = "disappear 0.4s ease forwards";
+        JSnotice.style.animation = "disappear 0.4s ease forwards";
         setTimeout(() => {
-            loading = 0;
-            document.body.style.cursor = 'crosshair';
             loadText.style.display = "none";
             JSnotice.style.display = "none";
-            shade1.style.display = "none";
-            container.style.display = "block";
+            mainLogo.style.display = "block";
+            setTimeout(() => {
+                mainLogo.style.animation = "disappear 0.4s ease forwards";
+                shade1.style.animation = "disappear 0.4s ease forwards";
+                setTimeout(() => {
+                    loading = 0;
+                    document.body.style.cursor = 'crosshair';
+                    shade1.style.display = "none";
+                    container.style.display = "block";
+                }, 400);
+            }, 1000);
         }, 400);
     }, 1000);
 };

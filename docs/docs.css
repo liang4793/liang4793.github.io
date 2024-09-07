@@ -89,6 +89,7 @@ a {
     cursor: pointer;
     transition: width 0.4s ease 0.1s, height 0.4s ease 0.1s, background-color 0.2s ease 0.3s;
     z-index: 10;
+    overflow: hidden;
 }
 #expendImg {
     width: 2.5rem;
