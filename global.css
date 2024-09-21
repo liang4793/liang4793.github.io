@@ -19,6 +19,40 @@ a {
 .hoverable:hover {
     color: rgb(250, 100, 0);
 }
+.hoverable2 {
+    cursor: pointer;
+    color: rgb(250, 100, 0);
+    animation: none;
+}
+.hoverable2:hover {
+    animation: glow 10s infinite;
+}
+@keyframes glow {
+    0%, 1% {
+        text-shadow: 0 0 1rem rgb(200, 80, 0),0 0 2rem rgb(200, 80, 0),0 0 3rem rgb(200, 80, 0);
+        color:rgb(250, 100, 0);
+    }
+    2.5% {
+        text-shadow: none;
+        color: rgba(250, 100, 0, 0.4);
+    }
+    3%, 4% {
+        text-shadow: 0 0 1rem rgb(200, 80, 0),0 0 2rem rgb(200, 80, 0),0 0 3rem rgb(200, 80, 0);
+        color:rgb(250, 100, 0);
+    }
+    4.5% {
+        text-shadow: none;
+        color: rgba(250, 100, 0, 0.4);
+    }
+    10%, 99% {
+        text-shadow: 0 0 1rem rgb(200, 80, 0),0 0 2rem rgb(200, 80, 0),0 0 3rem rgb(200, 80, 0);
+        color:rgb(250, 100, 0);
+    }
+    100% {
+        text-shadow: none;
+        color: rgba(250, 100, 0, 0.4);
+    }
+}
 @keyframes appear {
     0% {
         opacity: 0;

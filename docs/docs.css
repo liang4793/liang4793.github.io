@@ -33,6 +33,7 @@
     width: 80%;
     color: white;
     word-break: normal;
+    text-align: left;
     min-width: 35rem;
 }
 #titlePic {
@@ -71,6 +72,9 @@
     color: white;
     animation: fromT 0.4s ease forwards;
 }
+#text img {
+    border-radius: 0.5rem;
+}
 a {
     color: rgb(250, 100, 0);
 }
@@ -107,6 +111,8 @@ a {
     height: 25.5rem;
     transition: all 0.2s;
     overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 #expendText::-webkit-scrollbar {
     display: none;

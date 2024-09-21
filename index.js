@@ -1,6 +1,7 @@
 //¯\_(ツ)_/¯ Why are you looking at my code? 
 let body = document.body;
 let loading = 1;
+let inTransit = true;
 document.body.style.cursor = 'wait';
 let showF = 0;
 
@@ -30,6 +31,7 @@ function startPage() {
                 shade1.style.animation = "disappear 0.4s ease forwards";
                 setTimeout(() => {
                     loading = 0;
+                    inTransit = false;
                     document.body.style.cursor = 'crosshair';
                     shade1.style.display = "none";
                     container.style.display = "block";
@@ -38,6 +40,92 @@ function startPage() {
         }, 400);
     }, 1000);
 };
+
+//transitionCanvas
+const canvas = document.getElementById("transitionCanvas");
+const ctx = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+const stars = [];
+const starCount = 300; //Controls the number of meteors
+const colorStart = "rgba(250,100,0,1)"; //Meteor head color
+const colorEnd = "rgba(250,100,0,0)"; //Meteor tail gradient (transparent at the end)
+const speedMultiplier = 10; //Controls the speed of meteors
+const glowColor = "rgb(200, 80, 0)"; //Glow color for the meteors
+//Generates a random number within a range
+function randomRange(min, max) {
+    return Math.random() * (max - min) + min;
+}
+//Star class to create and manage meteors
+class Star {
+    constructor(x, y, z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+        this.originalZ = z;
+    }
+    //Update the meteor's position and speed
+    update() {
+        this.z -= 0.3 * speedMultiplier; // Speed up the meteor
+        if (this.z <= 0) {
+            this.z = this.originalZ; // Respawn the meteor
+            this.x = randomRange(-canvas.width, canvas.width);
+            this.y = randomRange(-canvas.height, canvas.height);
+        }
+    }
+    //Draw the meteor and its tail with a glowing effect
+    draw() {
+        const sx = (this.x / this.z) * canvas.width / 2 + canvas.width / 2;
+        const sy = (this.y / this.z) * canvas.height / 2 + canvas.height / 2;
+        const trailX = (this.x / (this.z + 100)) * canvas.width / 2 + canvas.width / 2; // Tail start point
+        const trailY = (this.y / (this.z + 100)) * canvas.height / 2 + canvas.height / 2;
+        //Create gradient for the meteor's tail
+        const gradient = ctx.createLinearGradient(sx, sy, trailX, trailY);
+        gradient.addColorStop(0, colorStart);
+        gradient.addColorStop(1, colorEnd);
+        //Add glow effect
+        ctx.shadowBlur = 20; // Blur radius for glow effect
+        ctx.shadowColor = glowColor; // Glow color
+        //Draw the meteor's trail
+        ctx.beginPath();
+        ctx.moveTo(sx, sy);
+        ctx.lineTo(trailX, trailY);
+        ctx.lineWidth = Math.max(0.1, 10 * (1 - this.z / this.originalZ)); // Adjust the thickness of the line
+        ctx.strokeStyle = gradient;
+        ctx.stroke();
+        //Reset shadow to avoid affecting other drawing operations
+        ctx.shadowBlur = 0;
+        ctx.shadowColor = "transparent";
+    }
+}
+//Initialize all meteors
+function initStars() {
+    for (let i = 0; i < starCount; i++) {
+        const x = randomRange(-canvas.width, canvas.width);
+        const y = randomRange(-canvas.height, canvas.height);
+        const z = randomRange(0.1, canvas.width); // Control initial distance of meteors
+        stars.push(new Star(x, y, z));
+    }
+}
+//Main animation loop
+function animate() {
+    if (!inTransit) return; //Stop the animation if inTransit is false
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    stars.forEach(star => {
+        star.update();
+        star.draw();
+    });
+    requestAnimationFrame(animate);
+}
+initStars(); //Initialize meteors
+animate(); //Start animation
+//Adjust canvas size dynamically on window resize
+window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    stars.length = 0; // Clear the existing array of stars
+    initStars(); //Reinitialize stars
+});
 
 //main
 let shade2 = document.getElementById("shade2");

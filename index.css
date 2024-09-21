@@ -9,6 +9,22 @@
     z-index: 2;
     animation: appear 0.2s ease forwards;
 }
+#transitionCanvas {
+    background-color: #080808;
+}
+.shade {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #080808;
+    z-index: 1;
+}
+#shade1 {
+    overflow: hidden;
+}
 #loadText {
     position: fixed;
     top: 0rem;
@@ -42,16 +58,6 @@
     text-align: center;
     color: white;
     animation: appear 0.2s ease forwards;
-}
-.shade {
-    position: absolute;
-    top: 0rem;
-    left: 0rem;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: #080808;
-    z-index: 1;
 }
 #container {
     display: none;
