@@ -372,7 +372,7 @@ furry.addEventListener("click", () => {
         FT3.style.display = "block";
         FT4.style.display = "block";
     }, 400);
-    if (document.body.clientWidth >= 894) {
+    if (document.body.clientWidth >= 1300) {
         furryAll1.style.animation = "fromT 0.4s ease forwards";
         setTimeout(() => {
             furryAll1.style.display = "block";
@@ -391,7 +391,7 @@ furry.addEventListener("click", () => {
 });
 window.addEventListener("resize", () => {
     if (showF == 1) {
-        if (document.body.clientWidth >= 894) {
+        if (document.body.clientWidth >= 1300) {
             furryAll1.style.display = "block";
             furryAll2.style.display = "none";
         } else {
