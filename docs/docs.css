@@ -1,0 +1,149 @@
+/*¯\_(ツ)_/¯ Why are you looking at my CSS?*/
+#progressBar {
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    width: 100%;
+    height: 1.25rem;
+    background-image: repeating-linear-gradient(45deg, rgb(250, 100, 0) 0, rgb(255, 102, 0) 12px, #080808 0, #080808 24px);
+    background-clip: content-box;
+    animation-name: progress;
+    animation-timeline: scroll(y);
+    z-index: 10;
+}
+@keyframes progress {
+    from { width: 0% }
+    to   { width: 100% }
+}
+#percentage {
+    opacity: 0;
+    position: fixed;
+    top: 0rem;
+    right: 0rem;
+    text-align: right;
+    color: rgb(250, 100, 0);
+    font-size: 1.5rem;
+    line-height: 0.9;
+    transition: all 0.2s;
+}
+#content {
+    position: relative;
+    top: 10rem;
+    left: 10%;
+    width: 80%;
+    color: white;
+    word-break: normal;
+    text-align: left;
+    min-width: 35rem;
+}
+#titlePic {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    height: 3.8rem;
+    animation: fromL 0.4s ease forwards;
+}
+#title {
+    position: relative;
+    top: 0rem;
+    left: 15rem;
+    width: calc(100% - 15rem);
+    font-size: 3.5rem;
+    line-height: 1.1;
+    text-align: right;
+    color: white;
+    animation: fromR 0.4s ease forwards;
+}
+#textInfo {
+    position: relative;
+    top: 6rem;
+    left: 0rem;
+    font-size: 1rem;
+    line-height: 1.2;
+    color:rgb(250, 100, 0);
+    animation: fromL 0.4s ease forwards;
+}
+#text {
+    position: relative;
+    top: 10.5rem;
+    left: 0rem;
+    width: 100%;
+    font-size: 1rem;
+    color: white;
+    animation: fromT 0.4s ease forwards;
+}
+#text img {
+    border-radius: 0.5rem;
+}
+a {
+    color: rgb(250, 100, 0);
+}
+#expend {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: rgb(250, 100, 0);
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    outline: 0.2rem solid rgb(250, 100, 0);
+    outline-offset: -0.2rem;
+    animation: appear 0.4s ease forwards;
+    cursor: pointer;
+    transition: width 0.4s ease 0.1s, height 0.4s ease 0.1s, background-color 0.2s ease 0.3s;
+    z-index: 10;
+    overflow: hidden;
+}
+#expendImg {
+    width: 2.5rem;
+    margin-top: 0.95rem;
+    margin-left: 0.5rem;
+    transition: all 0.4s ease 0.2s;
+}
+#expendText {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 3.5rem;
+    left: 1rem;
+    width: 18rem;
+    height: 25.5rem;
+    transition: all 0.2s;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+#expendText::-webkit-scrollbar {
+    display: none;
+}
+#expend:hover {
+    width: 20rem;
+    height: 30rem;
+    background-color: #080808;
+    transition: width 0.4s ease, height 0.4s ease, background-color 0.4s ease;
+}
+#expend:hover #expendImg {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    transition: all 0.4s ease;
+}
+#expend:hover #expendText {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.2s ease 0.2s;
+}
+.textimg {
+    height: 2.5rem;
+}
+#footer {
+    position: relative;
+    top: 25.5rem;
+    left: 10%;
+    width: 80%;
+    min-width: 35rem;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: white;
+    text-align: center;
+}

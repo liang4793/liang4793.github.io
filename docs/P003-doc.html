@@ -1,0 +1,82 @@
+<!--¯\_(ツ)_/¯ Why are you looking at my HTML?-->
+<!DOCTYPE html>
+<html lang="en" style="width: 100%; height: 100%;">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Liáng4793's Repository: Redefine the world with imagination. Personal website showcasing my project progress and documentation, sharing my life and thoughts.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes">
+  <meta name="keywords" content="Liáng4793, Liang4793, liang4793, repository, imagination, project, design, software, development, C-4793">
+  <meta name="author" content="Liáng4793">
+
+  <meta property="og:url" content="https://liang4793.github.io/docs/P003-doc.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Liáng4793's Repository - Docs">
+  <meta property="og:description" content="Liáng4793's Repository: Redefine the world with imagination. Personal website showcasing my project progress and documentation, sharing my life and thoughts.">
+  <meta property="og:image" content="https://s2.loli.net/2024/07/28/lMNwgLaXH8Zjsxp.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="liang4793.github.io">
+  <meta property="twitter:url" content="https://liang4793.github.io/docs/P003-doc.html">
+  <meta name="twitter:title" content="Liáng4793's Repository - Docs">
+  <meta name="twitter:description" content="Liáng4793's Repository: Redefine the world with imagination. Personal website showcasing my project progress and documentation, sharing my life and thoughts.">
+  <meta name="twitter:image" content="https://s2.loli.net/2024/07/28/lMNwgLaXH8Zjsxp.png">
+
+  <link rel="stylesheet" type="text/css" href="../global.css">
+  <link rel="stylesheet" type="text/css" href="docs.css">
+  <link rel="shortcut icon" href="../image/logoB.svg">
+  <link href="https://fonts.googlefonts.cn/css?family=Poppins" rel="stylesheet">
+  <title>Liáng4793's Repository - Docs</title>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="7d0ad76c-fd4d-471d-bded-46aa23e7aad7"></script>
+</head>
+
+<body style="background-color:#080808; width:100%; height:100%; margin:auto; cursor: crosshair;">
+
+  <div id="progressBar">
+    <div id="percentage">0%</div>
+  </div>
+
+  <div id="content">
+    <img id="titlePic" src="../image/software.svg" alt="software">
+    <div id="title">Camera-brake</div>
+
+    <div id="textInfo">Last update: 2024/7/12 <span style="color: white;">|</span> Classification: Project document <span style="color: white;">|</span> Word count: <span id="wordCount">0</span>words <span style="color: white;">|</span> Reading time: <span id="readingTime">≈0</span>min</div>
+
+    <div id="text">
+      <h1 id="-img-src-https-s2-loli-net-2023-05-26-ilqh3gnayib7yvz-png-style-height-24px-camerabrake"><img src="https://s2.loli.net/2023/05/26/IlQH3gnayib7Yvz.png" style="height: 1.5rem;" alt="CameraBrake"> CameraBrake</h1>
+      <p><strong>Camera privacy protection</strong><br>Quickly report and block camera service from opening.<br>If you like it, please give me a star.</p>
+      <h2 id="notes">Notes</h2>
+      <p><strong>⚠️Only for Windows, tested on laptops running win10/11</strong><br>If there are any questions, please leave issue or contact me.</p>
+      <h2 id="realization">Realization</h2>
+      <p>A (Windows) service called <code>FrameServer</code> controls whether the camera is turned on or off.<br><strong>CameraBrake</strong> use <code>win32serviceutil</code> to check whether the camera is on and turn off the camera by stopping <code>FrameServer</code> service.</p>
+      <h2 id="introduction">Introduction</h2>
+      <ol>
+      <li><strong>CameraBrake</strong> can detect whether the camera service is occupied and report.  </li>
+      <li><strong>CameraBrake</strong> can quickly turn off the camera.</li>
+      <li><strong>CameraBrake</strong> can prevent the camera from turning on in order to protect privacy and security.</li>
+      </ol>
+      <h2 id="how-to-use">How to use</h2>
+      <p><img src="https://s2.loli.net/2023/05/21/XDvcHAE1tnaZbUg.png" style="width: 30rem; height: auto; max-width: 300px;" alt="page1"/>
+      <img src="https://s2.loli.net/2023/05/21/P2mSfjocRQAHnMd.png" style="width: 30rem; height: auto; max-width: 300px;" alt="page2"/></p>
+      <p><strong>main:</strong><br><code>Camera: On/Off</code> Show current status of camera.<br><code>brake camera! (Button)</code> Click to turn off the camera once. (Some programs can turn on the camera again)<br><code>always brake camera (Switch)</code> Switch on to 
+      turn off the camera. (Doesn't allow the camera to be turned on again)</p>
+      <p><strong>setting:</strong><br><code>Logger (Switch)</code> Switch on to log.<br><code>Toaster (Switch)</code> Switch on to notify when camera is on.</p>
+
+      <p><a href="https://github.com/liang4793/CameraBrake">[View this project on Github]</a></p>
+      <p><a href="https://liang4793.github.io">[Back to main]</a></p>
+    </div>
+  </div>
+
+  <div id="expend">
+    <img id="expendImg" src="../image/expend.svg" alt="expend">
+    <div id="expendText"><div class="hoverable" onclick="window.scrollTo(0, 0);">Scroll to top</div></div>
+  </div>
+  <div id="footer">
+    ©Liáng4793, <script>document.write(new Date().getFullYear());</script></br>
+    <img class="textimg" src="../image/iconL.svg" alt="icon"><img class="textimg" style="padding-left: 1.5rem; padding-right: 1.5rem;" src="../image/textL.svg" alt="icon text"><img class="textimg" src="../image/iconL.svg" alt="icon">
+  </div>
+
+  <script type="text/javascript" src="docs.js"></script>
+</body>
+
+</html>

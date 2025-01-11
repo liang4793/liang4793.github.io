@@ -1,0 +1,137 @@
+/*¯\_(ツ)_/¯ Why are you looking at my CSS?*/
+html {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    word-break: break-all;
+    text-align: justify;
+    scroll-behavior: smooth;
+}
+::selection {
+    background-color: rgb(250, 100, 0, 0.4);
+}
+a {
+    text-decoration: none;
+}
+.hoverable {
+    cursor: pointer;
+    color: white;
+}
+.hoverable:hover {
+    color: rgb(250, 100, 0);
+}
+.hoverable2 {
+    cursor: pointer;
+    color: rgb(250, 100, 0);
+    animation: none;
+}
+.hoverable2:hover {
+    animation: glow 10s infinite;
+}
+@keyframes glow {
+    0%, 1% {
+        text-shadow: 0 0 1rem rgb(200, 80, 0),0 0 2rem rgb(200, 80, 0),0 0 3rem rgb(200, 80, 0);
+        color:rgb(250, 100, 0);
+    }
+    2.5% {
+        text-shadow: none;
+        color: rgba(250, 100, 0, 0.4);
+    }
+    3%, 4% {
+        text-shadow: 0 0 1rem rgb(200, 80, 0),0 0 2rem rgb(200, 80, 0),0 0 3rem rgb(200, 80, 0);
+        color:rgb(250, 100, 0);
+    }
+    4.5% {
+        text-shadow: none;
+        color: rgba(250, 100, 0, 0.4);
+    }
+    10%, 99% {
+        text-shadow: 0 0 1rem rgb(200, 80, 0),0 0 2rem rgb(200, 80, 0),0 0 3rem rgb(200, 80, 0);
+        color:rgb(250, 100, 0);
+    }
+    100% {
+        text-shadow: none;
+        color: rgba(250, 100, 0, 0.4);
+    }
+}
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes disappear {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes fromL {
+    0% {
+        transform: translateX(-2rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0rem);
+        opacity: 1;
+    }
+}
+@keyframes fromR {
+    0% {
+        transform: translateX(2rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0rem);
+        opacity: 1;
+    }
+}
+@keyframes fromT {
+    0% {
+        transform: translateY(-2rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+}
+@keyframes rotate{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+body::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
+}
+body::-webkit-scrollbar-thumb {
+    background-image: repeating-linear-gradient(45deg, white 0, white 12px, #080808 0, #080808 24px);
+    background-clip: content-box;
+}
+@media (max-width: 720px) {
+    html {
+        font-size: 14px;
+    }
+}
+@media (max-width: 632.5px) {
+    html {
+        font-size: 12px;
+    }
+}
+@media (max-width: 545px) {
+    html {
+        font-size: 10px;
+    }
+}
+@media (max-width: 457.5px) {
+    html {
+        font-size: 8px;
+    }
+}

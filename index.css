@@ -1,0 +1,623 @@
+/*¯\_(ツ)_/¯ Why are you looking at my CSS?*/
+.welcomeBox {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 35rem;
+    z-index: 2;
+    animation: appear 0.2s ease forwards;
+}
+#transitionCanvas {
+    background-color: #080808;
+}
+.shade {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #080808;
+    z-index: 1;
+}
+#shade1 {
+    overflow: hidden;
+}
+#loadText {
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    width: 100%;
+    color: rgb(250, 100, 0);
+    font-size: 1.5rem;
+    line-height: 0.9;
+    animation: fromT 0.2s ease forwards;
+}
+#loadText1 {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 10rem;
+    text-align: left;
+}
+#loadText2 {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    width: calc(100% - 10rem);
+    text-align: right;
+}
+#shade1Text {
+    position: absolute;
+    bottom: 0rem;
+    left: 0rem;
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    animation: appear 0.2s ease forwards;
+}
+#container {
+    display: none;
+    position: absolute;
+    top: 0rem;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 100%;
+    color: white;
+    animation: appear 0.2s ease forwards;
+}
+.box {
+    position: relative;
+    margin-top: 10rem;
+    left: 10%;
+    width: 80%;
+    min-width: 35rem;
+}
+#main {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: rgba(255, 255, 255, 0.4);
+}
+.textimg {
+    height: 2.5rem;
+}
+#projects {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+.title {
+    position: relative;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: white;
+}
+.Pbox {
+    overflow: hidden;
+}
+.PimgBox {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 20rem;
+    overflow: auto;
+    margin-top: -20rem;
+    z-index: -1;
+    transition: margin-top 0.5s 0.1s;
+    cursor: ew-resize;
+}
+.PimgBox::-webkit-scrollbar {
+    display: none;
+}
+.Pimg {
+    height: 100%;
+    border-radius: 0.5rem;
+    margin-right: 0.5rem;
+    opacity: 0;
+    -webkit-user-drag: none;
+    transition: opacity 0.2s;
+}
+.Pimg:hover {
+    outline: 0.2rem solid rgb(250, 100, 0);
+    outline-offset: -0.2rem;
+}
+#P3box:hover #P3imgBox {
+    margin-top: 0rem;
+    z-index: 1;
+    transition: margin-top 0.5s, z-index 0s 0.5s;
+}
+#P3box:hover #P3img {
+    opacity: 1;
+    transition: opacity 0.2s 0.3s;
+}
+#P2box:hover #P2imgBox {
+    margin-top: 0rem;
+    z-index: 1;
+    transition: margin-top 0.5s, z-index 0s 0.5s;
+}
+#P2box:hover #P2img {
+    opacity: 1;
+    transition: opacity 0.2s 0.3s;
+}
+#P1box:hover #P1imgBox {
+    margin-top: 0rem;
+    z-index: 1;
+    transition: margin-top 0.5s, z-index 0s 0.5s;
+}
+#P1box:hover #P1img {
+    opacity: 1;
+    transition: opacity 0.2s 0.3s;
+}
+#moments {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+.Mbox {
+    position: relative;
+    overflow: hidden;
+    min-height: 20rem;
+}
+.MtextBox {
+    width: calc(100% - 30rem);
+}
+.MimgBox {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    width: 30rem;
+    height: 100%;
+}
+.Mimg {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    height: 20rem;
+    border-radius: 0.5rem;
+    -webkit-user-drag: none;
+    box-shadow: 0rem 0rem 1rem 0rem #080808;
+}
+.Mimg:hover {
+    outline: 0.2rem solid rgb(250, 100, 0);
+    outline-offset: -0.2rem;
+}
+.Mimg1 {
+    z-index: 3;
+    right: 2rem;
+}
+.Mimg2 {
+    z-index: 2;
+    right: 1rem;
+}
+.Mimg3 {
+    z-index: 1;
+    right: 0rem;
+}
+#footer {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: white;
+    text-align: center;
+}
+
+#shade2 {
+    display: none;
+}
+.shadeBox {
+    position: relative;
+    margin-top: 2rem;
+    left: 5%;
+    width: 90%;
+    min-width: 35rem;
+}
+.shadeBox2 {
+    position: relative;
+    margin-top: 2rem;
+    left: 0rem;
+    width: 100%;
+    display: none;
+}
+#map {
+    display: none;
+    position: relative;
+    width: 60%;
+    max-width: 35rem;
+    float: left;
+}
+#locationInfo {
+    position: relative;
+    top: 0rem;
+    left: 37rem;
+    width: calc(100% - 37rem);
+    color: white;
+}
+#axis {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-top: -3rem;
+}
+#LL {
+    display: none;
+    font-size: 14rem;
+    color: rgb(250, 100, 0);
+}
+#SS {
+    display: none;
+    color: rgba(255, 255, 255, 0.4);
+}
+#timeTitle {
+    display: none;
+}
+#mePicBox {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50rem;
+    overflow: hidden;
+}
+.mePicBox2 {
+    position: absolute;
+    height: calc(100% - 8.4rem);
+    margin-top: -2.4rem;
+}
+.mePic {
+    height: 100%;
+    border-radius: 0.5rem;
+    border-top: 0.4rem white solid;
+    border-left: 0.4rem white solid;
+    border-right: 0.4rem white solid;
+    border-bottom: 2rem white solid;
+    box-shadow: 0rem 0rem 1rem 0rem #080808;
+    transition: all 0.2s;
+}
+.mePicText {
+    position: absolute;
+    bottom: -2.5rem;
+    left: 0.4rem;
+    font-size: 1.5rem;
+    color: #080808;
+}
+#mePic1 {
+    z-index: 4;
+    transform: rotate(0deg);
+    filter: brightness(100%);
+}
+#mePic2 {
+    z-index: 3;
+    transform: rotate(-4deg);
+    filter: brightness(80%);
+}
+#mePic3 {
+    z-index: 2;
+    transform:rotate(-8deg);
+    filter: brightness(60%);
+}
+#mePic4 {
+    z-index: 1;
+    transform:rotate(-12deg);
+    filter: brightness(40%);
+}
+#lShadow {
+    position: absolute;
+    left: 0rem;
+    width: 1rem;
+    height: 100%;
+    background: linear-gradient(90deg, #080808, rgb(0, 0, 0, 0));
+    z-index: 10;
+}
+#rShadow {
+    position: absolute;
+    right: 0rem;
+    width: 1rem;
+    height: 100%;
+    background: linear-gradient(-90deg, #080808, rgb(0, 0, 0, 0));
+    z-index: 10;
+}
+#toLeft {
+    position: absolute;
+    left: 0rem;
+    height: 2.5rem;
+    z-index: 11;
+    cursor: pointer;
+}
+#toRight {
+    position: absolute;
+    right: 0rem;
+    height: 2.5rem;
+    z-index: 11;
+    cursor: pointer;
+}
+.label {
+    position: absolute;
+    font-size: 2.5rem;
+    line-height: 0.8;
+    background-color: rgb(250, 100, 0);
+    color: white;
+    white-space: nowrap;
+}
+#label1 {
+    margin-top: -26rem;
+    margin-left: -40rem;
+    z-index: 11;
+}
+#label2 {
+    margin-top: 26rem;
+    margin-left: 40rem;
+    z-index: 11
+}
+#label3 {
+    margin-top: 16rem;
+    margin-left: -80rem;
+    z-index: 9;
+}
+#label4 {
+    margin-top: -16rem;
+    margin-left: 80rem;
+    z-index: 9;
+}
+#contactTitle {
+    position: relative;
+    top: 3.5rem;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: white;
+}
+#contactBox {
+    position: relative;
+    top: 3.5rem;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: white;
+}
+#musicTitle {
+    position: relative;
+    top: 6.5rem;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: white;
+}
+#musicShare {
+    position: relative;
+    top: 7rem;
+}
+#NGLTitle {
+    position: relative;
+    top: 10rem;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: white;
+}
+#NGLBox {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10.5rem;
+    width: 100%;
+    height: 460px;
+    border-radius: 1rem;
+    background: linear-gradient(rgb(237, 25, 128), rgb(254, 131, 27));
+    overflow: hidden;
+}
+@keyframes to4 {
+    0% {
+        z-index: 4;
+        transform: rotate(0deg);
+        filter: brightness(100%);
+    } 50% {
+        z-index: 4;
+        transform: rotate(4deg);
+        opacity: 0;
+    } 60% {
+        z-index: 1;
+        transform:rotate(-16deg);
+        filter: brightness(40%);
+        opacity: 0;
+    } 100% {
+        z-index: 1;
+        transform:rotate(-12deg);
+        filter: brightness(40%);
+        opacity: 1;
+    } 
+}
+@keyframes to1 {
+    0% {
+        z-index: 3;
+        transform: rotate(-4deg);
+        filter: brightness(80%);
+    } 100% {
+        z-index: 4;
+        transform: rotate(0deg);
+        filter: brightness(100%);
+    }
+}
+@keyframes to2 {
+    0% {
+        z-index: 2;
+        transform:rotate(-8deg);
+        filter: brightness(60%);
+    } 100% {
+        z-index: 3;
+        transform: rotate(-4deg);
+        filter: brightness(80%);
+    }  
+}
+@keyframes to3 {
+    0% {
+        z-index: 1;
+        transform:rotate(-12deg);
+        filter: brightness(40%);
+    } 100% {
+        z-index: 2;
+        transform:rotate(-8deg);
+        filter: brightness(60%);
+    }  
+}
+.furryTitle {
+    position: relative;
+    top: 0rem;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: white;
+}
+.furryAll {
+    display: none;
+    position: relative;
+    top: 3rem;
+    width: 100%;
+    border-radius: 0.5rem;
+}
+#furryPicBox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    position: relative;
+    top: 10rem;
+    width: 100%;
+    overflow: hidden;
+}
+.furryPic {
+    position: relative;
+    height: 20rem;
+    border-radius: 0.5rem;
+}
+.furryPic:hover {
+    outline: 0.2rem solid rgb(250, 100, 0);
+    outline-offset: -0.2rem;
+}
+.repoTitle {
+    position: relative;
+    top: 0rem;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: white;
+}
+#repoLogoBox {
+    position: relative;
+    top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40rem;
+    overflow: hidden;
+}
+.repoContent {
+    position: relative;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+#repoSkillBox {
+    position: relative;
+    top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40rem;
+    overflow: hidden;
+}
+@media (max-width: 1260px) {
+    #axis {
+        margin-top: -2rem;
+    }
+    #LL {
+        font-size: 10rem;
+    }
+}
+@media (max-width: 1220px) {
+    .MimgBox {
+        width: 28rem;
+    }
+    .MtextBox {
+        width: calc(100% - 28rem);
+    }
+    .Mimg1 {
+        right: 0rem;
+        top: 0rem;
+    }
+    .Mimg2 {
+        right: 0rem;
+        top: 1rem;
+    }
+    .Mimg3 {
+        right: 0rem;
+        top: 2rem;
+    }
+}
+@media (max-width: 1092px) {
+    #axis {
+        margin-top: -1.6rem;
+    }
+    #LL {
+        font-size: 8rem;
+    }
+    #label1 {
+        margin-left: -60%;
+    }
+    #label2 {
+        margin-left: 50%;
+    }
+    .MtextBox {
+        width: 100%;
+    }
+    .MimgBox {
+        position: relative;
+        top: 0rem;
+        left: 0rem;
+        width: 100%;
+        height: 20rem;
+    }
+    .Mimg1 {
+        left: 0%;
+        top: 0rem;
+    }
+    .Mimg2 {
+        left: calc(50% - 13.33rem);
+        top: 0rem;
+    }
+    .Mimg3 {
+        right: 0%;
+        top: 0rem;
+    }
+}
+@media (max-width: 1000px) {
+    #mePicBox {
+        height: 55rem;
+    }
+    .mePicBox2 {
+        margin-top: -8rem;
+        height: calc(100% - 13.5rem);
+    }
+    #toLeft {
+        bottom: 0rem;
+    }
+    #toRight {
+        bottom: 0rem;
+    }
+    #label1 {
+        margin-top: -38rem;
+    }
+}
+@media (max-width: 894px) {
+    #axis {
+        margin-top: -1.2rem;
+    }
+    #LL {
+        font-size: 5rem;
+    }
+}
+@media (max-width: 65rem) {
+    #locationInfo {
+        left: 63.2%;
+        width: 38%;
+    }
+}
