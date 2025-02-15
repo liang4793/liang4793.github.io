@@ -386,7 +386,7 @@ furry.addEventListener("click", () => {
     showF = 1;
     furryPicBox.style.animation = "fromT 0.4s ease forwards";
     setTimeout(() => {
-        furryPicBox.style.display = "block";
+        furryPicBox.style.display = "flex";
     }, 400);
 });
 window.addEventListener("resize", () => {

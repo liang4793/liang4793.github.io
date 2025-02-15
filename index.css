@@ -151,6 +151,28 @@
     opacity: 1;
     transition: opacity 0.2s 0.3s;
 }
+#posterPicBox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+#posterPicBox img {
+    position: relative;
+    width: 30rem;
+    height: auto;
+}
+#posterPicBox img:hover {
+    outline: 0.2rem solid rgb(250, 100, 0);
+    outline-offset: -0.2rem;
+}
+.darkPoster {
+    outline: 0.2rem solid white;
+    outline-offset: -0.2rem;
+}
 #moments {
     font-size: 1.5rem;
     color: rgba(255, 255, 255, 0.4);
@@ -477,19 +499,20 @@
 #furryPicBox {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 1rem;
     justify-content: flex-start;
     position: relative;
     top: 10rem;
     width: 100%;
     overflow: hidden;
 }
-.furryPic {
+#furryPicBox img {
     position: relative;
-    height: 20rem;
+    height: 30rem;
+    width: auto;
     border-radius: 0.5rem;
 }
-.furryPic:hover {
+#furryPicBox img:hover {
     outline: 0.2rem solid rgb(250, 100, 0);
     outline-offset: -0.2rem;
 }
@@ -613,6 +636,16 @@
     }
     #LL {
         font-size: 5rem;
+    }
+}
+@media (max-width: 457.5px) {
+    #posterPicBox img {
+        width: 100%;
+        height: auto;
+    }
+    #furryPicBox img {
+        width: 100%;
+        height: auto;
     }
 }
 @media (max-width: 65rem) {

@@ -43,24 +43,31 @@
     <div id="textInfo">Last update: 2024/7/12 <span style="color: white;">|</span> Classification: Project document <span style="color: white;">|</span> Word count: <span id="wordCount">0</span>words <span style="color: white;">|</span> Reading time: <span id="readingTime">≈0</span>min</div>
 
     <div id="text">
-      <h1 id="-img-src-https-s2-loli-net-2023-05-26-ilqh3gnayib7yvz-png-style-height-24px-camerabrake"><img src="https://s2.loli.net/2023/05/26/IlQH3gnayib7Yvz.png" style="height: 1.5rem;" alt="CameraBrake"> CameraBrake</h1>
-      <p><strong>Camera privacy protection</strong><br>Quickly report and block camera service from opening.<br>If you like it, please give me a star.</p>
-      <h2 id="notes">Notes</h2>
-      <p><strong>⚠️Only for Windows, tested on laptops running win10/11</strong><br>If there are any questions, please leave issue or contact me.</p>
-      <h2 id="realization">Realization</h2>
-      <p>A (Windows) service called <code>FrameServer</code> controls whether the camera is turned on or off.<br><strong>CameraBrake</strong> use <code>win32serviceutil</code> to check whether the camera is on and turn off the camera by stopping <code>FrameServer</code> service.</p>
-      <h2 id="introduction">Introduction</h2>
+      <h1><img src="https://s2.loli.net/2023/05/26/IlQH3gnayib7Yvz.png" style="height: 24px;"> CameraBrake</h1>
+      <p><strong>Camera privacy protection ver2.0!</strong><br>A light and fast program that can quickly report and block camera service from opening.<br>If you like it, please give me a star ---&gt;</p>
+      <h2>Notes</h2>
+      <p><strong>⚠️Only for Windows, tested on laptops &amp; desktops running win10/11</strong><br>If there are any questions, please leave issue or contact me.<br>🔗Browse articles on: <a href="https://liang4793.github.io/docs/P002-doc.html">Liang4793&#39;s Repository</a></p>
+      <h2>Realization</h2>
+      <p>In a nutshell, a (Windows) service called <code>FrameServer</code> controls whether the camera is turned on or off.<br><strong>CameraBrake</strong> use <code>win32serviceutil</code> to check whether the camera is on and turn off the camera by stopping <code>FrameServer</code> service.</p>
+      <h2>Introduction</h2>
       <ol>
-      <li><strong>CameraBrake</strong> can detect whether the camera service is occupied and report.  </li>
-      <li><strong>CameraBrake</strong> can quickly turn off the camera.</li>
-      <li><strong>CameraBrake</strong> can prevent the camera from turning on in order to protect privacy and security.</li>
+        <li><strong>CameraBrake</strong> can detect whether the camera service is occupied and report.</li>
+        <li><strong>CameraBrake</strong> can quickly turn off the camera.</li>
+        <li><strong>CameraBrake</strong> can prevent the camera from turning on in order to protect privacy and security.</li>
+        <li><strong>CameraBrake</strong> is easy to use and light.</li>
       </ol>
-      <h2 id="how-to-use">How to use</h2>
-      <p><img src="https://s2.loli.net/2023/05/21/XDvcHAE1tnaZbUg.png" style="width: 30rem; height: auto; max-width: 300px;" alt="page1"/>
-      <img src="https://s2.loli.net/2023/05/21/P2mSfjocRQAHnMd.png" style="width: 30rem; height: auto; max-width: 300px;" alt="page2"/></p>
-      <p><strong>main:</strong><br><code>Camera: On/Off</code> Show current status of camera.<br><code>brake camera! (Button)</code> Click to turn off the camera once. (Some programs can turn on the camera again)<br><code>always brake camera (Switch)</code> Switch on to 
-      turn off the camera. (Doesn't allow the camera to be turned on again)</p>
+      <h2>How to use</h2>
+      <p>Run <code>CameraBrake.py</code> or run <code>CameraBrake.exe</code> in the latest release.</p>
+      <p><img src="https://s2.loli.net/2025/02/06/GplS4vemK3ZHUVr.png" style="width: 260px; height: auto"/>
+      <img src="https://s2.loli.net/2025/02/06/evVwhXn1f2JWxRK.png" style="width: 260px; height: auto"/></p>
+      <p><img src="https://s2.loli.net/2025/02/06/9O3HTlVhwcJIy2b.png" style="width: 260px; height: auto"/>
+      <img src="https://s2.loli.net/2025/02/06/SFhI6osjXmzTdnZ.png" style="width: 260px; height: auto"/></p>
+      <p><img src="https://s2.loli.net/2025/02/06/4T5gXuZnSFJqiAl.png" style="width: 260px; height: auto"/></p>
+      <p><strong>main:</strong><br><code>Camera: On/Off</code> Show current status of camera.<br><code>brake camera! (Button)</code> Click to turn off the camera once. (Some programs can turn on the camera again)<br><code>always brake camera (Switch)</code> Switch on to turn off the camera. (Doesn&#39;t allow the camera to be turned on again)</p>
       <p><strong>setting:</strong><br><code>Logger (Switch)</code> Switch on to log.<br><code>Toaster (Switch)</code> Switch on to notify when camera is on.</p>
+      <p><strong>other:</strong><br><code>Minimize to Tray</code> Yes to minimize, No to exit.<br><code>Report</code> Log &amp; Windows notification.</p>
+      <h2>Poster</h2>
+      <p><img src="https://s2.loli.net/2025/02/06/cGH4qPC2rg5YVXB.png" style="width: 100%; height: auto; max-width: 457.5px; border-radius: 0px;"/></p>
 
       <p><a href="https://github.com/liang4793/CameraBrake">[View this project on Github]</a></p>
       <p><a href="https://liang4793.github.io">[Back to main]</a></p>
