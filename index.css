@@ -217,6 +217,34 @@
     z-index: 1;
     right: 0rem;
 }
+#links {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+#linksBox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.linkBox {
+    position: relative;
+    height: 6rem;
+    font-size: 1rem;
+    color: white;
+}
+.linkBox img {
+    position: relative;
+    height: 100%;
+    border-radius: 3rem;
+    background-color: white;
+    outline: 0.2rem solid rgb(250, 100, 0);
+    outline-offset: -0.2rem;
+    float: left;
+}
 #footer {
     font-size: 3.5rem;
     line-height: 1.2;
