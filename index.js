@@ -483,6 +483,19 @@ document.querySelectorAll(".PimgBox").forEach(item => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const revealElements = document.querySelectorAll(".scroll-reveal");
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    revealElements.forEach(element => observer.observe(element));
+});
+
 //Let's go!
 let loadText1 = document.getElementById("loadText1");
 let loadText2 = document.getElementById("loadText2");

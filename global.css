@@ -27,6 +27,12 @@ a {
 .hoverable2:hover {
     animation: glow 10s infinite;
 }
+.scroll-reveal {
+    opacity: 0;
+}
+.scroll-reveal.visible {
+    animation: appear 0.4s ease-out forwards;
+}
 @keyframes glow {
     0%, 1% {
         text-shadow: 0 0 1rem rgb(200, 80, 0),0 0 2rem rgb(200, 80, 0),0 0 3rem rgb(200, 80, 0);
@@ -56,47 +62,57 @@ a {
 @keyframes appear {
     0% {
         opacity: 0;
+        filter: blur(0.2rem);
     }
     100% {
         opacity: 1;
+        filter: blur(0rem);
     }
 }
 @keyframes disappear {
     0% {
         opacity: 1;
+        filter: blur(0rem);
     }
     100% {
         opacity: 0;
+        filter: blur(0.2rem);
     }
 }
 @keyframes fromL {
     0% {
         transform: translateX(-2rem);
         opacity: 0;
+        filter: blur(0.2rem);
     }
     100% {
         transform: translateX(0rem);
         opacity: 1;
+        filter: blur(0rem);
     }
 }
 @keyframes fromR {
     0% {
         transform: translateX(2rem);
         opacity: 0;
+        filter: blur(0.2rem);
     }
     100% {
         transform: translateX(0rem);
         opacity: 1;
+        filter: blur(0rem);
     }
 }
 @keyframes fromT {
     0% {
         transform: translateY(-2rem);
         opacity: 0;
+        filter: blur(0.2rem);
     }
     100% {
         transform: translateY(0rem);
         opacity: 1;
+        filter: blur(0rem);
     }
 }
 @keyframes rotate{

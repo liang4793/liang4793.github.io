@@ -5,7 +5,7 @@
     left: 0rem;
     width: 100%;
     height: 1.25rem;
-    background-image: repeating-linear-gradient(45deg, rgb(250, 100, 0) 0, rgb(255, 102, 0) 12px, #080808 0, #080808 24px);
+    background-image: repeating-linear-gradient(45deg, rgb(250, 100, 0) 0, rgb(255, 100, 0) 12px, #080808 0, #080808 24px);
     background-clip: content-box;
     animation-name: progress;
     animation-timeline: scroll(y);
@@ -76,7 +76,16 @@
     border-radius: 0.5rem;
 }
 a {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: white;
+    background-color: rgb(250, 100, 0);
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+}
+a:hover {
     color: rgb(250, 100, 0);
+    background-color: white;
 }
 #expend {
     position: fixed;
