@@ -59,15 +59,6 @@
     color: white;
     animation: appear 0.2s ease forwards;
 }
-#cursor {
-    display: none;
-    pointer-events: none;
-    position: fixed;
-    width: 3.5rem;
-    height: 3.5rem;
-    z-index: 999;
-    transform: translate(-50%, -50%);
-}
 #container {
     display: none;
     position: absolute;
