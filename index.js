@@ -11,6 +11,34 @@ console.log("[Welcome to Liáng4793's Repository(Liáng's Repo)]");
 //page
 let container = document.getElementById("container");
 
+//cursor
+let showCursor = 0;
+let cursor = document.getElementById("cursor");
+let isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+if (!isMobile) {
+    window.addEventListener("mousemove", (e) => {
+        cursor.style.left = `${e.clientX}px`;
+        cursor.style.top = `${e.clientY}px`;
+    });
+    window.addEventListener("mouseout", () => {
+        if (showCursor == 1) {
+            cursor.style.animation = "disappear 0.2s ease forwards";
+            setTimeout(() => {
+                cursor.style.display = "none";
+            }, 200);
+        };
+    });
+    window.addEventListener("mouseover", () => {
+        if (showCursor == 1) {
+            cursor.style.animation = "appear 0.2s ease forwards";
+            setTimeout(() => {
+                cursor.style.display = "block";
+            }, 200);
+        };
+    });
+};
+
 //JSneeded & Loading
 let loadText = document.getElementById("loadText");
 let JSnotice = document.getElementById("JSneeded");
@@ -31,6 +59,7 @@ function startPage() {
                 shade1.style.animation = "disappear 0.4s ease forwards";
                 setTimeout(() => {
                     loading = 0;
+                    showCursor = 1;
                     inTransit = false;
                     document.body.style.cursor = 'crosshair';
                     shade1.style.display = "none";
