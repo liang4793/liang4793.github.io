@@ -145,7 +145,7 @@ let localTime = document.getElementById("localTime");
 
 //meBox
 let meBox = document.getElementById("meBox");
-let mePic = document.getElementsByClassName("mePicBox2");
+let mePic = document.querySelectorAll('.mePicBox2');
 let toLeft = document.getElementById("toLeft");
 let toRight = document.getElementById("toRight");
 let label1 = document.getElementById("label1");
@@ -278,33 +278,110 @@ l.addEventListener("click", () => {
 });
 
 //meBox
-var mePicList = [1, 2, 3, 4];
-toLeft.addEventListener("click", () => {
+let mePicList = [0, 1, 2, 3];
+mePic.forEach((el, i) => {
+    gsap.set(el, {
+        rotation: [0, -4, -8, -12][i],
+        opacity: 1,
+        zIndex: [3, 2, 1, 0][i],
+        filter: `brightness(${[100, 80, 60, 40][i]}%)`
+    });
+});
+let isAnimating = false;
+const animateToLeft = () => {
+    if (isAnimating) return;
+    isAnimating = true;
+    setTimeout(() => isAnimating = false, 1000);
+
     mePicList.unshift(mePicList.pop());
-    mePic[mePicList[0]-1].style.animation = "to4 reverse 1.2s ease forwards";
-    setTimeout(() => {
-        mePic[mePicList[3]-1].style.animation = "to3 reverse 0.4s ease forwards";
-        setTimeout(() => {
-            mePic[mePicList[2]-1].style.animation = "to2 reverse 0.4s ease forwards";
-            setTimeout(() => {
-                mePic[mePicList[1]-1].style.animation = "to1 reverse 0.4s ease forwards";
-            },200);
-        },200);
-    },200);
-});
-toRight.addEventListener("click", () => {
+    const timeline = gsap.timeline();
+    timeline.to(mePic[mePicList[0]], {
+        duration: 0.4,
+        rotation: -16,
+        opacity: 0,
+        ease: "power2.ease"
+    }, 0);
+    timeline.to(mePic[mePicList[3]], {
+        duration: 0.4,
+        rotation: -12,
+        filter: 'brightness(40%)',
+        zIndex: 0,
+        ease: "power2.ease"
+    }, 0.2);
+    timeline.to(mePic[mePicList[2]], {
+        duration: 0.4,
+        rotation: -8,
+        filter: 'brightness(60%)',
+        zIndex: 1,
+        ease: "power2.ease"
+    }, 0.4);
+    timeline.to(mePic[mePicList[1]], {
+        duration: 0.4,
+        rotation: -4,
+        filter: 'brightness(80%)',
+        zIndex: 2,
+        ease: "power2.ease"
+    }, 0.6);
+    timeline.set(mePic[mePicList[0]], {
+        rotation: 4,
+        filter: 'brightness(100%)',
+        zIndex: 3
+    }, 0.8);
+    timeline.to(mePic[mePicList[0]], {
+        duration: 0.4,
+        rotation: 0,
+        opacity: 1,
+        ease: "power2.ease"
+    }, 0.8);
+};
+toLeft.addEventListener("click", animateToLeft);
+const animateToRight = () => {
+    if (isAnimating) return;
+    isAnimating = true;
+    setTimeout(() => isAnimating = false, 1000);
+
     mePicList.push(mePicList.shift());
-    mePic[mePicList[3]-1].style.animation = "to4 1.2s ease forwards";
-    setTimeout(() => {
-        mePic[mePicList[0]-1].style.animation = "to1 0.4s ease forwards";
-        setTimeout(() => {
-            mePic[mePicList[1]-1].style.animation = "to2 0.4s ease forwards";
-            setTimeout(() => {
-                mePic[mePicList[2]-1].style.animation = "to3 0.4s ease forwards";
-            },200);
-        },200);
-    },200);
-});
+    const timeline = gsap.timeline();
+    timeline.to(mePic[mePicList[3]], {
+        duration: 0.4,
+        rotation: 4,
+        opacity: 0,
+        ease: "power2.ease"
+    }, 0);
+    timeline.to(mePic[mePicList[0]], {
+        duration: 0.4,
+        rotation: 0,
+        filter: 'brightness(100%)',
+        zIndex: 3,
+        ease: "power2.ease"
+    }, 0.2);
+    timeline.to(mePic[mePicList[1]], {
+        duration: 0.4,
+        rotation: -4,
+        filter: 'brightness(80%)',
+        zIndex: 2,
+        ease: "power2.ease"
+    }, 0.4);
+    timeline.to(mePic[mePicList[2]], {
+        duration: 0.4,
+        rotation: -8,
+        filter: 'brightness(60%)',
+        zIndex: 1,
+        ease: "power2.ease"
+    }, 0.6);
+    timeline.set(mePic[mePicList[3]], {
+        rotation: -16,
+        filter: 'brightness(40%)',
+        zIndex: 0
+    }, 0.8);
+    timeline.to(mePic[mePicList[3]], {
+        duration: 0.4,
+        rotation: -12,
+        opacity: 1,
+        ease: "power2.ease"
+    }, 0.8);
+};
+toRight.addEventListener("click", animateToRight);
 me.addEventListener("click", () => {
     window.scrollTo(0, 0);
     shade2.style.animation = "appear 0.2s ease forwards";
