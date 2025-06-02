@@ -31,7 +31,7 @@ a {
     opacity: 0;
 }
 .scroll-reveal.visible {
-    animation: appear 0.4s ease-out forwards;
+    animation: appear 0.4s ease forwards;
 }
 @keyframes glow {
     0%, 1% {

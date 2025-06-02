@@ -19,6 +19,54 @@ let shade1 = document.getElementById("shade1");
 let shade1Text = document.getElementById("shade1Text");
 shade1Text.innerHTML = "[... JS enabled. Loading website ...]";
 function startPage() {
+    //Split the text and prepare the opening animation
+    const mainText = document.getElementById('main');
+    const targetIds = ['location', 'me', 'furry', 'repo', 'scroll'];
+    const nodes = Array.from(mainText.childNodes);
+    let lineBuffer = [];
+    const lineBlocks = [];
+    for (const node of nodes) {
+        if (node.nodeName === 'BR') {
+            lineBlocks.push([...lineBuffer]);
+            lineBuffer = [];
+        } else {
+            lineBuffer.push(node);
+        }
+    }
+    if (lineBuffer.length > 0) {
+        lineBlocks.push([...lineBuffer]);
+    }
+    const newContent = lineBlocks.map((line, lineIndex) => {
+        const result = document.createElement('div');
+        let charIndex = 1;
+        for (const node of line) {
+            if (node.nodeType === Node.TEXT_NODE) {
+                for (const ch of node.textContent) {
+                    if (ch.trim() === '') {
+                        result.appendChild(document.createTextNode(ch));
+                    } else {
+                        const span = document.createElement('span');
+                        span.textContent = ch;
+                        span.id = String.fromCharCode(97 + lineIndex) + charIndex++;
+                        span.style.opacity = '0';
+                        span.style.filter = 'blur(0.2rem)';
+                        result.appendChild(span);
+                    }
+                }
+            } else if (
+                node.nodeType === Node.ELEMENT_NODE &&
+                node.tagName === 'SPAN' &&
+                targetIds.includes(node.id)
+            ) {
+                result.appendChild(node.cloneNode(true));
+            } else {
+                result.appendChild(node.cloneNode(true));
+            }
+        }
+        return result.innerHTML;
+    });
+    mainText.innerHTML = newContent.join('<br>');
+
     setTimeout(() => {
         loadText.style.animation = "disappear 0.4s ease forwards";
         JSnotice.style.animation = "disappear 0.4s ease forwards";
@@ -35,6 +83,71 @@ function startPage() {
                     document.body.style.cursor = 'crosshair';
                     shade1.style.display = "none";
                     container.style.display = "block";
+                    //Opening animation
+                    const mainTextTimeline = gsap.timeline();
+                    const animationTargetIds = ['location', 'me', 'furry', 'scroll'];
+                    mainTextTimeline.add(() => {
+                        animationTargetIds.forEach((id, index) => {
+                            const el = document.getElementById(id);
+                            if (el) {
+                                mainTextTimeline.to(el, {
+                                    opacity: 1,
+                                    y: 0,
+                                    filter: 'blur(0rem)',
+                                    duration: 0.4,
+                                    ease: "power1.ease"
+                                }, 0.2 + index * 0.4);
+                            }
+                        });
+                    }, '+=0.2');
+                    mainTextTimeline.add(() => {
+                        const spans = Array.from(mainText.querySelectorAll('span')).filter(span => /^a\d+$/.test(span.id));
+                        spans.forEach((span, i) => {
+                            gsap.to(span, {
+                                opacity: 1,
+                                filter: 'blur(0rem)',
+                                duration: 0.2,
+                                delay: i * 0.02,
+                                ease: "power1.ease"
+                            });
+                        });
+                    }, '+=1.4');
+                    mainTextTimeline.add(() => {
+                        const spans = Array.from(mainText.querySelectorAll('span')).filter(span => /^b\d+$/.test(span.id));
+                        spans.forEach((span, i) => {
+                            gsap.to(span, {
+                                opacity: 1,
+                                filter: 'blur(0rem)',
+                                duration: 0.2,
+                                delay: i * 0.02,
+                                ease: "power1.ease"
+                            });
+                        });
+                    }, '<');
+                    mainTextTimeline.add(() => {
+                        const spans = Array.from(mainText.querySelectorAll('span')).filter(span => /^c\d+$/.test(span.id));
+                        spans.forEach((span, i) => {
+                            gsap.to(span, {
+                                opacity: 1,
+                                filter: 'blur(0rem)',
+                                duration: 0.2,
+                                delay: i * 0.02,
+                                ease: "power1.ease"
+                            });
+                        });
+                    }, '<');
+                    mainTextTimeline.add(() => {
+                        const spans = Array.from(mainText.querySelectorAll('span')).filter(span => /^d\d+$/.test(span.id));
+                        spans.forEach((span, i) => {
+                            gsap.to(span, {
+                                opacity: 1,
+                                filter: 'blur(0rem)',
+                                duration: 0.2,
+                                delay: i * 0.02,
+                                ease: "power1.ease"
+                            });
+                        });
+                    }, '<');
                 }, 400);
             }, 1000);
         }, 400);
@@ -130,10 +243,6 @@ window.addEventListener('resize', () => {
 //main
 let shade2 = document.getElementById("shade2");
 let quit = document.getElementById("quit");
-let l = document.getElementById("location");
-let me = document.getElementById("me");
-let furry = document.getElementById("furry");
-let repo = document.getElementById("repo");
 
 //locationBox
 let lBox = document.getElementById("locationBox");
@@ -248,33 +357,35 @@ function updateLocalTime() {
     var time = new Date().toLocaleString("en-US", {timeZone: "Asia/Shanghai"});
     localTime.innerHTML = time;
 };
-l.addEventListener("click", () => {
-    window.scrollTo(0, 0);
-    updateLocalTime();
-    setInterval(updateLocalTime, 1000);
-    shade2.style.animation = "appear 0.2s ease forwards";
-    container.style.animation = "disappear 0.2s ease forwards";
-    setTimeout(() => {
-        shade2.style.display = "block";
-        container.style.display = "none";
-    }, 200);
-    lBox.style.display = "block";
-    map.style.animation = "fromL 0.4s ease forwards";
-    setTimeout(() => {
-        map.style.display = "block";
-    }, 400);
-    LL.style.animation = "fromT 0.4s ease forwards";
-    setTimeout(() => {
-        LL.style.display = "block";
-    }, 400);
-    SS.style.animation = "fromT 0.4s ease forwards";
-    setTimeout(() => {
-        SS.style.display = "block";
-    }, 400);
-    timeTitle.style.animation = "fromT 0.4s ease forwards";
-    setTimeout(() => {
-        timeTitle.style.display = "block";
-    }, 400);
+document.getElementById("main").addEventListener("click", (e) => {
+    if (e.target.id === "location") {
+        window.scrollTo(0, 0);
+        updateLocalTime();
+        setInterval(updateLocalTime, 1000);
+        shade2.style.animation = "appear 0.2s ease forwards";
+        container.style.animation = "disappear 0.2s ease forwards";
+        setTimeout(() => {
+            shade2.style.display = "block";
+            container.style.display = "none";
+        }, 200);
+        lBox.style.display = "block";
+        map.style.animation = "fromL 0.4s ease forwards";
+        setTimeout(() => {
+            map.style.display = "block";
+        }, 400);
+        LL.style.animation = "fromT 0.4s ease forwards";
+        setTimeout(() => {
+            LL.style.display = "block";
+        }, 400);
+        SS.style.animation = "fromT 0.4s ease forwards";
+        setTimeout(() => {
+            SS.style.display = "block";
+        }, 400);
+        timeTitle.style.animation = "fromT 0.4s ease forwards";
+        setTimeout(() => {
+            timeTitle.style.display = "block";
+        }, 400);
+    }
 });
 
 //meBox
@@ -382,89 +493,93 @@ const animateToRight = () => {
     }, 0.8);
 };
 toRight.addEventListener("click", animateToRight);
-me.addEventListener("click", () => {
-    window.scrollTo(0, 0);
-    shade2.style.animation = "appear 0.2s ease forwards";
-    container.style.animation = "disappear 0.2s ease forwards";
-    setTimeout(() => {
-        shade2.style.display = "block";
-        container.style.display = "none";
-    }, 200);
-    meBox.style.display = "block";
-    toLeft.style.animation = "fromR 0.4s ease forwards";
-    setTimeout(() => {
-        toLeft.style.display = "block";
-    }, 400);
-    toRight.style.animation = "fromL 0.4s ease forwards";
-    setTimeout(() => {
-        toRight.style.display = "block";
-    }, 400);
-    label1.style.animation = "fromR 0.4s ease forwards";
-    label2.style.animation = "fromL 0.4s ease forwards";
-    label3.style.animation = "fromR 0.4s ease forwards";
-    label4.style.animation = "fromL 0.4s ease forwards";
-    setTimeout(() => {
-        label1.style.display = "block";
-        label2.style.display = "block";
-        label3.style.display = "block";
-        label4.style.display = "block";
-    }, 400);
-    contactTitle.style.animation = "fromT 0.4s ease forwards";
-    contactBox.style.animation = "fromT 0.4s ease forwards";
-    setTimeout(() => {
-        contactTitle.style.display = "block";
-        contactBox.style.display = "block";
-    }, 400);
-    musicTitle.style.animation = "fromT 0.4s ease forwards";
-    musicShare.style.animation = "fromT 0.4s ease forwards";
-    setTimeout(() => {
-        musicTitle.style.display = "block";
-        musicShare.style.display = "block";
-    }, 400);
-    NGLTitle.style.animation = "fromT 0.4s ease forwards";
-    NGLBox.style.animation = "fromT 0.4s ease forwards";
-    setTimeout(() => {
-        NGLTitle.style.display = "block";
-        NGLBox.style.display = "flex";
-    }, 400);
+document.getElementById("main").addEventListener("click", (e) => {
+    if (e.target.id === "me") {
+        window.scrollTo(0, 0);
+        shade2.style.animation = "appear 0.2s ease forwards";
+        container.style.animation = "disappear 0.2s ease forwards";
+        setTimeout(() => {
+            shade2.style.display = "block";
+            container.style.display = "none";
+        }, 200);
+        meBox.style.display = "block";
+        toLeft.style.animation = "fromR 0.4s ease forwards";
+        setTimeout(() => {
+            toLeft.style.display = "block";
+        }, 400);
+        toRight.style.animation = "fromL 0.4s ease forwards";
+        setTimeout(() => {
+            toRight.style.display = "block";
+        }, 400);
+        label1.style.animation = "fromR 0.4s ease forwards";
+        label2.style.animation = "fromL 0.4s ease forwards";
+        label3.style.animation = "fromR 0.4s ease forwards";
+        label4.style.animation = "fromL 0.4s ease forwards";
+        setTimeout(() => {
+            label1.style.display = "block";
+            label2.style.display = "block";
+            label3.style.display = "block";
+            label4.style.display = "block";
+        }, 400);
+        contactTitle.style.animation = "fromT 0.4s ease forwards";
+        contactBox.style.animation = "fromT 0.4s ease forwards";
+        setTimeout(() => {
+            contactTitle.style.display = "block";
+            contactBox.style.display = "block";
+        }, 400);
+        musicTitle.style.animation = "fromT 0.4s ease forwards";
+        musicShare.style.animation = "fromT 0.4s ease forwards";
+        setTimeout(() => {
+            musicTitle.style.display = "block";
+            musicShare.style.display = "block";
+        }, 400);
+        NGLTitle.style.animation = "fromT 0.4s ease forwards";
+        NGLBox.style.animation = "fromT 0.4s ease forwards";
+        setTimeout(() => {
+            NGLTitle.style.display = "block";
+            NGLBox.style.display = "flex";
+        }, 400);
+    }
 });
 
 //furryBox
-furry.addEventListener("click", () => {
-    window.scrollTo(0, 0);
-    shade2.style.animation = "appear 0.2s ease forwards";
-    container.style.animation = "disappear 0.2s ease forwards";
-    setTimeout(() => {
-        shade2.style.display = "block";
-        container.style.display = "none";
-    }, 200);
-    furryBox.style.display = "block";
-    FT1.style.animation = "fromT 0.4s ease forwards";
-    FT2.style.animation = "fromT 0.4s ease forwards";
-    FT3.style.animation = "fromT 0.4s ease forwards";
-    FT4.style.animation = "fromT 0.4s ease forwards";
-    setTimeout(() => {
-        FT1.style.display = "block";
-        FT2.style.display = "block";
-        FT3.style.display = "block";
-        FT4.style.display = "block";
-    }, 400);
-    if (document.body.clientWidth >= 1300) {
-        furryAll1.style.animation = "fromT 0.4s ease forwards";
+document.getElementById("main").addEventListener("click", (e) => {
+    if (e.target.id === "furry") {
+        window.scrollTo(0, 0);
+        shade2.style.animation = "appear 0.2s ease forwards";
+        container.style.animation = "disappear 0.2s ease forwards";
         setTimeout(() => {
-            furryAll1.style.display = "block";
-        }, 400);
-    } else {
-        furryAll2.style.animation = "fromT 0.4s ease forwards";
+            shade2.style.display = "block";
+            container.style.display = "none";
+        }, 200);
+        furryBox.style.display = "block";
+        FT1.style.animation = "fromT 0.4s ease forwards";
+        FT2.style.animation = "fromT 0.4s ease forwards";
+        FT3.style.animation = "fromT 0.4s ease forwards";
+        FT4.style.animation = "fromT 0.4s ease forwards";
         setTimeout(() => {
-            furryAll2.style.display = "block";
+            FT1.style.display = "block";
+            FT2.style.display = "block";
+            FT3.style.display = "block";
+            FT4.style.display = "block";
         }, 400);
-    };
-    showF = 1;
-    furryPicBox.style.animation = "fromT 0.4s ease forwards";
-    setTimeout(() => {
-        furryPicBox.style.display = "flex";
-    }, 400);
+        if (document.body.clientWidth >= 1300) {
+            furryAll1.style.animation = "fromT 0.4s ease forwards";
+            setTimeout(() => {
+                furryAll1.style.display = "block";
+            }, 400);
+        } else {
+            furryAll2.style.animation = "fromT 0.4s ease forwards";
+            setTimeout(() => {
+                furryAll2.style.display = "block";
+            }, 400);
+        };
+        showF = 1;
+        furryPicBox.style.animation = "fromT 0.4s ease forwards";
+        setTimeout(() => {
+            furryPicBox.style.display = "flex";
+        }, 400);
+    }
 });
 window.addEventListener("resize", () => {
     if (showF == 1) {
@@ -479,61 +594,64 @@ window.addEventListener("resize", () => {
 });
 
 //repoBox
-repo.addEventListener("click", () => {
-    window.scrollTo(0, 0);
-    shade2.style.animation = "appear 0.2s ease forwards";
-    container.style.animation = "disappear 0.2s ease forwards";
-    setTimeout(() => {
-        shade2.style.display = "block";
-        container.style.display = "none";
-    }, 200);
-    repoBox.style.display = "block";
-    RT1.style.animation = "fromT 0.4s ease forwards";
-    setTimeout(() => {
-        RT1.style.display = "block";
-    }, 400);
-    repoLogoBox.style.display = "flex";
-    RT2.style.animation = "fromT 0.4s ease forwards";
-    repoPic1.style.animation = "fromT 0.4s ease forwards";
-    repoPic2.style.animation = "fromR 0.4s ease forwards";
-    repoPic3.style.animation = "fromR 0.4s ease forwards";
-    repoPic4.style.animation = "fromT 0.4s ease forwards";
-    repoPic5.style.animation = "fromT 0.4s ease forwards";
-    setTimeout(() => {
-        RT2.style.display = "block";
-        repoPic1.style.display = "block";
-        repoPic2.style.display = "block";
-        repoPic3.style.display = "block";
-        repoPic4.style.display = "block";
-        repoPic5.style.display = "block";
-    }, 400);
-    RC1.style.animation = "fromT 0.4s ease forwards";
-    setTimeout(() => {
-        RC1.style.display = "block";
-    }, 400);
-    repoSkillBox.style.display = "flex";
-    RT3.style.animation = "fromT 0.4s ease forwards";
-    repoPic6.style.animation = "fromT 0.4s ease forwards";
-    repoPic7.style.animation = "fromR 0.4s ease forwards";
-    repoPic8.style.animation = "fromT 0.4s ease forwards";
-    setTimeout(() => {
-        RT3.style.display = "block";
-        repoPic6.style.display = "block";
-        repoPic7.style.display = "block";
-        repoPic8.style.display = "block";
-    }, 400);
-    RC2.style.animation = "fromT 0.4s ease forwards";
-    setTimeout(() => {
-        RC2.style.display = "block";
-    }, 400);
+document.getElementById("main").addEventListener("click", (e) => {
+    if (e.target.id === "repo") {
+        window.scrollTo(0, 0);
+        shade2.style.animation = "appear 0.2s ease forwards";
+        container.style.animation = "disappear 0.2s ease forwards";
+        setTimeout(() => {
+            shade2.style.display = "block";
+            container.style.display = "none";
+        }, 200);
+        repoBox.style.display = "block";
+        RT1.style.animation = "fromT 0.4s ease forwards";
+        setTimeout(() => {
+            RT1.style.display = "block";
+        }, 400);
+        repoLogoBox.style.display = "flex";
+        RT2.style.animation = "fromT 0.4s ease forwards";
+        repoPic1.style.animation = "fromT 0.4s ease forwards";
+        repoPic2.style.animation = "fromR 0.4s ease forwards";
+        repoPic3.style.animation = "fromR 0.4s ease forwards";
+        repoPic4.style.animation = "fromT 0.4s ease forwards";
+        repoPic5.style.animation = "fromT 0.4s ease forwards";
+        setTimeout(() => {
+            RT2.style.display = "block";
+            repoPic1.style.display = "block";
+            repoPic2.style.display = "block";
+            repoPic3.style.display = "block";
+            repoPic4.style.display = "block";
+            repoPic5.style.display = "block";
+        }, 400);
+        RC1.style.animation = "fromT 0.4s ease forwards";
+        setTimeout(() => {
+            RC1.style.display = "block";
+        }, 400);
+        repoSkillBox.style.display = "flex";
+        RT3.style.animation = "fromT 0.4s ease forwards";
+        repoPic6.style.animation = "fromT 0.4s ease forwards";
+        repoPic7.style.animation = "fromR 0.4s ease forwards";
+        repoPic8.style.animation = "fromT 0.4s ease forwards";
+        setTimeout(() => {
+            RT3.style.display = "block";
+            repoPic6.style.display = "block";
+            repoPic7.style.display = "block";
+            repoPic8.style.display = "block";
+        }, 400);
+        RC2.style.animation = "fromT 0.4s ease forwards";
+        setTimeout(() => {
+            RC2.style.display = "block";
+        }, 400);
+    }
 });
 
 //main
-let s = document.getElementById("scroll");
 let projects = document.getElementById("projects");
 
-s.addEventListener("click", () => {
-    projects.scrollIntoView({ behavior: "smooth" });
+document.getElementById("main").addEventListener("click", (e) => {
+    if (e.target.id === "scroll") {
+        projects.scrollIntoView({ behavior: "smooth" });
+    }
 });
 
 var isDragging = false;
