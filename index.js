@@ -106,8 +106,8 @@ function startPage() {
                             gsap.to(span, {
                                 opacity: 1,
                                 filter: 'blur(0rem)',
-                                duration: 0.2,
-                                delay: i * 0.02,
+                                duration: 0.4,
+                                delay: i * 0.01,
                                 ease: "power1.ease"
                             });
                         });
@@ -118,8 +118,8 @@ function startPage() {
                             gsap.to(span, {
                                 opacity: 1,
                                 filter: 'blur(0rem)',
-                                duration: 0.2,
-                                delay: i * 0.02,
+                                duration: 0.4,
+                                delay: i * 0.01,
                                 ease: "power1.ease"
                             });
                         });
@@ -130,8 +130,8 @@ function startPage() {
                             gsap.to(span, {
                                 opacity: 1,
                                 filter: 'blur(0rem)',
-                                duration: 0.2,
-                                delay: i * 0.02,
+                                duration: 0.4,
+                                delay: i * 0.01,
                                 ease: "power1.ease"
                             });
                         });
@@ -142,8 +142,8 @@ function startPage() {
                             gsap.to(span, {
                                 opacity: 1,
                                 filter: 'blur(0rem)',
-                                duration: 0.2,
-                                delay: i * 0.02,
+                                duration: 0.4,
+                                delay: i * 0.01,
                                 ease: "power1.ease"
                             });
                         });

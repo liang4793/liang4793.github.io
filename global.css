@@ -31,7 +31,7 @@ a {
     opacity: 0;
 }
 .scroll-reveal.visible {
-    animation: appear 0.4s ease forwards;
+    animation: fromB 0.4s ease forwards;
 }
 @keyframes glow {
     0%, 1% {
@@ -106,6 +106,18 @@ a {
 @keyframes fromT {
     0% {
         transform: translateY(-2rem);
+        opacity: 0;
+        filter: blur(0.2rem);
+    }
+    100% {
+        transform: translateY(0rem);
+        opacity: 1;
+        filter: blur(0rem);
+    }
+}
+@keyframes fromB {
+    0% {
+        transform: translateY(2rem);
         opacity: 0;
         filter: blur(0.2rem);
     }
