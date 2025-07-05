@@ -24,7 +24,7 @@
     color: rgb(250, 100, 0);
     font-size: 1.5rem;
     line-height: 0.9;
-    transition: all 0.2s;
+    transition: all 0.2s ease;
 }
 #content {
     position: relative;
@@ -77,14 +77,16 @@
 }
 a {
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: white;
     background-color: rgb(250, 100, 0);
     border-radius: 0.5rem;
+    border: 0.2rem solid rgb(250, 100, 0);
     transition: all 0.2s ease;
 }
 a:hover {
     color: rgb(250, 100, 0);
+    border: 0.2rem solid white;
     background-color: white;
 }
 #expend {
@@ -118,7 +120,7 @@ a:hover {
     left: 1rem;
     width: 18rem;
     height: 25.5rem;
-    transition: all 0.2s;
+    transition: all 0.2s ease;
     overflow: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -155,4 +157,10 @@ a:hover {
     line-height: 1.2;
     color: white;
     text-align: center;
+}
+@media (min-width: 2240px) {
+    #content {
+        width: 1792px;
+        left: calc(50% - 896px);
+    }
 }

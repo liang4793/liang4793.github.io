@@ -110,7 +110,7 @@
     overflow: auto;
     margin-top: -20rem;
     z-index: -1;
-    transition: margin-top 0.5s 0.1s;
+    transition: margin-top 0.5s ease 0.1s;
     cursor: ew-resize;
 }
 .PimgBox::-webkit-scrollbar {
@@ -122,7 +122,7 @@
     margin-right: 0.5rem;
     opacity: 0;
     -webkit-user-drag: none;
-    transition: opacity 0.2s;
+    transition: opacity ease 0.2s;
 }
 .Pimg:hover {
     outline: 0.2rem solid rgb(250, 100, 0);
@@ -131,29 +131,33 @@
 #P3box:hover #P3imgBox {
     margin-top: 0rem;
     z-index: 1;
-    transition: margin-top 0.5s, z-index 0s 0.5s;
+    transition: margin-top 0.5s ease, z-index 0s ease 0.5s;
 }
 #P3box:hover #P3img {
     opacity: 1;
-    transition: opacity 0.2s 0.3s;
+    transition: opacity 0.2s ease 0.3s;
 }
 #P2box:hover #P2imgBox {
     margin-top: 0rem;
     z-index: 1;
-    transition: margin-top 0.5s, z-index 0s 0.5s;
+    transition: margin-top 0.5s ease, z-index 0s ease 0.5s;
 }
 #P2box:hover #P2img {
     opacity: 1;
-    transition: opacity 0.2s 0.3s;
+    transition: opacity 0.2s ease 0.3s;
 }
 #P1box:hover #P1imgBox {
     margin-top: 0rem;
     z-index: 1;
-    transition: margin-top 0.5s, z-index 0s 0.5s;
+    transition: margin-top 0.5s ease, z-index 0s ease 0.5s;
 }
 #P1box:hover #P1img {
     opacity: 1;
-    transition: opacity 0.2s 0.3s;
+    transition: opacity 0.2s ease 0.3s;
+}
+#designs {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.4);
 }
 #posterPicBox {
     display: flex;
@@ -245,6 +249,171 @@
     outline-offset: -0.2rem;
     float: left;
 }
+#directMessageBox {
+    width: 100%;
+    height: 30rem;
+    background-color: rgb(250, 100, 0);
+    border: 0.5rem solid rgb(250, 100, 0);
+    border-radius: 0.5rem;
+    margin-left: -0.5rem;
+    transition: all 0.5s ease 0.1s;
+}
+#directMessageContent {
+    visibility: hidden;
+    position: absolute;
+    top: 8rem;
+    left: 0rem;
+    width: 100%;
+    height: 39rem;
+    font-size: 1.5rem;
+    word-break: normal;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+#directMessageBox:hover,
+#directMessageBox:focus-within {
+    height: 50rem;
+    transition: all 0.5s ease 0s;
+}
+#directMessageBox:hover #directMessageContent,
+#directMessageBox:focus-within #directMessageContent {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.2s ease 0.3s;
+}
+#directMessageForm {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 100%;
+    height: 100%;
+}
+input, textarea, button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+input::placeholder,
+input::-webkit-input-placeholder,
+input::-moz-placeholder,
+textarea::placeholder,
+textarea::-webkit-input-placeholder,
+textarea::-moz-placeholder {
+    font-family: inherit;
+    font-size: inherit;
+}
+#directMessageForm input:focus,
+#directMessageForm textarea:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+#directMessageForm input[name="user_name"],
+#directMessageForm input[name="user_email"] {
+    width: calc(100% - 6rem);
+    height: 1.6rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+#directMessageForm input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    accent-color: #FA6400;
+    cursor: pointer;
+}
+#directMessageForm input[name="subject"] {
+    width: calc(100% - 4px);
+    height: 1.6rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+#directMessageForm textarea {
+    width: calc(100% - 4px);
+    height: 18rem;
+    border: none;
+    border-radius: 0.5rem;
+    resize: none;
+}
+#directMessageForm button {
+    position: absolute;
+    bottom: 0.2rem;
+    left: 0rem;
+    width: 100%;
+    height: 2rem;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    color: rgb(250, 100, 0);
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+#directMessageForm button:hover {
+    box-shadow: 0 0 1rem white;
+}
+#directMessageLoading {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -3.25rem;
+    margin-left: -1.25rem;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+#directMessageLoadingText {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+}
+#directMessageSuccessText {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -2rem;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    text-align: center;
+}
+#world {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: rgba(255, 255, 255, 0.4);
+}
+#worldMap {
+    width: 100%;
+}
+.worldMapCircle {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background: rgba(250, 100, 0, 0.2);
+    border: 0.2rem solid rgba(250, 100, 0);
+    scale: 1;
+    transition: all 0.5s ease;
+    margin: none;
+}
+.worldMapCircle:hover {
+    scale: 1.1;
+    margin-top: 1%;
+    margin-left: 1%;
+}
+.ripple {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: rgba(250, 100, 0, 0.2);
+    border: 0.2rem solid rgba(250, 100, 0);
+    pointer-events: none;
+}
 #footer {
     font-size: 3.5rem;
     line-height: 1.2;
@@ -325,7 +494,6 @@
     border-right: 0.4rem white solid;
     border-bottom: 2rem white solid;
     box-shadow: 0rem 0rem 1rem 0rem #080808;
-    transition: all 0.2s;
 }
 .mePicText {
     position: absolute;
@@ -450,23 +618,22 @@
     width: 100%;
     border-radius: 0.5rem;
 }
-#furryPicBox {
+.furryPicBox {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: flex-start;
     position: relative;
-    top: 10rem;
     width: 100%;
     overflow: hidden;
 }
-#furryPicBox img {
+.furryPicBox img {
     position: relative;
     height: 30rem;
     width: auto;
     border-radius: 0.5rem;
 }
-#furryPicBox img:hover {
+.furryPicBox img:hover {
     outline: 0.2rem solid rgb(250, 100, 0);
     outline-offset: -0.2rem;
 }
@@ -501,6 +668,16 @@
     width: 100%;
     height: 40rem;
     overflow: hidden;
+}
+@media (min-width: 2240px) {
+    .box {
+        width: 1792px;
+        left: calc(50% - 896px);
+    }
+    .shadeBox {
+        width: 2016px;
+        left: calc(50% - 1008px);
+    }
 }
 @media (max-width: 1260px) {
     #axis {

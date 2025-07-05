@@ -1,6 +1,6 @@
 //¯\_(ツ)_/¯ Why are you looking at my code? 
-let progressBar = document.getElementById('progressBar');
-let percentage = document.getElementById('percentage');
+const progressBar = document.getElementById('progressBar');
+const percentage = document.getElementById('percentage');
 
 function updateProgressBar() {
     const windowWidth = document.body.clientWidth;
@@ -28,18 +28,18 @@ window.addEventListener('scroll', function() {
     updateProgressBar();
 });
 
-let wordCount = document.getElementById("wordCount");
-let readingTime = document.getElementById("readingTime");
-let article = document.getElementById("text");
+const wordCount = document.getElementById("wordCount");
+const readingTime = document.getElementById("readingTime");
+const article = document.getElementById("text");
 
 function countWords(str) {
     const arr = str.split(' ');
     return arr.filter(word => word !== '').length;
 };
 
-let letterC = countWords(article.innerText)
+let letterC = countWords(article.innerText);
 wordCount.innerHTML = letterC;
-readT = Math.round(letterC / 100);
+let readT = Math.round(letterC / 100);
 console.log(readT);
 if (readT >= 1) {
     readingTime.innerHTML = "≈" + readT;
@@ -47,8 +47,8 @@ if (readT >= 1) {
     readingTime.innerHTML = "<1";
 }
 
-let content = document.getElementById("expendText");
-let articleHeadings = article.querySelectorAll("h1, h2, h3, h4, h5, h6");
+const content = document.getElementById("expendText");
+const articleHeadings = article.querySelectorAll("h1, h2, h3, h4, h5, h6");
 function scrollToElement(id) {
     document.getElementById(id).scrollIntoView({behavior: 'smooth'});
 };

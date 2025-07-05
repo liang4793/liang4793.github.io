@@ -1,5 +1,5 @@
 //¯\_(ツ)_/¯ Why are you looking at my code? 
-let body = document.body;
+const body = document.body;
 let loading = 1;
 let inTransit = true;
 document.body.style.cursor = 'wait';
@@ -9,14 +9,14 @@ let showF = 0;
 console.log("[Welcome to Liáng4793's Repository(Liáng's Repo)]");
 
 //page
-let container = document.getElementById("container");
+const container = document.getElementById("container");
 
 //JSneeded & Loading
-let loadText = document.getElementById("loadText");
-let JSnotice = document.getElementById("JSneeded");
-let mainLogo = document.getElementById("mainLogo");
-let shade1 = document.getElementById("shade1");
-let shade1Text = document.getElementById("shade1Text");
+const loadText = document.getElementById("loadText");
+const JSnotice = document.getElementById("JSneeded");
+const mainLogo = document.getElementById("mainLogo");
+const shade1 = document.getElementById("shade1");
+const shade1Text = document.getElementById("shade1Text");
 shade1Text.innerHTML = "[... JS enabled. Loading website ...]";
 function startPage() {
     //Split the text and prepare the opening animation
@@ -241,60 +241,63 @@ window.addEventListener('resize', () => {
 });
 
 //main
-let shade2 = document.getElementById("shade2");
-let quit = document.getElementById("quit");
+const shade2 = document.getElementById("shade2");
+const quit = document.getElementById("quit");
 
 //locationBox
-let lBox = document.getElementById("locationBox");
-let map = document.getElementById("map");
-let LL = document.getElementById("LL");
-let SS = document.getElementById("SS");
-let timeTitle = document.getElementById("timeTitle");
-let localTime = document.getElementById("localTime");
+const lBox = document.getElementById("locationBox");
+const map = document.getElementById("map");
+const LL = document.getElementById("LL");
+const SS = document.getElementById("SS");
+const timeTitle = document.getElementById("timeTitle");
+const localTime = document.getElementById("localTime");
 
 //meBox
-let meBox = document.getElementById("meBox");
-let mePic = document.querySelectorAll('.mePicBox2');
-let toLeft = document.getElementById("toLeft");
-let toRight = document.getElementById("toRight");
-let label1 = document.getElementById("label1");
-let label2 = document.getElementById("label2");
-let label3 = document.getElementById("label3");
-let label4 = document.getElementById("label4");
-let contactTitle = document.getElementById("contactTitle");
-let contactBox = document.getElementById("contactBox");
-let musicTitle = document.getElementById("musicTitle");
-let musicShare = document.getElementById("musicShare");
-let NGLTitle = document.getElementById("NGLTitle");
-let NGLBox = document.getElementById("NGLBox");
+const meBox = document.getElementById("meBox");
+const mePic = document.querySelectorAll('.mePicBox2');
+const toLeft = document.getElementById("toLeft");
+const toRight = document.getElementById("toRight");
+const label1 = document.getElementById("label1");
+const label2 = document.getElementById("label2");
+const label3 = document.getElementById("label3");
+const label4 = document.getElementById("label4");
+const contactTitle = document.getElementById("contactTitle");
+const contactBox = document.getElementById("contactBox");
+const musicTitle = document.getElementById("musicTitle");
+const musicShare = document.getElementById("musicShare");
+const NGLTitle = document.getElementById("NGLTitle");
+const NGLBox = document.getElementById("NGLBox");
 
 //furryBox
-let furryBox = document.getElementById("furryBox");
-let FT1 = document.getElementById("FT1");
-let FT2 = document.getElementById("FT2");
-let FT3 = document.getElementById("FT3");
-let FT4 = document.getElementById("FT4");
-let furryAll1 = document.getElementById("furryAll1");
-let furryAll2 = document.getElementById("furryAll2");
-let furryPicBox = document.getElementById("furryPicBox");
+const furryBox = document.getElementById("furryBox");
+const FT1 = document.getElementById("FT1");
+const FT2 = document.getElementById("FT2");
+const FT3 = document.getElementById("FT3");
+const FT4 = document.getElementById("FT4");
+const FT4_1 = document.getElementById("FT4_1");
+const FT4_2 = document.getElementById("FT4_2");
+const furryAll1 = document.getElementById("furryAll1");
+const furryAll2 = document.getElementById("furryAll2");
+const furryPicBox1 = document.getElementById("furryPicBox1");
+const furryPicBox2 = document.getElementById("furryPicBox2");
 
 //repoBox
-let repoBox = document.getElementById("repoBox");
-let RT1 = document.getElementById("RT1");
-let repoLogoBox = document.getElementById("repoLogoBox");
-let RT2 = document.getElementById("RT2");
-let repoPic1 = document.getElementById("repoPic1");
-let repoPic2 = document.getElementById("repoPic2");
-let repoPic3 = document.getElementById("repoPic3");
-let repoPic4 = document.getElementById("repoPic4");
-let repoPic5 = document.getElementById("repoPic5");
-let RC1 = document.getElementById("RC1");
-let repoSkillBox = document.getElementById("repoSkillBox");
-let RT3 = document.getElementById("RT3");
-let repoPic6 = document.getElementById("repoPic6");
-let repoPic7 = document.getElementById("repoPic7");
-let repoPic8 = document.getElementById("repoPic8");
-let RC2 = document.getElementById("RC2");
+const repoBox = document.getElementById("repoBox");
+const RT1 = document.getElementById("RT1");
+const repoLogoBox = document.getElementById("repoLogoBox");
+const RT2 = document.getElementById("RT2");
+const repoPic1 = document.getElementById("repoPic1");
+const repoPic2 = document.getElementById("repoPic2");
+const repoPic3 = document.getElementById("repoPic3");
+const repoPic4 = document.getElementById("repoPic4");
+const repoPic5 = document.getElementById("repoPic5");
+const RC1 = document.getElementById("RC1");
+const repoSkillBox = document.getElementById("repoSkillBox");
+const RT3 = document.getElementById("RT3");
+const repoPic6 = document.getElementById("repoPic6");
+const repoPic7 = document.getElementById("repoPic7");
+const repoPic8 = document.getElementById("repoPic8");
+const RC2 = document.getElementById("RC2");
 
 quit.addEventListener("click", () => {
     shade2.style.animation = "disappear 0.2s ease forwards";
@@ -328,10 +331,13 @@ quit.addEventListener("click", () => {
         FT2.style.display = "none";
         FT3.style.display = "none";
         FT4.style.display = "none";
+        FT4_1.style.display = "none";
+        FT4_2.style.display = "none";
         furryAll1.style.display = "none";
         furryAll2.style.display = "none";
         showF = 0;
-        furryPicBox.style.display = "none";
+        furryPicBox1.style.display = "none";
+        furryPicBox2.style.display = "none";
 
         repoBox.style.display = "none";
         RT1.style.display = "none";
@@ -557,11 +563,15 @@ document.getElementById("main").addEventListener("click", (e) => {
         FT2.style.animation = "fromT 0.4s ease forwards";
         FT3.style.animation = "fromT 0.4s ease forwards";
         FT4.style.animation = "fromT 0.4s ease forwards";
+        FT4_1.style.animation = "fromT 0.4s ease forwards";
+        FT4_2.style.animation = "fromT 0.4s ease forwards";
         setTimeout(() => {
             FT1.style.display = "block";
             FT2.style.display = "block";
             FT3.style.display = "block";
             FT4.style.display = "block";
+            FT4_1.style.display = "block";
+            FT4_2.style.display = "block";
         }, 400);
         if (document.body.clientWidth >= 1300) {
             furryAll1.style.animation = "fromT 0.4s ease forwards";
@@ -575,9 +585,11 @@ document.getElementById("main").addEventListener("click", (e) => {
             }, 400);
         };
         showF = 1;
-        furryPicBox.style.animation = "fromT 0.4s ease forwards";
+        furryPicBox1.style.animation = "fromT 0.4s ease forwards";
+        furryPicBox2.style.animation = "fromR 0.4s ease forwards";
         setTimeout(() => {
-            furryPicBox.style.display = "flex";
+            furryPicBox1.style.display = "flex";
+            furryPicBox2.style.display = "flex";
         }, 400);
     }
 });
@@ -646,8 +658,20 @@ document.getElementById("main").addEventListener("click", (e) => {
 });
 
 //main
-let projects = document.getElementById("projects");
+document.addEventListener("DOMContentLoaded", () => {
+    const revealElements = document.querySelectorAll(".scroll-reveal");
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    revealElements.forEach(element => observer.observe(element));
+});
 
+const projects = document.getElementById("projects");
 document.getElementById("main").addEventListener("click", (e) => {
     if (e.target.id === "scroll") {
         projects.scrollIntoView({ behavior: "smooth" });
@@ -657,7 +681,6 @@ document.getElementById("main").addEventListener("click", (e) => {
 var isDragging = false;
 var startPosition;
 var startScrollPosition;
-
 document.querySelectorAll(".PimgBox").forEach(item => {
     item.addEventListener('mousedown', function(event) {
         isDragging = true;
@@ -678,22 +701,99 @@ document.querySelectorAll(".PimgBox").forEach(item => {
     });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const revealElements = document.querySelectorAll(".scroll-reveal");
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-                observer.unobserve(entry.target);
+const directMessageForm = document.getElementById("directMessageForm");
+const directMessageLoading = document.getElementById("directMessageLoading");
+const directMessageLoadingText = document.getElementById("directMessageLoadingText");
+const directMessageSuccessText = document.getElementById("directMessageSuccessText");
+emailjs.init("sNZVE-CKE8ygwtR9z");
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("directMessageForm");
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        directMessageForm.style.animation = "disappear 0.2s ease forwards";
+        setTimeout(() => {
+            directMessageForm.style.display = "none";
+            directMessageLoading.style.animation = "appear 0.2s ease forwards";
+            directMessageLoadingText.style.animation = "appear 0.2s ease forwards";
+            setTimeout(() => {
+                directMessageLoading.style.display = "block";
+                directMessageLoadingText.style.display = "block";
+                directMessageLoading.style.animation = "rotate 1s linear infinite";
+            }, 200);
+        }, 200);
+        const selectedPurposes = [...form.querySelectorAll('input[name="purpose"]:checked')]
+            .map(el => el.value)
+            .join(", ");
+        let hiddenInput = form.querySelector('input[name="purpose_combined"]');
+        if (!hiddenInput) {
+            hiddenInput = document.createElement("input");
+            hiddenInput.type = "hidden";
+            hiddenInput.name = "purpose_combined";
+            form.appendChild(hiddenInput);
+        }
+        hiddenInput.value = selectedPurposes;
+        emailjs.sendForm("service_web_4793", "template_mozhnru", form)
+            .then(() => {
+                directMessageLoading.style.animation = "disappear 0.2s ease forwards";
+                directMessageLoadingText.style.animation = "disappear 0.2s ease forwards";
+                setTimeout(() => {
+                    directMessageLoading.style.display = "none";
+                    directMessageLoadingText.style.display = "none";
+                    directMessageSuccessText.style.animation = "appear 0.2s ease forwards";
+                    setTimeout(() => {
+                        directMessageSuccessText.style.display = "block";
+                    }, 200);
+                }, 200);
+            })
+            .catch((error) => {
+                console.error("EmailJS error:", error);
+                alert("⚠️ Failed to send. Please try again later.");
+                directMessageLoading.style.animation = "disappear 0.2s ease forwards";
+                directMessageLoadingText.style.animation = "disappear 0.2s ease forwards";
+                setTimeout(() => {
+                    directMessageLoading.style.display = "none";
+                    directMessageLoadingText.style.display = "none";
+                    directMessageForm.style.animation = "appear 0.2s ease forwards";
+                    setTimeout(() => {
+                        directMessageForm.style.display = "block";
+                    }, 200);
+                }, 200);
+            });
+    });
+});
+
+function createRippleEffect(target) {
+    const createRipple = () => {
+        const ripple = document.createElement("div");
+        ripple.className = "ripple";
+        target.appendChild(ripple);
+        gsap.fromTo(ripple,
+            { scale: 0, backgroundColor: "rgba(250, 100, 0, 0.2)" },
+            {
+                scale: 1,
+                duration: 2,
+                backgroundColor: "rgba(250, 100, 0, 0)",
+                ease: "power2.ease",
+                onComplete: () => {
+                    ripple.remove();
+                }
             }
-        });
-    }, { threshold: 0.1 });
-    revealElements.forEach(element => observer.observe(element));
+        );
+    };
+    setInterval(createRipple, 4000);
+};
+document.querySelectorAll('.worldMapCircle').forEach(el => {
+    createRippleEffect(el);
+});
+
+const scroll2 = document.getElementById("scroll2");
+scroll2.addEventListener("click", () => {
+    window.scrollTo(0, 0);
 });
 
 //Let's go!
-let loadText1 = document.getElementById("loadText1");
-let loadText2 = document.getElementById("loadText2");
+const loadText1 = document.getElementById("loadText1");
+const loadText2 = document.getElementById("loadText2");
 let loadNum = "0%";
 let img = document.querySelectorAll("img");
 let len = img.length;
