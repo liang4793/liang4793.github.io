@@ -681,7 +681,7 @@ document.getElementById("main").addEventListener("click", (e) => {
 var isDragging = false;
 var startPosition;
 var startScrollPosition;
-document.querySelectorAll(".PimgBox").forEach(item => {
+document.querySelectorAll(".PimgBox, .defaultPicBox").forEach(item => {
     item.addEventListener('mousedown', function(event) {
         isDragging = true;
         startPosition = event.clientX;
