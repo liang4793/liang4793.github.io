@@ -1,14 +1,16 @@
-# Liáng4793's Repository (main website)
+# Liáng4793's Repository
+**Main website ver2.0!**  
+Thoughtfully crafted with a sleeker, more modern design — and filled with imagination and surprises.  
+If you like it, please give me a star --->
 
 ## Information
-Redefine The World With Imagination...
+Redefine The World With Imagination...  
 
 Address: [Liáng4793's Repository](https://liang4793.github.io/)   
 🔗Browse articles on: [Liang4793's Repository](https://liang4793.github.io/docs/P001-doc.html)  
 
 Any bug reports/suggestions/questions are welcome!  
-
-🚧🚧🚧Under construction🚧🚧🚧  
+🚧🚧🚧Continuously updated🚧🚧🚧  
 
 ## Poster
 <img src="https://s2.loli.net/2025/02/15/qf2SZDG3VMzljyW.png" style="width: auto; height: auto"/>

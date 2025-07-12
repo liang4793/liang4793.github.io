@@ -92,7 +92,6 @@ function startPage() {
                             if (el) {
                                 mainTextTimeline.to(el, {
                                     opacity: 1,
-                                    y: 0,
                                     filter: 'blur(0rem)',
                                     duration: 0.4,
                                     ease: "power1.ease"
