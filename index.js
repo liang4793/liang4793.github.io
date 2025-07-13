@@ -2,7 +2,7 @@
 const body = document.body;
 let loading = 1;
 let inTransit = true;
-document.body.style.cursor = 'wait';
+document.body.style.cursor = "wait";
 let showF = 0;
 
 //welcome
@@ -20,13 +20,13 @@ const shade1Text = document.getElementById("shade1Text");
 shade1Text.innerHTML = "[... JS enabled. Loading website ...]";
 function startPage() {
     //Split the text and prepare the opening animation
-    const mainText = document.getElementById('main');
-    const targetIds = ['location', 'me', 'furry', 'repo', 'scroll'];
+    const mainText = document.getElementById("main");
+    const targetIds = ["location", "me", "furry", "repo", "scroll"];
     const nodes = Array.from(mainText.childNodes);
     let lineBuffer = [];
     const lineBlocks = [];
     for (const node of nodes) {
-        if (node.nodeName === 'BR') {
+        if (node.nodeName === "BR") {
             lineBlocks.push([...lineBuffer]);
             lineBuffer = [];
         } else {
@@ -37,25 +37,25 @@ function startPage() {
         lineBlocks.push([...lineBuffer]);
     }
     const newContent = lineBlocks.map((line, lineIndex) => {
-        const result = document.createElement('div');
+        const result = document.createElement("div");
         let charIndex = 1;
         for (const node of line) {
             if (node.nodeType === Node.TEXT_NODE) {
                 for (const ch of node.textContent) {
-                    if (ch.trim() === '') {
+                    if (ch.trim() === "") {
                         result.appendChild(document.createTextNode(ch));
                     } else {
-                        const span = document.createElement('span');
+                        const span = document.createElement("span");
                         span.textContent = ch;
                         span.id = String.fromCharCode(97 + lineIndex) + charIndex++;
-                        span.style.opacity = '0';
-                        span.style.filter = 'blur(0.2rem)';
+                        span.style.opacity = "0";
+                        span.style.filter = "blur(0.2rem)";
                         result.appendChild(span);
                     }
                 }
             } else if (
                 node.nodeType === Node.ELEMENT_NODE &&
-                node.tagName === 'SPAN' &&
+                node.tagName === "SPAN" &&
                 targetIds.includes(node.id)
             ) {
                 result.appendChild(node.cloneNode(true));
@@ -65,7 +65,7 @@ function startPage() {
         }
         return result.innerHTML;
     });
-    mainText.innerHTML = newContent.join('<br>');
+    mainText.innerHTML = newContent.join("<br>");
 
     setTimeout(() => {
         loadText.style.animation = "disappear 0.4s ease forwards";
@@ -80,73 +80,73 @@ function startPage() {
                 setTimeout(() => {
                     loading = 0;
                     inTransit = false;
-                    document.body.style.cursor = 'crosshair';
+                    document.body.style.cursor = "crosshair";
                     shade1.style.display = "none";
                     container.style.display = "block";
                     //Opening animation
                     const mainTextTimeline = gsap.timeline();
-                    const animationTargetIds = ['location', 'me', 'furry', 'scroll'];
+                    const animationTargetIds = ["location", "me", "furry", "scroll"];
                     mainTextTimeline.add(() => {
                         animationTargetIds.forEach((id, index) => {
                             const el = document.getElementById(id);
                             if (el) {
                                 mainTextTimeline.to(el, {
                                     opacity: 1,
-                                    filter: 'blur(0rem)',
+                                    filter: "blur(0rem)",
                                     duration: 0.4,
                                     ease: "power1.ease"
                                 }, 0.2 + index * 0.4);
                             }
                         });
-                    }, '+=0.2');
+                    }, "+=0.2");
                     mainTextTimeline.add(() => {
-                        const spans = Array.from(mainText.querySelectorAll('span')).filter(span => /^a\d+$/.test(span.id));
+                        const spans = Array.from(mainText.querySelectorAll("span")).filter(span => /^a\d+$/.test(span.id));
                         spans.forEach((span, i) => {
                             gsap.to(span, {
                                 opacity: 1,
-                                filter: 'blur(0rem)',
+                                filter: "blur(0rem)",
                                 duration: 0.4,
                                 delay: i * 0.01,
                                 ease: "power1.ease"
                             });
                         });
-                    }, '+=1.4');
+                    }, "+=1.4");
                     mainTextTimeline.add(() => {
-                        const spans = Array.from(mainText.querySelectorAll('span')).filter(span => /^b\d+$/.test(span.id));
+                        const spans = Array.from(mainText.querySelectorAll("span")).filter(span => /^b\d+$/.test(span.id));
                         spans.forEach((span, i) => {
                             gsap.to(span, {
                                 opacity: 1,
-                                filter: 'blur(0rem)',
+                                filter: "blur(0rem)",
                                 duration: 0.4,
                                 delay: i * 0.01,
                                 ease: "power1.ease"
                             });
                         });
-                    }, '<');
+                    }, "<");
                     mainTextTimeline.add(() => {
-                        const spans = Array.from(mainText.querySelectorAll('span')).filter(span => /^c\d+$/.test(span.id));
+                        const spans = Array.from(mainText.querySelectorAll("span")).filter(span => /^c\d+$/.test(span.id));
                         spans.forEach((span, i) => {
                             gsap.to(span, {
                                 opacity: 1,
-                                filter: 'blur(0rem)',
+                                filter: "blur(0rem)",
                                 duration: 0.4,
                                 delay: i * 0.01,
                                 ease: "power1.ease"
                             });
                         });
-                    }, '<');
+                    }, "<");
                     mainTextTimeline.add(() => {
-                        const spans = Array.from(mainText.querySelectorAll('span')).filter(span => /^d\d+$/.test(span.id));
+                        const spans = Array.from(mainText.querySelectorAll("span")).filter(span => /^d\d+$/.test(span.id));
                         spans.forEach((span, i) => {
                             gsap.to(span, {
                                 opacity: 1,
-                                filter: 'blur(0rem)',
+                                filter: "blur(0rem)",
                                 duration: 0.4,
                                 delay: i * 0.01,
                                 ease: "power1.ease"
                             });
                         });
-                    }, '<');
+                    }, "<");
                 }, 400);
             }, 1000);
         }, 400);
@@ -232,7 +232,7 @@ function animate() {
 initStars(); //Initialize meteors
 animate(); //Start animation
 //Adjust canvas size dynamically on window resize
-window.addEventListener('resize', () => {
+window.addEventListener("resize", () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     stars.length = 0; // Clear the existing array of stars
@@ -253,7 +253,7 @@ const localTime = document.getElementById("localTime");
 
 //meBox
 const meBox = document.getElementById("meBox");
-const mePic = document.querySelectorAll('.mePicBox2');
+const mePic = document.querySelectorAll(".mePicBox2");
 const toLeft = document.getElementById("toLeft");
 const toRight = document.getElementById("toRight");
 const label1 = document.getElementById("label1");
@@ -420,27 +420,27 @@ const animateToLeft = () => {
     timeline.to(mePic[mePicList[3]], {
         duration: 0.4,
         rotation: -12,
-        filter: 'brightness(40%)',
+        filter: "brightness(40%)",
         zIndex: 0,
         ease: "power2.ease"
     }, 0.2);
     timeline.to(mePic[mePicList[2]], {
         duration: 0.4,
         rotation: -8,
-        filter: 'brightness(60%)',
+        filter: "brightness(60%)",
         zIndex: 1,
         ease: "power2.ease"
     }, 0.4);
     timeline.to(mePic[mePicList[1]], {
         duration: 0.4,
         rotation: -4,
-        filter: 'brightness(80%)',
+        filter: "brightness(80%)",
         zIndex: 2,
         ease: "power2.ease"
     }, 0.6);
     timeline.set(mePic[mePicList[0]], {
         rotation: 4,
-        filter: 'brightness(100%)',
+        filter: "brightness(100%)",
         zIndex: 3
     }, 0.8);
     timeline.to(mePic[mePicList[0]], {
@@ -467,27 +467,27 @@ const animateToRight = () => {
     timeline.to(mePic[mePicList[0]], {
         duration: 0.4,
         rotation: 0,
-        filter: 'brightness(100%)',
+        filter: "brightness(100%)",
         zIndex: 3,
         ease: "power2.ease"
     }, 0.2);
     timeline.to(mePic[mePicList[1]], {
         duration: 0.4,
         rotation: -4,
-        filter: 'brightness(80%)',
+        filter: "brightness(80%)",
         zIndex: 2,
         ease: "power2.ease"
     }, 0.4);
     timeline.to(mePic[mePicList[2]], {
         duration: 0.4,
         rotation: -8,
-        filter: 'brightness(60%)',
+        filter: "brightness(60%)",
         zIndex: 1,
         ease: "power2.ease"
     }, 0.6);
     timeline.set(mePic[mePicList[3]], {
         rotation: -16,
-        filter: 'brightness(40%)',
+        filter: "brightness(40%)",
         zIndex: 0
     }, 0.8);
     timeline.to(mePic[mePicList[3]], {
@@ -681,21 +681,21 @@ var isDragging = false;
 var startPosition;
 var startScrollPosition;
 document.querySelectorAll(".PimgBox, .defaultPicBox").forEach(item => {
-    item.addEventListener('mousedown', function(event) {
+    item.addEventListener("mousedown", function(event) {
         isDragging = true;
         startPosition = event.clientX;
         startScrollPosition = item.scrollLeft;
     });
-    item.addEventListener('mousemove', function(event) {
+    item.addEventListener("mousemove", function(event) {
         if (isDragging) {
             var scrollDistance = event.clientX - startPosition;
             item.scrollLeft = startScrollPosition - scrollDistance;
         }
     });
-    item.addEventListener('mouseup', function() {
+    item.addEventListener("mouseup", function() {
         isDragging = false;
     });
-    item.addEventListener('mouseout', function() {
+    item.addEventListener("mouseout", function() {
         isDragging = false;
     });
 });
@@ -781,7 +781,7 @@ function createRippleEffect(target) {
     };
     setInterval(createRipple, 4000);
 };
-document.querySelectorAll('.worldMapCircle').forEach(el => {
+document.querySelectorAll(".worldMapCircle").forEach(el => {
     createRippleEffect(el);
 });
 

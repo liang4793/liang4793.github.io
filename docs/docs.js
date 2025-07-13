@@ -1,6 +1,6 @@
 //¯\_(ツ)_/¯ Why are you looking at my code? 
-const progressBar = document.getElementById('progressBar');
-const percentage = document.getElementById('percentage');
+const progressBar = document.getElementById("progressBar");
+const percentage = document.getElementById("percentage");
 
 function updateProgressBar() {
     const windowWidth = document.body.clientWidth;
@@ -24,7 +24,7 @@ window.onload = function() {
 window.onresize = function() {
     updateProgressBar();
 }
-window.addEventListener('scroll', function() {
+window.addEventListener("scroll", function() {
     updateProgressBar();
 });
 
@@ -33,8 +33,8 @@ const readingTime = document.getElementById("readingTime");
 const article = document.getElementById("text");
 
 function countWords(str) {
-    const arr = str.split(' ');
-    return arr.filter(word => word !== '').length;
+    const arr = str.split(" ");
+    return arr.filter(word => word !== "").length;
 };
 
 let letterC = countWords(article.innerText);
@@ -50,14 +50,14 @@ if (readT >= 1) {
 const content = document.getElementById("expendText");
 const articleHeadings = article.querySelectorAll("h1, h2, h3, h4, h5, h6");
 function scrollToElement(id) {
-    document.getElementById(id).scrollIntoView({behavior: 'smooth'});
+    document.getElementById(id).scrollIntoView({behavior: "smooth"});
 };
 articleHeadings.forEach(function(heading, index) {
     let headingLevel = heading.tagName.toLowerCase().replace("h", "");
     let headingName = heading.innerText.trim();
     let idName = heading.id;
     if (!idName) {
-        idName = 'No' + (index + 1);
+        idName = "No" + (index + 1);
         heading.id = idName;
     };
     let contentItem = document.createElement("div");

@@ -135,6 +135,54 @@ a {
         transform: rotate(360deg);
     }
 }
+@keyframes zoomedImgAppear {
+    0% {
+        opacity: 0;
+        filter: blur(0.2rem);
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0rem);
+    }
+}
+@keyframes zoomedImgDisappear {
+    0% {
+        opacity: 1;
+        filter: blur(0rem);
+    }
+    100% {
+        opacity: 0;
+        filter: blur(0.2rem);
+        transform: scale(0.9);
+    }
+}
+body.noScroll {
+    overflow: hidden;
+    touch-action: none;
+}
+#shadeZoom {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(0.5rem) brightness(0.8);
+    background: rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+#zoomedImg {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 0.5rem;
+    box-shadow: 0rem 0rem 0.5rem 0rem rgba(0, 0, 0, 0.4);
+    transition: all 0.2s linear;
+    will-change: transform;
+    transform-style: preserve-3d;
+}
 body::-webkit-scrollbar {
     width: 20px;
     height: 20px;

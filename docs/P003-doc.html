@@ -62,11 +62,11 @@
       </ol>
       <h2>How to use</h2>
       <p>Run <code>CameraBrake.py</code> or run <code>CameraBrake.exe</code> in the latest release.</p>
-      <p><img src="https://s2.loli.net/2025/05/06/veXL6dUfZyxW2BG.png" style="width: 260px; height: auto"/>
-      <img src="https://s2.loli.net/2025/05/06/29ZBXIdO3DU4z5r.png" style="width: 260px; height: auto"/></p>
-      <p><img src="https://s2.loli.net/2025/02/06/9O3HTlVhwcJIy2b.png" style="width: 260px; height: auto"/>
-      <img src="https://s2.loli.net/2025/02/06/SFhI6osjXmzTdnZ.png" style="width: 260px; height: auto"/></p>
-      <p><img src="https://s2.loli.net/2025/02/06/4T5gXuZnSFJqiAl.png" style="width: 260px; height: auto"/></p>
+      <p><img class="zoomable" src="https://s2.loli.net/2025/05/06/veXL6dUfZyxW2BG.png" style="width: 260px; height: auto"/>
+      <img class="zoomable" src="https://s2.loli.net/2025/05/06/29ZBXIdO3DU4z5r.png" style="width: 260px; height: auto"/></p>
+      <p><img class="zoomable" src="https://s2.loli.net/2025/02/06/9O3HTlVhwcJIy2b.png" style="width: 260px; height: auto"/>
+      <img class="zoomable" src="https://s2.loli.net/2025/02/06/SFhI6osjXmzTdnZ.png" style="width: 260px; height: auto"/></p>
+      <p><img class="zoomable" src="https://s2.loli.net/2025/02/06/4T5gXuZnSFJqiAl.png" style="width: 260px; height: auto"/></p>
       <p><strong>main:</strong><br><code>Camera: On/Off</code> Show current status of camera.<br><code>Brake Camera! (Button)</code> Click to turn off the camera once. (Some programs can turn on the camera again)<br><code>Always Brake Camera (Switch)</code> Switch on to turn off the camera. (Doesn&#39;t allow the camera to be turned on again)<br><code>View Code / Leave Issues / Star (Button)</code> Jump to this Github page.</p>
       <p><strong>setting:</strong><br><code>Enable logger (Switch)</code> Switch on to log.<br><code>Open Log (Button)</code> Open log file.<br><code>Enable notifications (Switch)</code> Switch on to notify when camera is on.<br><code>Launch on Startup (Switch)</code> Switch on to launch on startup.</p>
       <p><strong>other:</strong><br><code>Minimize to Tray</code> Yes to minimize, No to exit.<br><code>Notifications</code> Camera status change notifications.</p>
@@ -91,6 +91,11 @@
     <img class="textimg" src="../image/iconL.svg" alt="icon"><img class="textimg" style="padding-left: 1.5rem; padding-right: 1.5rem;" src="../image/textL.svg" alt="icon text"><img class="textimg" src="../image/iconL.svg" alt="icon">
   </div>
 
+  <div id="shadeZoom">
+    <img id="zoomedImg" src="" alt="zoomedImg" title="">
+  </div>
+
+  <script type="text/javascript" src="../global.js"></script>
   <script type="text/javascript" src="docs.js"></script>
 </body>
 
