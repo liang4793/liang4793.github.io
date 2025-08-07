@@ -250,7 +250,7 @@
 #linksBox {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1rem 1.5rem;
     justify-content: flex-start;
     position: relative;
     width: 100%;
@@ -351,7 +351,7 @@ textarea::-moz-placeholder {
 }
 #directMessageForm textarea {
     width: calc(100% - 4px);
-    height: 18rem;
+    height: 50%;
     border: none;
     border-radius: 0.5rem;
     resize: none;
@@ -644,7 +644,7 @@ textarea::-moz-placeholder {
 .furryPicBox {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.5rem;
     justify-content: flex-start;
     position: relative;
     width: 100%;
