@@ -24,6 +24,7 @@
 
   <link rel="stylesheet" type="text/css" href="../global.css">
   <link rel="stylesheet" type="text/css" href="docs.css">
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.10/dist/lenis.css">
   <link rel="shortcut icon" href="../image/logoB.svg">
   <link href="https://fonts.googlefonts.cn/css?family=Poppins" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,6 +32,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <title>Liáng4793's Repository - Docs</title>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="7d0ad76c-fd4d-471d-bded-46aa23e7aad7"></script>
+  <script src="https://unpkg.com/lenis@1.3.10/dist/lenis.min.js"></script>
 </head>
 
 <body style="background-color:#080808; width:100%; height:100%; margin:auto; cursor: crosshair;">
@@ -88,14 +90,14 @@
 
   <div id="expend">
     <img id="expendImg" src="../image/expend.svg" alt="expend">
-    <div id="expendText"><div class="hoverable" onclick="window.scrollTo(0, 0);">Scroll to top</div></div>
+    <div id="expendText"><div class="hoverable" onclick="window.lenis.scrollTo(0);">Scroll to top</div></div>
   </div>
   <div id="footer">
     ©Liáng4793, <script>document.write(new Date().getFullYear());</script></br>
     <img class="textimg" src="../image/iconL.svg" alt="icon"><img class="textimg" style="padding-left: 1.5rem; padding-right: 1.5rem;" src="../image/textL.svg" alt="icon text"><img class="textimg" src="../image/iconL.svg" alt="icon">
   </div>
 
-  <div id="shadeZoom">
+  <div id="shadeZoom"  data-lenis-prevent>
     <img id="zoomedImg" src="" alt="zoomedImg" title="">
   </div>
 

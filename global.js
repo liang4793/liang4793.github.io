@@ -1,4 +1,7 @@
 //¯\_(ツ)_/¯ Why are you looking at my code? 
+window.lenis = new Lenis({
+    autoRaf: true,
+});
 const shadeZoom = document.getElementById("shadeZoom");
 const zoomedImg = document.getElementById("zoomedImg");
 document.querySelectorAll("img.zoomable").forEach(img => {

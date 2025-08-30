@@ -364,7 +364,7 @@ function updateLocalTime() {
 };
 document.getElementById("main").addEventListener("click", (e) => {
     if (e.target.id === "location") {
-        window.scrollTo(0, 0);
+        window.lenis.scrollTo(0);
         updateLocalTime();
         setInterval(updateLocalTime, 1000);
         shade2.style.animation = "appear 0.2s ease forwards";
@@ -454,7 +454,7 @@ toLeft.addEventListener("click", animateToLeft);
 const animateToRight = () => {
     if (isAnimating) return;
     isAnimating = true;
-    setTimeout(() => isAnimating = false, 1000);
+    setTimeout(() => isAnimating = false, 600);
 
     mePicList.push(mePicList.shift());
     const timeline = gsap.timeline();
@@ -500,7 +500,7 @@ const animateToRight = () => {
 toRight.addEventListener("click", animateToRight);
 document.getElementById("main").addEventListener("click", (e) => {
     if (e.target.id === "me") {
-        window.scrollTo(0, 0);
+        window.lenis.scrollTo(0);
         shade2.style.animation = "appear 0.2s ease forwards";
         container.style.animation = "disappear 0.2s ease forwards";
         setTimeout(() => {
@@ -550,7 +550,7 @@ document.getElementById("main").addEventListener("click", (e) => {
 //furryBox
 document.getElementById("main").addEventListener("click", (e) => {
     if (e.target.id === "furry") {
-        window.scrollTo(0, 0);
+        window.lenis.scrollTo(0);
         shade2.style.animation = "appear 0.2s ease forwards";
         container.style.animation = "disappear 0.2s ease forwards";
         setTimeout(() => {
@@ -607,7 +607,7 @@ window.addEventListener("resize", () => {
 //repoBox
 document.getElementById("main").addEventListener("click", (e) => {
     if (e.target.id === "repo") {
-        window.scrollTo(0, 0);
+        window.lenis.scrollTo(0);
         shade2.style.animation = "appear 0.2s ease forwards";
         container.style.animation = "disappear 0.2s ease forwards";
         setTimeout(() => {
@@ -673,7 +673,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const projects = document.getElementById("projects");
 document.getElementById("main").addEventListener("click", (e) => {
     if (e.target.id === "scroll") {
-        projects.scrollIntoView({ behavior: "smooth" });
+        window.lenis.scrollTo(projects);
     }
 });
 
@@ -787,7 +787,7 @@ document.querySelectorAll(".worldMapCircle").forEach(el => {
 
 const scroll2 = document.getElementById("scroll2");
 scroll2.addEventListener("click", () => {
-    window.scrollTo(0, 0);
+    window.lenis.scrollTo(0);
 });
 
 //Let's go!

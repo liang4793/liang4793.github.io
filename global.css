@@ -4,7 +4,6 @@ html {
     font-family: 'Poppins', sans-serif;
     word-break: break-all;
     text-align: justify;
-    scroll-behavior: smooth;
 }
 ::selection {
     background-color: rgb(250, 100, 0, 0.4);

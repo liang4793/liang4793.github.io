@@ -50,7 +50,10 @@ if (readT >= 1) {
 const content = document.getElementById("expendText");
 const articleHeadings = article.querySelectorAll("h1, h2, h3, h4, h5, h6");
 function scrollToElement(id) {
-    document.getElementById(id).scrollIntoView({behavior: "smooth"});
+    const target = document.getElementById(id);
+    if (target) {
+        window.lenis.scrollTo(target, { offset: -15 });
+    }
 };
 articleHeadings.forEach(function(heading, index) {
     let headingLevel = heading.tagName.toLowerCase().replace("h", "");
