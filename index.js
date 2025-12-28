@@ -10,6 +10,22 @@ console.log("[Welcome to Liáng4793's Repository(Liáng's Repo)]");
 
 //page
 const container = document.getElementById("container");
+function debounce(fn, delay = 120) {
+    let t;
+    return (...args) => {
+        clearTimeout(t);
+        t = setTimeout(() => fn(...args), delay);
+    };
+};
+const safeResizeLenis = debounce(() => {
+    if (!lenis) return;
+    lenis.resize();
+    console.log("Lenis resized");
+}, 100);
+const ro = new ResizeObserver(() => {
+    safeResizeLenis();
+});
+ro.observe(container);
 
 //JSneeded & Loading
 const loadText = document.getElementById("loadText");
@@ -390,6 +406,10 @@ document.getElementById("main").addEventListener("click", (e) => {
         setTimeout(() => {
             timeTitle.style.display = "block";
         }, 400);
+        //ensure Lenis resizes properly
+        setTimeout(() => {
+            lenis.resize();
+        }, 800);
     }
 });
 
@@ -544,6 +564,10 @@ document.getElementById("main").addEventListener("click", (e) => {
             NGLTitle.style.display = "block";
             NGLBox.style.display = "flex";
         }, 400);
+        //ensure Lenis resizes properly
+        setTimeout(() => {
+            lenis.resize();
+        }, 800);
     }
 });
 
@@ -590,6 +614,10 @@ document.getElementById("main").addEventListener("click", (e) => {
             furryPicBox1.style.display = "flex";
             furryPicBox2.style.display = "flex";
         }, 400);
+        //ensure Lenis resizes properly
+        setTimeout(() => {
+            lenis.resize();
+        }, 800);
     }
 });
 window.addEventListener("resize", () => {
@@ -653,6 +681,10 @@ document.getElementById("main").addEventListener("click", (e) => {
         setTimeout(() => {
             RC2.style.display = "block";
         }, 400);
+        //ensure Lenis resizes properly
+        setTimeout(() => {
+            lenis.resize();
+        }, 800);
     }
 });
 
@@ -804,7 +836,7 @@ img.forEach((singleImg) => {
         loadText1.innerHTML = loadNum + " loaded";
     };
 });
-window.onload = function () {
+window.onload = () => {
     loadText1.innerHTML = "All done!";
     loadText2.innerHTML = "Redefine the world with imagination!";
     startPage();
