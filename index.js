@@ -20,7 +20,6 @@ function debounce(fn, delay = 120) {
 const safeResizeLenis = debounce(() => {
     if (!lenis) return;
     lenis.resize();
-    console.log("Lenis resized");
 }, 100);
 const ro = new ResizeObserver(() => {
     safeResizeLenis();

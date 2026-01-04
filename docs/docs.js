@@ -20,6 +20,7 @@ function updateProgressBar() {
 }
 window.onload = function() {
     updateProgressBar();
+    lenis.resize();
 }
 window.onresize = function() {
     updateProgressBar();
