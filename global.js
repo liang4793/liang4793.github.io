@@ -2,6 +2,26 @@
 window.lenis = new Lenis({
     autoRaf: true,
 });
+//simple lenis problem fix
+const index_container = document.getElementById("container");
+const docs_content = document.getElementById("content");
+function debounce(fn, delay = 120) {
+    let t;
+    return (...args) => {
+        clearTimeout(t);
+        t = setTimeout(() => fn(...args), delay);
+    };
+};
+const safeResizeLenis = debounce(() => {
+    if (!lenis) return;
+    lenis.resize();
+}, 100);
+const ro = new ResizeObserver(() => {
+    safeResizeLenis();
+});
+if (index_container) {ro.observe(index_container);};
+if (docs_content) {ro.observe(docs_content);};
+
 const shadeZoom = document.getElementById("shadeZoom");
 const zoomedImg = document.getElementById("zoomedImg");
 document.querySelectorAll("img.zoomable").forEach(img => {

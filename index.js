@@ -10,21 +10,6 @@ console.log("[Welcome to Liáng4793's Repository(Liáng's Repo)]");
 
 //page
 const container = document.getElementById("container");
-function debounce(fn, delay = 120) {
-    let t;
-    return (...args) => {
-        clearTimeout(t);
-        t = setTimeout(() => fn(...args), delay);
-    };
-};
-const safeResizeLenis = debounce(() => {
-    if (!lenis) return;
-    lenis.resize();
-}, 100);
-const ro = new ResizeObserver(() => {
-    safeResizeLenis();
-});
-ro.observe(container);
 
 //JSneeded & Loading
 const loadText = document.getElementById("loadText");

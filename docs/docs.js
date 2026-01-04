@@ -41,14 +41,13 @@ function countWords(str) {
 let letterC = countWords(article.innerText);
 wordCount.innerHTML = letterC;
 let readT = Math.round(letterC / 100);
-console.log(readT);
 if (readT >= 1) {
     readingTime.innerHTML = "≈" + readT;
 } else {
     readingTime.innerHTML = "<1";
 }
 
-const content = document.getElementById("expendText");
+const expendText = document.getElementById("expendText");
 const articleHeadings = article.querySelectorAll("h1, h2, h3, h4, h5, h6");
 function scrollToElement(id) {
     const target = document.getElementById(id);
@@ -70,5 +69,5 @@ articleHeadings.forEach(function(heading, index) {
     contentItem.setAttribute("style", `position: relative; padding-bottom: 1rem; padding-left: ${headingLevel - 1}rem;`);
     contentItem.setAttribute("onclick", `scrollToElement('${idName}')`);
     contentItem.innerHTML = `L${headingLevel} ${headingName}`;
-    content.appendChild(contentItem);
+    expendText.appendChild(contentItem);
 });
