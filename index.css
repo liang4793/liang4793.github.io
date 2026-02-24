@@ -1,9 +1,6 @@
 /*¯\_(ツ)_/¯ Why are you looking at my CSS?*/
 .welcomeBox {
     position:absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     display: block;
     width: 35rem;
     z-index: 2;
@@ -33,7 +30,7 @@
     color: rgb(250, 100, 0);
     font-size: 1.5rem;
     line-height: 0.9;
-    animation: fromT 0.2s ease forwards;
+    animation: noscale-appear 0.2s ease forwards;
 }
 #loadText1 {
     position: absolute;
@@ -63,8 +60,6 @@
     display: none;
     position: absolute;
     top: 0rem;
-    left: 50%;
-    transform: translate(-50%,0);
     width: 100%;
     color: white;
     animation: appear 0.2s ease forwards;
@@ -376,28 +371,19 @@ textarea::-moz-placeholder {
 #directMessageLoading {
     display: none;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -3.25rem;
-    margin-left: -1.25rem;
+    margin-top: -4rem;
     width: 2.5rem;
     height: 2.5rem;
 }
 #directMessageLoadingText {
     display: none;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     font-size: 1rem;
 }
 #directMessageSuccessText {
     display: none;
     position: absolute;
-    top: 50%;
-    left: 50%;
     margin-top: -2rem;
-    transform: translate(-50%, -50%);
     font-size: 1rem;
     text-align: center;
 }
@@ -411,30 +397,24 @@ textarea::-moz-placeholder {
 }
 .worldMapCircle {
     position: absolute;
-    transform: translate(-50%, -50%);
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     background: rgba(250, 100, 0, 0.2);
-    border: 0.2rem solid rgba(250, 100, 0);
+    outline: 0.2rem solid rgb(250, 100, 0);
     scale: 1;
     transition: all 0.5s ease;
     margin: none;
 }
 .worldMapCircle:hover {
     scale: 1.1;
-    margin-top: 1%;
-    margin-left: 1%;
 }
 .ripple {
     position: absolute;
-    left: 50%;
-    top: 50%;
     width: 100%;
     height: 100%;
-    transform: translate(-50%, -50%);
     border-radius: 50%;
     background: rgba(250, 100, 0, 0.2);
-    border: 0.2rem solid rgba(250, 100, 0);
+    outline: 0.2rem solid rgb(250, 100, 0);
     pointer-events: none;
 }
 #footer {
@@ -608,24 +588,17 @@ textarea::-moz-placeholder {
     position: relative;
     top: 7rem;
 }
-#NGLTitle {
+#FavThingsTitle {
     position: relative;
     top: 10rem;
     font-size: 3.5rem;
     line-height: 1.2;
     color: white;
 }
-#NGLBox {
+#FavThingsBox {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
     top: 10.5rem;
-    width: 100%;
-    height: 460px;
-    border-radius: 1rem;
-    background: linear-gradient(rgb(237, 25, 128), rgb(254, 131, 27));
-    overflow: hidden;
 }
 .furryTitle {
     position: relative;

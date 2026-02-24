@@ -44,8 +44,8 @@ document.querySelectorAll("img.zoomable").forEach(img => {
             zoomedImg.src = img.src;
             zoomedImg.title = img.title || "";
             shadeZoom.style.display = "flex";
-            shadeZoom.style.animation = "appear 0.2s ease forwards";
-            zoomedImg.style.animation = "zoomedImgAppear 0.2s ease forwards";
+            shadeZoom.style.animation = "noscale-appear 0.2s ease forwards";
+            zoomedImg.style.animation = "appear 0.2s ease forwards";
             setTimeout(() => {
                 zoomedImg.style.animation = "";
             }, 200);
@@ -55,8 +55,8 @@ document.querySelectorAll("img.zoomable").forEach(img => {
 shadeZoom.addEventListener("click", (e) => {
     if (e.target === shadeZoom) {
         document.body.classList.remove("noScroll");
-        shadeZoom.style.animation = "disappear 0.4s ease forwards";
-        zoomedImg.style.animation = "zoomedImgDisappear 0.2s ease forwards";
+        shadeZoom.style.animation = "noscale-disappear 0.4s ease forwards";
+        zoomedImg.style.animation = "disappear 0.2s ease forwards";
         setTimeout(() => {
             shadeZoom.style.display = "none";
             zoomedImg.src = "";
@@ -70,8 +70,8 @@ window.addEventListener("mousemove", (e) => {
     const centerY = window.innerHeight / 2;
     const offsetX = e.clientX - centerX;
     const offsetY = e.clientY - centerY;
-    const rotateX = (offsetY / centerY) * 20;
-    const rotateY = -(offsetX / centerX) * 20;
+    const rotateX = (offsetY / centerY) * (-20);
+    const rotateY = -(offsetX / centerX) * (-20);
     zoomedImg.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1)`;
     const shadowX = -(offsetX / centerX) * 20;
     const shadowY = (offsetY / centerY) * (-20);

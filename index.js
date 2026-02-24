@@ -68,7 +68,7 @@ function startPage() {
     mainText.innerHTML = newContent.join("<br>");
 
     setTimeout(() => {
-        loadText.style.animation = "disappear 0.4s ease forwards";
+        loadText.style.animation = "noscale-disappear 0.4s ease forwards";
         JSnotice.style.animation = "disappear 0.4s ease forwards";
         setTimeout(() => {
             loadText.style.display = "none";
@@ -76,7 +76,7 @@ function startPage() {
             mainLogo.style.display = "block";
             setTimeout(() => {
                 mainLogo.style.animation = "disappear 0.4s ease forwards";
-                shade1.style.animation = "disappear 0.4s ease forwards";
+                shade1.style.animation = "noscale-disappear 0.4s ease forwards";
                 setTimeout(() => {
                     loading = 0;
                     inTransit = false;
@@ -156,88 +156,101 @@ function startPage() {
 //transitionCanvas
 const canvas = document.getElementById("transitionCanvas");
 const ctx = canvas.getContext("2d");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+let dpr = window.devicePixelRatio || 1;
+function resizeCanvas() {
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+    canvas.style.width = w + "px";
+    canvas.style.height = h + "px";
+    canvas.width = w * dpr;
+    canvas.height = h * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+const STAR_COUNT = 100;
+const DEPTH = 1000;
+const FOCAL_LENGTH = 500;
+const BASE_SPEED = 500;
+const ROTATION_SPEED = 0.2;
+let globalRotation = 0;
 const stars = [];
-const starCount = 300; //Controls the number of meteors
-const colorStart = "rgba(250,100,0,1)"; //Meteor head color
-const colorEnd = "rgba(250,100,0,0)"; //Meteor tail gradient (transparent at the end)
-const speedMultiplier = 10; //Controls the speed of meteors
-const glowColor = "rgb(200, 80, 0)"; //Glow color for the meteors
-//Generates a random number within a range
 function randomRange(min, max) {
     return Math.random() * (max - min) + min;
 }
-//Star class to create and manage meteors
 class Star {
-    constructor(x, y, z) {
-        this.x = x;
-        this.y = y;
-        this.z = z;
-        this.originalZ = z;
+    constructor() {
+        this.reset();
     }
-    //Update the meteor's position and speed
-    update() {
-        this.z -= 0.3 * speedMultiplier; // Speed up the meteor
+    reset() {
+        this.x = randomRange(-1, 1);
+        this.y = randomRange(-1, 1);
+        this.z = randomRange(200, DEPTH);
+        this.velocity = BASE_SPEED * randomRange(0.8, 1.2);
+    }
+    update(deltaTime) {
+        this.z -= this.velocity * deltaTime;
         if (this.z <= 0) {
-            this.z = this.originalZ; // Respawn the meteor
-            this.x = randomRange(-canvas.width, canvas.width);
-            this.y = randomRange(-canvas.height, canvas.height);
+            this.reset();
+            this.z = DEPTH;
         }
     }
-    //Draw the meteor and its tail with a glowing effect
-    draw() {
-        const sx = (this.x / this.z) * canvas.width / 2 + canvas.width / 2;
-        const sy = (this.y / this.z) * canvas.height / 2 + canvas.height / 2;
-        const trailX = (this.x / (this.z + 100)) * canvas.width / 2 + canvas.width / 2; // Tail start point
-        const trailY = (this.y / (this.z + 100)) * canvas.height / 2 + canvas.height / 2;
-        //Create gradient for the meteor's tail
-        const gradient = ctx.createLinearGradient(sx, sy, trailX, trailY);
-        gradient.addColorStop(0, colorStart);
-        gradient.addColorStop(1, colorEnd);
-        //Add glow effect
-        ctx.shadowBlur = 20; // Blur radius for glow effect
-        ctx.shadowColor = glowColor; // Glow color
-        //Draw the meteor's trail
+    draw(rotation) {
+        const w = canvas.width / dpr;
+        const h = canvas.height / dpr;
+
+        const cos = Math.cos(rotation);
+        const sin = Math.sin(rotation);
+        const rx = this.x * cos - this.y * sin;
+        const ry = this.x * sin + this.y * cos;
+
+        const scale = FOCAL_LENGTH / this.z;
+        const sx = rx * scale * w * 0.5 + w * 0.5;
+        const sy = ry * scale * h * 0.5 + h * 0.5;
+
+        const tailZ = this.z + 60;
+        const tailScale = FOCAL_LENGTH / tailZ;
+        const tx = rx * tailScale * w * 0.5 + w * 0.5;
+        const ty = ry * tailScale * h * 0.5 + h * 0.5;
+
+        const fadeStart = 0.5;
+        let alpha = 1 - (this.z / DEPTH - fadeStart) / (1 - fadeStart);
+        alpha = Math.max(0, Math.min(1, alpha));
+        alpha = Math.pow(alpha, 2);
+
+        const gradient = ctx.createLinearGradient(sx, sy, tx, ty);
+        gradient.addColorStop(0, `rgba(250,100,0,${alpha})`);
+        gradient.addColorStop(1, `rgba(250,100,0,0)`);
+
         ctx.beginPath();
         ctx.moveTo(sx, sy);
-        ctx.lineTo(trailX, trailY);
-        ctx.lineWidth = Math.max(0.1, 10 * (1 - this.z / this.originalZ)); // Adjust the thickness of the line
+        ctx.lineTo(tx, ty);
+        ctx.lineWidth = Math.max(1, 5 * alpha);
         ctx.strokeStyle = gradient;
         ctx.stroke();
-        //Reset shadow to avoid affecting other drawing operations
-        ctx.shadowBlur = 0;
-        ctx.shadowColor = "transparent";
     }
 }
-//Initialize all meteors
-function initStars() {
-    for (let i = 0; i < starCount; i++) {
-        const x = randomRange(-canvas.width, canvas.width);
-        const y = randomRange(-canvas.height, canvas.height);
-        const z = randomRange(0.1, canvas.width); // Control initial distance of meteors
-        stars.push(new Star(x, y, z));
-    }
+for (let i = 0; i < STAR_COUNT; i++) {
+    stars.push(new Star());
 }
-//Main animation loop
-function animate() {
-    if (!inTransit) return; //Stop the animation if inTransit is false
+let lastTime = performance.now();
+function animate(now) {
+    if (!inTransit) {
+        lastTime = now;
+        return;
+    }
+    const deltaTime = (now - lastTime) / 1000;
+    lastTime = now;
+    globalRotation += ROTATION_SPEED * deltaTime;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    stars.forEach(star => {
-        star.update();
-        star.draw();
-    });
+    for (let i = 0; i < STAR_COUNT; i++) {
+        const star = stars[i];
+        star.update(deltaTime);
+        star.draw(globalRotation);
+    }
     requestAnimationFrame(animate);
 }
-initStars(); //Initialize meteors
-animate(); //Start animation
-//Adjust canvas size dynamically on window resize
-window.addEventListener("resize", () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    stars.length = 0; // Clear the existing array of stars
-    initStars(); //Reinitialize stars
-});
+requestAnimationFrame(animate);
 
 //main
 const shade2 = document.getElementById("shade2");
@@ -264,8 +277,8 @@ const contactTitle = document.getElementById("contactTitle");
 const contactBox = document.getElementById("contactBox");
 const musicTitle = document.getElementById("musicTitle");
 const musicShare = document.getElementById("musicShare");
-const NGLTitle = document.getElementById("NGLTitle");
-const NGLBox = document.getElementById("NGLBox");
+const FavThingsTitle = document.getElementById("FavThingsTitle");
+const FavThingsBox = document.getElementById("FavThingsBox");
 
 //furryBox
 const furryBox = document.getElementById("furryBox");
@@ -299,7 +312,7 @@ const repoPic8 = document.getElementById("repoPic8");
 const RC2 = document.getElementById("RC2");
 
 quit.addEventListener("click", () => {
-    shade2.style.animation = "disappear 0.2s ease forwards";
+    shade2.style.animation = "noscale-disappear 0.2s ease forwards";
     container.style.animation = "appear 0.2s ease forwards";
     setTimeout(() => {
         shade2.style.display = "none";
@@ -322,8 +335,8 @@ quit.addEventListener("click", () => {
         contactBox.style.display = "none";
         musicTitle.style.display = "none";
         musicShare.style.display = "none";
-        NGLTitle.style.display = "none";
-        NGLBox.style.display = "none";
+        FavThingsTitle.style.display = "none";
+        FavThingsBox.style.display = "none";
 
         furryBox.style.display = "none";
         FT1.style.display = "none";
@@ -542,11 +555,11 @@ document.getElementById("main").addEventListener("click", (e) => {
             musicTitle.style.display = "block";
             musicShare.style.display = "block";
         }, 400);
-        NGLTitle.style.animation = "fromT 0.4s ease forwards";
-        NGLBox.style.animation = "fromT 0.4s ease forwards";
+        FavThingsTitle.style.animation = "fromT 0.4s ease forwards";
+        FavThingsBox.style.animation = "fromT 0.4s ease forwards";
         setTimeout(() => {
-            NGLTitle.style.display = "block";
-            NGLBox.style.display = "flex";
+            FavThingsTitle.style.display = "block";
+            FavThingsBox.style.display = "block";
         }, 400);
         //ensure Lenis resizes properly
         setTimeout(() => {
@@ -777,28 +790,36 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-function createRippleEffect(target) {
-    const createRipple = () => {
-        const ripple = document.createElement("div");
-        ripple.className = "ripple";
-        target.appendChild(ripple);
-        gsap.fromTo(ripple,
-            { scale: 0, backgroundColor: "rgba(250, 100, 0, 0.2)" },
-            {
-                scale: 1,
-                duration: 2,
-                backgroundColor: "rgba(250, 100, 0, 0)",
-                ease: "power2.ease",
-                onComplete: () => {
-                    ripple.remove();
-                }
-            }
-        );
-    };
-    setInterval(createRipple, 4000);
-};
-document.querySelectorAll(".worldMapCircle").forEach(el => {
-    createRippleEffect(el);
+const circles = document.querySelectorAll(".worldMapCircle");
+function createRipple(target) {
+    const ripple = document.createElement("div");
+    ripple.className = "ripple";
+    target.appendChild(ripple);
+    gsap.fromTo(
+        ripple,
+        { scale: 0, backgroundColor: "rgba(250, 100, 0, 0.2)" },
+        {
+            scale: 1,
+            duration: 2,
+            backgroundColor: "rgba(250, 100, 0, 0)",
+            ease: "power2.out",
+            onComplete: () => ripple.remove()
+        }
+    );
+}
+const rippleTimeline = gsap.timeline({
+    repeat: -1,
+    repeatDelay: 2
+});
+rippleTimeline.call(() => {
+    circles.forEach(circle => createRipple(circle));
+});
+document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+        rippleTimeline.pause();
+    } else {
+        rippleTimeline.resume();
+    }
 });
 
 const scroll2 = document.getElementById("scroll2");
@@ -809,19 +830,27 @@ scroll2.addEventListener("click", () => {
 //Let's go!
 const loadText1 = document.getElementById("loadText1");
 const loadText2 = document.getElementById("loadText2");
-let loadNum = "0%";
-let img = document.querySelectorAll("img");
-let len = img.length;
-let sum = 0;
-img.forEach((singleImg) => {
-    singleImg.onload = () => {
-        sum ++;
-        loadNum = Math.round(sum / len * 100) + "%";
-        loadText1.innerHTML = loadNum + " loaded";
-    };
-});
-window.onload = () => {
-    loadText1.innerHTML = "All done!";
-    loadText2.innerHTML = "Redefine the world with imagination!";
+const imgs = document.querySelectorAll("img");
+const total = imgs.length;
+let loaded = 0;
+const preloadImage = async (img) => {
+    if (!img.complete) {
+        await new Promise(resolve => {
+            img.onload = resolve;
+            img.onerror = resolve;
+        });
+    }
+    try {
+        await img.decode();//force decode
+    } catch (e) {}
+    loaded++;
+    const percent = Math.round((loaded / total) * 100);
+    loadText1.textContent = percent + "% loaded";
+};
+const preloadAll = async () => {
+    await Promise.all([...imgs].map(preloadImage));
+    loadText1.textContent = "All done!";
+    loadText2.textContent = "Redefine the world with imagination!";
     startPage();
 };
+preloadAll();

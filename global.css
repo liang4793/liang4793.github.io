@@ -11,6 +11,14 @@ html {
 a {
     text-decoration: none;
 }
+.centerWrapper {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
 .hoverable {
     cursor: pointer;
     color: white;
@@ -62,6 +70,18 @@ a {
     0% {
         opacity: 0;
         filter: blur(0.2rem);
+        scale: 0.9;
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0rem);
+        scale: 1;
+    }
+}
+@keyframes noscale-appear {
+    0% {
+        opacity: 0;
+        filter: blur(0.2rem);
     }
     100% {
         opacity: 1;
@@ -69,6 +89,18 @@ a {
     }
 }
 @keyframes disappear {
+    0% {
+        opacity: 1;
+        filter: blur(0rem);
+        scale: 1;
+    }
+    100% {
+        opacity: 0;
+        filter: blur(0.2rem);
+        scale: 0.9;
+    }
+}
+@keyframes noscale-disappear {
     0% {
         opacity: 1;
         filter: blur(0rem);
@@ -83,11 +115,13 @@ a {
         transform: translateX(-2rem);
         opacity: 0;
         filter: blur(0.2rem);
+        scale: 0.9;
     }
     100% {
         transform: translateX(0rem);
         opacity: 1;
         filter: blur(0rem);
+        scale: 1;
     }
 }
 @keyframes fromR {
@@ -95,11 +129,13 @@ a {
         transform: translateX(2rem);
         opacity: 0;
         filter: blur(0.2rem);
+        scale: 0.9;
     }
     100% {
         transform: translateX(0rem);
         opacity: 1;
         filter: blur(0rem);
+        scale: 1;
     }
 }
 @keyframes fromT {
@@ -107,11 +143,13 @@ a {
         transform: translateY(-2rem);
         opacity: 0;
         filter: blur(0.2rem);
+        scale: 0.9;
     }
     100% {
         transform: translateY(0rem);
         opacity: 1;
         filter: blur(0rem);
+        scale: 1;
     }
 }
 @keyframes fromB {
@@ -119,11 +157,13 @@ a {
         transform: translateY(2rem);
         opacity: 0;
         filter: blur(0.2rem);
+        scale: 0.9;
     }
     100% {
         transform: translateY(0rem);
         opacity: 1;
         filter: blur(0rem);
+        scale: 1;
     }
 }
 @keyframes rotate{
@@ -132,28 +172,6 @@ a {
     }
     100% {
         transform: rotate(360deg);
-    }
-}
-@keyframes zoomedImgAppear {
-    0% {
-        opacity: 0;
-        filter: blur(0.2rem);
-        transform: scale(0.9);
-    }
-    100% {
-        opacity: 1;
-        filter: blur(0rem);
-    }
-}
-@keyframes zoomedImgDisappear {
-    0% {
-        opacity: 1;
-        filter: blur(0rem);
-    }
-    100% {
-        opacity: 0;
-        filter: blur(0.2rem);
-        transform: scale(0.9);
     }
 }
 body.noScroll {
@@ -172,6 +190,8 @@ body.noScroll {
     justify-content: center;
     align-items: center;
     z-index: 999;
+    perspective: 1000px;
+    perspective-origin: center;
 }
 #zoomedImg {
     max-width: 80%;
@@ -179,7 +199,6 @@ body.noScroll {
     border-radius: 0.5rem;
     box-shadow: 0rem 0rem 0.5rem 0rem rgba(0, 0, 0, 0.4);
     transition: all 0.2s linear;
-    will-change: transform;
     transform-style: preserve-3d;
 }
 body::-webkit-scrollbar {
