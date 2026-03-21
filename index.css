@@ -62,7 +62,7 @@
     top: 0rem;
     width: 100%;
     color: white;
-    animation: appear 0.2s ease forwards;
+    animation: noscale-appear 0.2s ease forwards;
 }
 .box {
     position: relative;

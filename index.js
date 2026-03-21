@@ -312,8 +312,8 @@ const repoPic8 = document.getElementById("repoPic8");
 const RC2 = document.getElementById("RC2");
 
 quit.addEventListener("click", () => {
-    shade2.style.animation = "noscale-disappear 0.2s ease forwards";
-    container.style.animation = "appear 0.2s ease forwards";
+    shade2.style.animation = "disappear 0.2s ease forwards";
+    container.style.animation = "noscale-appear 0.2s ease forwards";
     setTimeout(() => {
         shade2.style.display = "none";
         container.style.display = "block";
@@ -368,6 +368,10 @@ quit.addEventListener("click", () => {
         repoPic8.style.display = "none";
         RC2.style.display = "none";
     }, 200);
+    //ensure Lenis resizes properly
+    setTimeout(() => {
+            lenis.resize();
+    }, 800);
 });
 
 //locationBox
@@ -381,7 +385,7 @@ document.getElementById("main").addEventListener("click", (e) => {
         updateLocalTime();
         setInterval(updateLocalTime, 1000);
         shade2.style.animation = "appear 0.2s ease forwards";
-        container.style.animation = "disappear 0.2s ease forwards";
+        container.style.animation = "noscale-disappear 0.2s ease forwards";
         setTimeout(() => {
             shade2.style.display = "block";
             container.style.display = "none";
@@ -519,7 +523,7 @@ document.getElementById("main").addEventListener("click", (e) => {
     if (e.target.id === "me") {
         window.lenis.scrollTo(0);
         shade2.style.animation = "appear 0.2s ease forwards";
-        container.style.animation = "disappear 0.2s ease forwards";
+        container.style.animation = "noscale-disappear 0.2s ease forwards";
         setTimeout(() => {
             shade2.style.display = "block";
             container.style.display = "none";
@@ -573,7 +577,7 @@ document.getElementById("main").addEventListener("click", (e) => {
     if (e.target.id === "furry") {
         window.lenis.scrollTo(0);
         shade2.style.animation = "appear 0.2s ease forwards";
-        container.style.animation = "disappear 0.2s ease forwards";
+        container.style.animation = "noscale-disappear 0.2s ease forwards";
         setTimeout(() => {
             shade2.style.display = "block";
             container.style.display = "none";
@@ -634,7 +638,7 @@ document.getElementById("main").addEventListener("click", (e) => {
     if (e.target.id === "repo") {
         window.lenis.scrollTo(0);
         shade2.style.animation = "appear 0.2s ease forwards";
-        container.style.animation = "disappear 0.2s ease forwards";
+        container.style.animation = "noscale-disappear 0.2s ease forwards";
         setTimeout(() => {
             shade2.style.display = "block";
             container.style.display = "none";
@@ -834,6 +838,7 @@ const imgs = document.querySelectorAll("img");
 const total = imgs.length;
 let loaded = 0;
 const preloadImage = async (img) => {
+    img.decoding = "async";
     if (!img.complete) {
         await new Promise(resolve => {
             img.onload = resolve;
